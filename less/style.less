@@ -1,0 +1,125 @@
+@import "../bower_components/bootstrap/less/bootstrap";
+
+//Redefine some vars
+@navbar-default-bg: transparent;
+
+//own vars
+@primary-color: #F44336;
+@dark-primary-color: #D32F2F;
+@light-primary-color: #FFCDD2;
+@accent-color: #607D8B;
+@primary-text: #212121;
+@secondary-text: #727272;
+@divider-color: #B6B6B6;
+@link-menu-color: #F4F4F4;
+
+//@main-color: @primary-color;
+
+
+nav.navbar.navbar-default.navbar-fixed-top {
+  /*border-bottom-color: fade(@well-bg, 30%);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 0.7em 2em;*/
+
+  ul.nav.navbar-nav.pull-rigth {
+    @media (min-width: 768px){
+      float: right;
+      padding: 2px;
+      li {
+        &:hover {
+          background-color: lighten(@primary-color, 20%);
+          color: @primary-text;
+          & a{
+            color: @primary-text;
+          }
+          .border-top-radius(5px);
+          .border-left-radius(5px);
+          .border-bottom-radius(5px);
+          .border-right-radius(5px);
+        }
+      }
+    }
+  }
+  a {
+    color: @secondary-text;
+  }
+
+  &.top-nav-collapse{
+    @media (min-width: 768px){
+      background-color: @dark-primary-color;
+    }
+  }
+}
+
+header {
+  height: 100%;
+  #cover-wrapper{
+    background-image: url(../img/wallpaper.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    //position: fixed;
+    padding: 0;
+    z-index: 10;
+    #cover{
+      background-color: fade(@divider-color, 90%);
+      color: @primary-text;
+      padding: 9em 2rem;
+      z-index: 100;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+/*----------------------------------------------------------------------------*/
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
+        padding: 0;
+        a{
+          color: @link-menu-color;
+        }
+    }
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
