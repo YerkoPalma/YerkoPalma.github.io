@@ -109,21 +109,43 @@ header {
 
 /* ----------- MAIN STYLES -----------*/
 main{
-  height: 100%;
+  //height: 100%;
 
   section{
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
     text-align: center;
 
-    &.about-section {
+    &#services {
+        padding-top: 100px;
         background: #eee;
+
+        .service-title{
+          color: @dark-primary-color;
+          font-weight: 900;
+          font-size: 2em;
+        }
+
+        h1{
+          font-size: 4em;
+          margin-bottom: 50px;
+        }
+
+        i.fa {
+          margin-bottom: 0.5em;
+        }
     }
 
-    &.services-section {
+    &.skills-section {
         background: #fff;
     }
 
+    &.projects-section {
+        background: #eee;
+    }
+    &.experience-section {
+        background: #eee;
+    }
     &.contact-section {
         background: #eee;
     }

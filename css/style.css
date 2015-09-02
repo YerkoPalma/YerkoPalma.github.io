@@ -6846,19 +6846,35 @@ header #cover-wrapper #cover {
   }
 }
 /* ----------- MAIN STYLES -----------*/
-main {
-  height: 100%;
-}
 main section {
   height: 100%;
-  padding-top: 150px;
+  padding-top: 100px;
   text-align: center;
 }
-main section.about-section {
+main section#services {
+  padding-top: 100px;
   background: #eee;
 }
-main section.services-section {
+main section#services .service-title {
+  color: #d32f2f;
+  font-weight: 900;
+  font-size: 2em;
+}
+main section#services h1 {
+  font-size: 4em;
+  margin-bottom: 50px;
+}
+main section#services i.fa {
+  margin-bottom: 0.5em;
+}
+main section.skills-section {
   background: #fff;
+}
+main section.projects-section {
+  background: #eee;
+}
+main section.experience-section {
+  background: #eee;
 }
 main section.contact-section {
   background: #eee;
