@@ -10,4 +10,4 @@ new Vue({
     cover: Cover,
     services: Services
   }
-})
+});
