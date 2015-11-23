@@ -11,7 +11,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":71,"vue-hot-reload-api":5}],2:[function(require,module,exports){
+},{"vue":72,"vue-hot-reload-api":6}],2:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n          <div class=\"navbar-header page-scroll\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                  <span class=\"sr-only\">Toggle navigation</span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n              </button>\n              <a class=\"navbar-brand page-scroll\" href=\"#cover-wrapper\">Start Bootstrap</a>\n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n              <ul class=\"nav navbar-nav pull-rigth\">\n                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->\n                  <li class=\"hidden\">\n                      <a class=\"page-scroll\" href=\"#cover-wrapper\"></a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#services\">Servicios</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#skills\">Habilidades</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#projects\">Proyectos</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#experience\">Experiencia</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#contact\">Contacto</a>\n                  </li>\n              </ul>\n          </div>\n          <!-- /.navbar-collapse -->\n      </div>\n      <!-- /.container -->\n  </nav>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -24,7 +24,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":71,"vue-hot-reload-api":5}],3:[function(require,module,exports){
+},{"vue":72,"vue-hot-reload-api":6}],3:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"services\" class=\"services-section\">\n    <h1>¿Qué hago?</h1>\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-desktop fa-5x\"></i>\n                  <p class=\"service-title\">Diseño web</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-globe fa-5x\"></i>\n                  <p class=\"service-title\">Desarrollo web</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-mobile fa-5x\"></i>\n                  <p class=\"service-title\">Desarrollo móvil</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-code fa-5x\"></i>\n                  <p class=\"service-title\">Última tecnología</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -37,22 +37,37 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":71,"vue-hot-reload-api":5}],4:[function(require,module,exports){
+},{"vue":72,"vue-hot-reload-api":6}],4:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Skills Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/skills.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":72,"vue-hot-reload-api":6}],5:[function(require,module,exports){
 var Vue = require('vue');
 var Nav = require('./../components/navigation.vue');
 var Cover = require('./../components/cover.vue');
 var Services = require('./../components/services.vue');
+var Skills = require('./../components/skills.vue');
 
 new Vue({
   el: 'body',
   components: {
     navigation: Nav,
     cover: Cover,
-    services: Services
+    services: Services,
+    skills: Skills
   }
-})
+});
 
-},{"./../components/cover.vue":1,"./../components/navigation.vue":2,"./../components/services.vue":3,"vue":71}],5:[function(require,module,exports){
+},{"./../components/cover.vue":1,"./../components/navigation.vue":2,"./../components/services.vue":3,"./../components/skills.vue":4,"vue":72}],6:[function(require,module,exports){
 var Vue // late bind
 var map = Object.create(null)
 var shimmed = false
@@ -290,7 +305,7 @@ function format (id) {
   return id.match(/[^\/]+\.vue$/)[0]
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 var _ = require('../util')
 var Watcher = require('../watcher')
 var Path = require('../parsers/path')
@@ -466,7 +481,7 @@ function clean (obj) {
   return JSON.parse(JSON.stringify(obj))
 }
 
-},{"../parsers/directive":56,"../parsers/expression":57,"../parsers/path":58,"../parsers/text":60,"../util":68,"../watcher":72}],7:[function(require,module,exports){
+},{"../parsers/directive":57,"../parsers/expression":58,"../parsers/path":59,"../parsers/text":61,"../util":69,"../watcher":73}],8:[function(require,module,exports){
 var _ = require('../util')
 var transition = require('../transition')
 
@@ -672,7 +687,7 @@ function remove (el, vm, cb) {
   if (cb) cb()
 }
 
-},{"../transition":61,"../util":68}],8:[function(require,module,exports){
+},{"../transition":62,"../util":69}],9:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -843,7 +858,7 @@ function modifyListenerCount (vm, event, count) {
   }
 }
 
-},{"../util":68}],9:[function(require,module,exports){
+},{"../util":69}],10:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var config = require('../config')
@@ -1008,7 +1023,7 @@ config._assetTypes.forEach(function (type) {
 })
 
 }).call(this,require('_process'))
-},{"../compiler":15,"../config":17,"../directives/internal":24,"../fragment/factory":46,"../parsers/directive":56,"../parsers/expression":57,"../parsers/path":58,"../parsers/template":59,"../parsers/text":60,"../util":68,"_process":73}],10:[function(require,module,exports){
+},{"../compiler":16,"../config":18,"../directives/internal":25,"../fragment/factory":47,"../parsers/directive":57,"../parsers/expression":58,"../parsers/path":59,"../parsers/template":60,"../parsers/text":61,"../util":69,"_process":74}],11:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -1080,7 +1095,7 @@ exports.$compile = function (el, host, scope, frag) {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":15,"../util":68,"_process":73}],11:[function(require,module,exports){
+},{"../compiler":16,"../util":69,"_process":74}],12:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -1189,7 +1204,7 @@ exports.push = function (watcher) {
 }
 
 }).call(this,require('_process'))
-},{"./config":17,"./util":68,"_process":73}],12:[function(require,module,exports){
+},{"./config":18,"./util":69,"_process":74}],13:[function(require,module,exports){
 /**
  * A doubly linked list-based Least Recently Used (LRU)
  * cache. Will keep most recently used items while
@@ -1303,7 +1318,7 @@ p.get = function (key, returnEntry) {
 
 module.exports = Cache
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var dirParser = require('../parsers/directive')
@@ -1514,7 +1529,7 @@ function getDefault (vm, options) {
 }
 
 }).call(this,require('_process'))
-},{"../config":17,"../directives/internal/prop":25,"../parsers/directive":56,"../parsers/path":58,"../util":68,"_process":73}],14:[function(require,module,exports){
+},{"../config":18,"../directives/internal/prop":26,"../parsers/directive":57,"../parsers/path":59,"../util":69,"_process":74}],15:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var publicDirectives = require('../directives/public')
@@ -2289,13 +2304,13 @@ function makeNodeLinkFn (directives) {
 }
 
 }).call(this,require('_process'))
-},{"../directives/internal":24,"../directives/public":34,"../parsers/directive":56,"../parsers/template":59,"../parsers/text":60,"../util":68,"./compile-props":13,"_process":73}],15:[function(require,module,exports){
+},{"../directives/internal":25,"../directives/public":35,"../parsers/directive":57,"../parsers/template":60,"../parsers/text":61,"../util":69,"./compile-props":14,"_process":74}],16:[function(require,module,exports){
 var _ = require('../util')
 
 _.extend(exports, require('./compile'))
 _.extend(exports, require('./transclude'))
 
-},{"../util":68,"./compile":14,"./transclude":16}],16:[function(require,module,exports){
+},{"../util":69,"./compile":15,"./transclude":17}],17:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var templateParser = require('../parsers/template')
@@ -2447,7 +2462,7 @@ function mergeAttrs (from, to) {
 }
 
 }).call(this,require('_process'))
-},{"../parsers/template":59,"../util":68,"_process":73}],17:[function(require,module,exports){
+},{"../parsers/template":60,"../util":69,"_process":74}],18:[function(require,module,exports){
 module.exports = {
 
   /**
@@ -2561,7 +2576,7 @@ Object.defineProperty(module.exports, 'unsafeDelimiters', {
   }
 })
 
-},{"./parsers/text":60}],18:[function(require,module,exports){
+},{"./parsers/text":61}],19:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var Watcher = require('./watcher')
@@ -2887,11 +2902,11 @@ Directive.prototype._teardown = function () {
 module.exports = Directive
 
 }).call(this,require('_process'))
-},{"./parsers/expression":57,"./util":68,"./watcher":72,"_process":73}],19:[function(require,module,exports){
+},{"./parsers/expression":58,"./util":69,"./watcher":73,"_process":74}],20:[function(require,module,exports){
 exports.slot = require('./slot')
 exports.partial = require('./partial')
 
-},{"./partial":20,"./slot":21}],20:[function(require,module,exports){
+},{"./partial":21,"./slot":22}],21:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var vIf = require('../public/if')
@@ -2938,7 +2953,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":46,"../../util":68,"../public/if":33,"_process":73}],21:[function(require,module,exports){
+},{"../../fragment/factory":47,"../../util":69,"../public/if":34,"_process":74}],22:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -3064,7 +3079,7 @@ function extractFragment (nodes, parent, main) {
   }
 }
 
-},{"../../parsers/template":59,"../../util":68}],22:[function(require,module,exports){
+},{"../../parsers/template":60,"../../util":69}],23:[function(require,module,exports){
 var _ = require('../../util')
 var addClass = _.addClass
 var removeClass = _.removeClass
@@ -3137,7 +3152,7 @@ function contains (value, key) {
     : value.hasOwnProperty(key)
 }
 
-},{"../../util":68}],23:[function(require,module,exports){
+},{"../../util":69}],24:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
@@ -3489,14 +3504,14 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../parsers/template":59,"../../util":68,"_process":73}],24:[function(require,module,exports){
+},{"../../parsers/template":60,"../../util":69,"_process":74}],25:[function(require,module,exports){
 exports.style = require('./style')
 exports['class'] = require('./class')
 exports.component = require('./component')
 exports.prop = require('./prop')
 exports.transition = require('./transition')
 
-},{"./class":22,"./component":23,"./prop":25,"./style":26,"./transition":27}],25:[function(require,module,exports){
+},{"./class":23,"./component":24,"./prop":26,"./style":27,"./transition":28}],26:[function(require,module,exports){
 // NOTE: the prop internal directive is compiled and linked
 // during _initScope(), before the created hook is called.
 // The purpose is to make the initial prop values available
@@ -3567,7 +3582,7 @@ module.exports = {
   }
 }
 
-},{"../../config":17,"../../util":68,"../../watcher":72}],26:[function(require,module,exports){
+},{"../../config":18,"../../util":69,"../../watcher":73}],27:[function(require,module,exports){
 var _ = require('../../util')
 var prefixes = ['-webkit-', '-moz-', '-ms-']
 var camelPrefixes = ['Webkit', 'Moz', 'ms']
@@ -3676,7 +3691,7 @@ function prefix (prop) {
   }
 }
 
-},{"../../util":68}],27:[function(require,module,exports){
+},{"../../util":69}],28:[function(require,module,exports){
 var _ = require('../../util')
 var Transition = require('../../transition/transition')
 
@@ -3698,7 +3713,7 @@ module.exports = {
   }
 }
 
-},{"../../transition/transition":63,"../../util":68}],28:[function(require,module,exports){
+},{"../../transition/transition":64,"../../util":69}],29:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 
@@ -3825,7 +3840,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":68,"../internal/style":26,"_process":73}],29:[function(require,module,exports){
+},{"../../util":69,"../internal/style":27,"_process":74}],30:[function(require,module,exports){
 module.exports = {
   bind: function () {
     var el = this.el
@@ -3835,7 +3850,7 @@ module.exports = {
   }
 }
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 var _ = require('../../util')
 
 module.exports = {
@@ -3864,7 +3879,7 @@ module.exports = {
   }
 }
 
-},{"../../util":68}],31:[function(require,module,exports){
+},{"../../util":69}],32:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var FragmentFactory = require('../../fragment/factory')
@@ -4457,7 +4472,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":46,"../../util":68,"_process":73}],32:[function(require,module,exports){
+},{"../../fragment/factory":47,"../../util":69,"_process":74}],33:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -4499,7 +4514,7 @@ module.exports = {
   }
 }
 
-},{"../../parsers/template":59,"../../util":68}],33:[function(require,module,exports){
+},{"../../parsers/template":60,"../../util":69}],34:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var FragmentFactory = require('../../fragment/factory')
@@ -4569,7 +4584,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":46,"../../util":68,"_process":73}],34:[function(require,module,exports){
+},{"../../fragment/factory":47,"../../util":69,"_process":74}],35:[function(require,module,exports){
 // text & html
 exports.text = require('./text')
 exports.html = require('./html')
@@ -4595,7 +4610,7 @@ exports.ref = require('./ref')
 // cloak
 exports.cloak = require('./cloak')
 
-},{"./bind":28,"./cloak":29,"./el":30,"./for":31,"./html":32,"./if":33,"./model":36,"./on":40,"./ref":41,"./show":42,"./text":43}],35:[function(require,module,exports){
+},{"./bind":29,"./cloak":30,"./el":31,"./for":32,"./html":33,"./if":34,"./model":37,"./on":41,"./ref":42,"./show":43,"./text":44}],36:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4659,7 +4674,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":68}],36:[function(require,module,exports){
+},{"../../../util":69}],37:[function(require,module,exports){
 (function (process){
 var _ = require('../../../util')
 
@@ -4745,7 +4760,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../../util":68,"./checkbox":35,"./radio":37,"./select":38,"./text":39,"_process":73}],37:[function(require,module,exports){
+},{"../../../util":69,"./checkbox":36,"./radio":38,"./select":39,"./text":40,"_process":74}],38:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4781,7 +4796,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":68}],38:[function(require,module,exports){
+},{"../../../util":69}],39:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4901,7 +4916,7 @@ function indexOf (arr, val) {
   return -1
 }
 
-},{"../../../util":68}],39:[function(require,module,exports){
+},{"../../../util":69}],40:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -5030,7 +5045,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":68}],40:[function(require,module,exports){
+},{"../../../util":69}],41:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 
@@ -5158,7 +5173,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":68,"_process":73}],41:[function(require,module,exports){
+},{"../../util":69,"_process":74}],42:[function(require,module,exports){
 (function (process){
 if (process.env.NODE_ENV !== 'production') {
   module.exports = {
@@ -5172,7 +5187,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../util":68,"_process":73}],42:[function(require,module,exports){
+},{"../../util":69,"_process":74}],43:[function(require,module,exports){
 var _ = require('../../util')
 var transition = require('../../transition')
 
@@ -5200,7 +5215,7 @@ module.exports = {
   }
 }
 
-},{"../../transition":61,"../../util":68}],43:[function(require,module,exports){
+},{"../../transition":62,"../../util":69}],44:[function(require,module,exports){
 var _ = require('../../util')
 
 module.exports = {
@@ -5216,7 +5231,7 @@ module.exports = {
   }
 }
 
-},{"../../util":68}],44:[function(require,module,exports){
+},{"../../util":69}],45:[function(require,module,exports){
 var _ = require('../util')
 var Path = require('../parsers/path')
 var toArray = require('../directives/public/for')._postProcess
@@ -5336,7 +5351,7 @@ function contains (val, search) {
   }
 }
 
-},{"../directives/public/for":31,"../parsers/path":58,"../util":68}],45:[function(require,module,exports){
+},{"../directives/public/for":32,"../parsers/path":59,"../util":69}],46:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -5456,7 +5471,7 @@ exports.debounce = function (handler, delay) {
 
 _.extend(exports, require('./array-filters'))
 
-},{"../util":68,"./array-filters":44}],46:[function(require,module,exports){
+},{"../util":69,"./array-filters":45}],47:[function(require,module,exports){
 var _ = require('../util')
 var compiler = require('../compiler')
 var templateParser = require('../parsers/template')
@@ -5514,7 +5529,7 @@ FragmentFactory.prototype.create = function (host, scope, parentFrag) {
 
 module.exports = FragmentFactory
 
-},{"../cache":12,"../compiler":15,"../parsers/template":59,"../util":68,"./fragment":47}],47:[function(require,module,exports){
+},{"../cache":13,"../compiler":16,"../parsers/template":60,"../util":69,"./fragment":48}],48:[function(require,module,exports){
 var _ = require('../util')
 var transition = require('../transition')
 
@@ -5702,7 +5717,7 @@ function detach (child) {
 
 module.exports = Fragment
 
-},{"../transition":61,"../util":68}],48:[function(require,module,exports){
+},{"../transition":62,"../util":69}],49:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var inDoc = _.inDoc
@@ -5869,7 +5884,7 @@ exports._callHook = function (hook) {
 }
 
 }).call(this,require('_process'))
-},{"../util":68,"_process":73}],49:[function(require,module,exports){
+},{"../util":69,"_process":74}],50:[function(require,module,exports){
 var mergeOptions = require('../util').mergeOptions
 var uid = 0
 
@@ -5983,7 +5998,7 @@ exports._init = function (options) {
   }
 }
 
-},{"../util":68}],50:[function(require,module,exports){
+},{"../util":69}],51:[function(require,module,exports){
 var _ = require('../util')
 var Directive = require('../directive')
 var compiler = require('../compiler')
@@ -6222,7 +6237,7 @@ exports._cleanup = function () {
   this.$off()
 }
 
-},{"../compiler":15,"../directive":18,"../util":68}],51:[function(require,module,exports){
+},{"../compiler":16,"../directive":19,"../util":69}],52:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 
@@ -6319,7 +6334,7 @@ exports._resolveComponent = function (id, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../util":68,"_process":73}],52:[function(require,module,exports){
+},{"../util":69,"_process":74}],53:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -6564,7 +6579,7 @@ exports._initMeta = function () {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":15,"../observer":55,"../observer/dep":54,"../util":68,"../watcher":72,"_process":73}],53:[function(require,module,exports){
+},{"../compiler":16,"../observer":56,"../observer/dep":55,"../util":69,"../watcher":73,"_process":74}],54:[function(require,module,exports){
 var _ = require('../util')
 var arrayProto = Array.prototype
 var arrayMethods = Object.create(arrayProto)
@@ -6656,7 +6671,7 @@ _.define(
 
 module.exports = arrayMethods
 
-},{"../util":68}],54:[function(require,module,exports){
+},{"../util":69}],55:[function(require,module,exports){
 var _ = require('../util')
 var uid = 0
 
@@ -6719,7 +6734,7 @@ Dep.prototype.notify = function () {
 
 module.exports = Dep
 
-},{"../util":68}],55:[function(require,module,exports){
+},{"../util":69}],56:[function(require,module,exports){
 var _ = require('../util')
 var config = require('../config')
 var Dep = require('./dep')
@@ -6948,7 +6963,7 @@ _.defineReactive = defineReactive
 
 module.exports = Observer
 
-},{"../config":17,"../util":68,"./array":53,"./dep":54}],56:[function(require,module,exports){
+},{"../config":18,"../util":69,"./array":54,"./dep":55}],57:[function(require,module,exports){
 var _ = require('../util')
 var Cache = require('../cache')
 var cache = new Cache(1000)
@@ -7084,7 +7099,7 @@ exports.parse = function (s) {
   return dir
 }
 
-},{"../cache":12,"../util":68}],57:[function(require,module,exports){
+},{"../cache":13,"../util":69}],58:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var Path = require('./path')
@@ -7352,7 +7367,7 @@ exports.isSimplePath = function (exp) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":12,"../util":68,"./path":58,"_process":73}],58:[function(require,module,exports){
+},{"../cache":13,"../util":69,"./path":59,"_process":74}],59:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var Cache = require('../cache')
@@ -7714,7 +7729,7 @@ exports.set = function (obj, path, val) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":12,"../util":68,"_process":73}],59:[function(require,module,exports){
+},{"../cache":13,"../util":69,"_process":74}],60:[function(require,module,exports){
 var _ = require('../util')
 var Cache = require('../cache')
 var templateCache = new Cache(1000)
@@ -8004,7 +8019,7 @@ exports.parse = function (template, clone, noSelector) {
     : frag
 }
 
-},{"../cache":12,"../util":68}],60:[function(require,module,exports){
+},{"../cache":13,"../util":69}],61:[function(require,module,exports){
 var Cache = require('../cache')
 var config = require('../config')
 var dirParser = require('./directive')
@@ -8166,7 +8181,7 @@ function inlineFilters (exp, single) {
   }
 }
 
-},{"../cache":12,"../config":17,"./directive":56}],61:[function(require,module,exports){
+},{"../cache":13,"../config":18,"./directive":57}],62:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -8247,7 +8262,7 @@ var apply = exports.apply = function (el, direction, op, vm, cb) {
   transition[action](op, cb)
 }
 
-},{"../util":68}],62:[function(require,module,exports){
+},{"../util":69}],63:[function(require,module,exports){
 var _ = require('../util')
 var queue = []
 var queued = false
@@ -8284,7 +8299,7 @@ function flush () {
   return f
 }
 
-},{"../util":68}],63:[function(require,module,exports){
+},{"../util":69}],64:[function(require,module,exports){
 var _ = require('../util')
 var queue = require('./queue')
 var addClass = _.addClass
@@ -8653,7 +8668,7 @@ function isHidden (el) {
 
 module.exports = Transition
 
-},{"../util":68,"./queue":62}],64:[function(require,module,exports){
+},{"../util":69,"./queue":63}],65:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 
@@ -8807,7 +8822,7 @@ function formatValue (val) {
 }
 
 }).call(this,require('_process'))
-},{"./index":68,"_process":73}],65:[function(require,module,exports){
+},{"./index":69,"_process":74}],66:[function(require,module,exports){
 (function (process){
 /**
  * Enable debug utilities.
@@ -8858,7 +8873,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../config":17,"_process":73}],66:[function(require,module,exports){
+},{"../config":18,"_process":74}],67:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 var config = require('../config')
@@ -9225,7 +9240,7 @@ exports.removeNodeRange = function (start, end, vm, frag, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../config":17,"../transition":61,"./index":68,"_process":73}],67:[function(require,module,exports){
+},{"../config":18,"../transition":62,"./index":69,"_process":74}],68:[function(require,module,exports){
 // can we use __proto__?
 exports.hasProto = '__proto__' in {}
 
@@ -9312,7 +9327,7 @@ exports.nextTick = (function () {
   }
 })()
 
-},{}],68:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 var lang = require('./lang')
 var extend = lang.extend
 
@@ -9323,7 +9338,7 @@ extend(exports, require('./options'))
 extend(exports, require('./component'))
 extend(exports, require('./debug'))
 
-},{"./component":64,"./debug":65,"./dom":66,"./env":67,"./lang":69,"./options":70}],69:[function(require,module,exports){
+},{"./component":65,"./debug":66,"./dom":67,"./env":68,"./lang":70,"./options":71}],70:[function(require,module,exports){
 /**
  * Set a property on an object. Adds the new property and
  * triggers change notification if the property doesn't
@@ -9715,7 +9730,7 @@ exports.looseEqual = function (a, b) {
   /* eslint-enable eqeqeq */
 }
 
-},{}],70:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 var config = require('../config')
@@ -10078,7 +10093,7 @@ exports.resolveAsset = function resolve (options, type, id) {
 }
 
 }).call(this,require('_process'))
-},{"../config":17,"./index":68,"_process":73}],71:[function(require,module,exports){
+},{"../config":18,"./index":69,"_process":74}],72:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var extend = _.extend
@@ -10178,7 +10193,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./api/data":6,"./api/dom":7,"./api/events":8,"./api/global":9,"./api/lifecycle":10,"./directives/element":19,"./directives/public":34,"./filters":45,"./instance/events":48,"./instance/init":49,"./instance/lifecycle":50,"./instance/misc":51,"./instance/state":52,"./util":68,"_process":73}],72:[function(require,module,exports){
+},{"./api/data":7,"./api/dom":8,"./api/events":9,"./api/global":10,"./api/lifecycle":11,"./directives/element":20,"./directives/public":35,"./filters":46,"./instance/events":49,"./instance/init":50,"./instance/lifecycle":51,"./instance/misc":52,"./instance/state":53,"./util":69,"_process":74}],73:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -10518,7 +10533,7 @@ function traverse (val) {
 module.exports = Watcher
 
 }).call(this,require('_process'))
-},{"./batcher":11,"./config":17,"./observer/dep":54,"./parsers/expression":57,"./util":68,"_process":73}],73:[function(require,module,exports){
+},{"./batcher":12,"./config":18,"./observer/dep":55,"./parsers/expression":58,"./util":69,"_process":74}],74:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -10611,4 +10626,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[4]);
+},{}]},{},[5]);
