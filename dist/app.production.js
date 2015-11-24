@@ -1,118 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Contact Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
-if (module.hot) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/contact.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, module.exports.template)
-  }
-})()}
-},{"vue":75,"vue-hot-reload-api":9}],2:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <img src=\"https://s.gravatar.com/avatar/d809533c5ce964b709e2b38e6573973b?s=180\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n      <h1 class=\"display-3\">Fluid jumbotron</h1>\n      <p class=\"lead\">This is a modified jumbotron that occupies the entire horizontal space of it's parent.</p>\n    </div>\n  </div>\n"
-if (module.hot) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/cover.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, module.exports.template)
-  }
-})()}
-},{"vue":75,"vue-hot-reload-api":9}],3:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"experience\" class=\"experience-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Experience Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
-if (module.hot) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/experience.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, module.exports.template)
-  }
-})()}
-},{"vue":75,"vue-hot-reload-api":9}],4:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n          <div class=\"navbar-header page-scroll\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                  <span class=\"sr-only\">Toggle navigation</span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n              </button>\n              <a class=\"navbar-brand page-scroll\" href=\"#cover-wrapper\">Start Bootstrap</a>\n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n              <ul class=\"nav navbar-nav pull-rigth\">\n                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->\n                  <li class=\"hidden\">\n                      <a class=\"page-scroll\" href=\"#cover-wrapper\"></a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#services\">Servicios</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#skills\">Habilidades</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#projects\">Proyectos</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#experience\">Experiencia</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#contact\">Contacto</a>\n                  </li>\n              </ul>\n          </div>\n          <!-- /.navbar-collapse -->\n      </div>\n      <!-- /.container -->\n  </nav>\n"
-if (module.hot) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/navigation.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, module.exports.template)
-  }
-})()}
-},{"vue":75,"vue-hot-reload-api":9}],5:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Projects Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
-if (module.hot) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/project.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, module.exports.template)
-  }
-})()}
-},{"vue":75,"vue-hot-reload-api":9}],6:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"services\" class=\"services-section\">\n    <h1>¿Qué hago?</h1>\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-desktop fa-5x\"></i>\n                  <p class=\"service-title\">Diseño web</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-globe fa-5x\"></i>\n                  <p class=\"service-title\">Desarrollo web</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-mobile fa-5x\"></i>\n                  <p class=\"service-title\">Desarrollo móvil</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-code fa-5x\"></i>\n                  <p class=\"service-title\">Última tecnología</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n          </div>\n      </div>\n  </section>\n"
-if (module.hot) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/services.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, module.exports.template)
-  }
-})()}
-},{"vue":75,"vue-hot-reload-api":9}],7:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                <!-- Tabs -->\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                  <li role=\"presentation\" class=\"active\"><a href=\"#frontend\" aria-controls=\"frontend\" role=\"tab\" data-toggle=\"tab\">Front-end</a></li>\n                  <li role=\"presentation\"><a href=\"#backend\" aria-controls=\"backend\" role=\"tab\" data-toggle=\"tab\">Back-end</a></li>\n                  <li role=\"presentation\"><a href=\"#mobile\" aria-controls=\"mobile\" role=\"tab\" data-toggle=\"tab\">Mobile</a></li>\n                </ul>\n\n                <!-- Tabs content -->\n                <div class=\"tab-content\">\n                  <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"frontend\">\n                    <div class=\"row\">\n                      <div class=\"container\">\n                        <div class=\"col-md-7\">\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%\">\n                              <span class=\"sr-only\">40% Complete (success)</span>\n                            </div>\n                          </div>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 20%\">\n                              <span class=\"sr-only\">20% Complete</span>\n                            </div>\n                          </div>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-warning\" role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 60%\">\n                              <span class=\"sr-only\">60% Complete (warning)</span>\n                            </div>\n                          </div>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-danger\" role=\"progressbar\" aria-valuenow=\"80\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 80%\">\n                              <span class=\"sr-only\">80% Complete (danger)</span>\n                            </div>\n                          </div>\n                        </div>\n                        <div class=\"col-md-5\">\n                          <div class=\"jumbotron\">\n                            <h3>Hello, world!</h3>\n                            <p>...</p>\n                            <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a></p>\n                          </div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"backend\">...</div>\n                  <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"mobile\">...</div>\n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
-if (module.hot) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/components/skills.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, module.exports.template)
-  }
-})()}
-},{"vue":75,"vue-hot-reload-api":9}],8:[function(require,module,exports){
-var Vue = require('vue');
-var Nav = require('./../components/navigation.vue');
-var Cover = require('./../components/cover.vue');
-var Services = require('./../components/services.vue');
-var Skills = require('./../components/skills.vue');
-var Projects = require('./../components/project.vue');
-var Experience = require('./../components/experience.vue');
-var Contact = require('./../components/contact.vue');
-
-new Vue({
-  el: 'body',
-  components: {
-    navigation: Nav,
-    cover: Cover,
-    services: Services,
-    skills: Skills,
-    projects: Projects,
-    experience: Experience,
-    contact: Contact
-  }
-});
-
-},{"./../components/contact.vue":1,"./../components/cover.vue":2,"./../components/experience.vue":3,"./../components/navigation.vue":4,"./../components/project.vue":5,"./../components/services.vue":6,"./../components/skills.vue":7,"vue":75}],9:[function(require,module,exports){
 var Vue // late bind
 var map = Object.create(null)
 var shimmed = false
@@ -350,7 +236,7 @@ function format (id) {
   return id.match(/[^\/]+\.vue$/)[0]
 }
 
-},{}],10:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 var _ = require('../util')
 var Watcher = require('../watcher')
 var Path = require('../parsers/path')
@@ -526,7 +412,7 @@ function clean (obj) {
   return JSON.parse(JSON.stringify(obj))
 }
 
-},{"../parsers/directive":60,"../parsers/expression":61,"../parsers/path":62,"../parsers/text":64,"../util":72,"../watcher":76}],11:[function(require,module,exports){
+},{"../parsers/directive":52,"../parsers/expression":53,"../parsers/path":54,"../parsers/text":56,"../util":64,"../watcher":68}],3:[function(require,module,exports){
 var _ = require('../util')
 var transition = require('../transition')
 
@@ -732,7 +618,7 @@ function remove (el, vm, cb) {
   if (cb) cb()
 }
 
-},{"../transition":65,"../util":72}],12:[function(require,module,exports){
+},{"../transition":57,"../util":64}],4:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -903,7 +789,7 @@ function modifyListenerCount (vm, event, count) {
   }
 }
 
-},{"../util":72}],13:[function(require,module,exports){
+},{"../util":64}],5:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var config = require('../config')
@@ -1068,7 +954,7 @@ config._assetTypes.forEach(function (type) {
 })
 
 }).call(this,require('_process'))
-},{"../compiler":19,"../config":21,"../directives/internal":28,"../fragment/factory":50,"../parsers/directive":60,"../parsers/expression":61,"../parsers/path":62,"../parsers/template":63,"../parsers/text":64,"../util":72,"_process":77}],14:[function(require,module,exports){
+},{"../compiler":11,"../config":13,"../directives/internal":20,"../fragment/factory":42,"../parsers/directive":52,"../parsers/expression":53,"../parsers/path":54,"../parsers/template":55,"../parsers/text":56,"../util":64,"_process":77}],6:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -1140,7 +1026,7 @@ exports.$compile = function (el, host, scope, frag) {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":19,"../util":72,"_process":77}],15:[function(require,module,exports){
+},{"../compiler":11,"../util":64,"_process":77}],7:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -1249,7 +1135,7 @@ exports.push = function (watcher) {
 }
 
 }).call(this,require('_process'))
-},{"./config":21,"./util":72,"_process":77}],16:[function(require,module,exports){
+},{"./config":13,"./util":64,"_process":77}],8:[function(require,module,exports){
 /**
  * A doubly linked list-based Least Recently Used (LRU)
  * cache. Will keep most recently used items while
@@ -1363,7 +1249,7 @@ p.get = function (key, returnEntry) {
 
 module.exports = Cache
 
-},{}],17:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var dirParser = require('../parsers/directive')
@@ -1574,7 +1460,7 @@ function getDefault (vm, options) {
 }
 
 }).call(this,require('_process'))
-},{"../config":21,"../directives/internal/prop":29,"../parsers/directive":60,"../parsers/path":62,"../util":72,"_process":77}],18:[function(require,module,exports){
+},{"../config":13,"../directives/internal/prop":21,"../parsers/directive":52,"../parsers/path":54,"../util":64,"_process":77}],10:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var publicDirectives = require('../directives/public')
@@ -2349,13 +2235,13 @@ function makeNodeLinkFn (directives) {
 }
 
 }).call(this,require('_process'))
-},{"../directives/internal":28,"../directives/public":38,"../parsers/directive":60,"../parsers/template":63,"../parsers/text":64,"../util":72,"./compile-props":17,"_process":77}],19:[function(require,module,exports){
+},{"../directives/internal":20,"../directives/public":30,"../parsers/directive":52,"../parsers/template":55,"../parsers/text":56,"../util":64,"./compile-props":9,"_process":77}],11:[function(require,module,exports){
 var _ = require('../util')
 
 _.extend(exports, require('./compile'))
 _.extend(exports, require('./transclude'))
 
-},{"../util":72,"./compile":18,"./transclude":20}],20:[function(require,module,exports){
+},{"../util":64,"./compile":10,"./transclude":12}],12:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var templateParser = require('../parsers/template')
@@ -2507,7 +2393,7 @@ function mergeAttrs (from, to) {
 }
 
 }).call(this,require('_process'))
-},{"../parsers/template":63,"../util":72,"_process":77}],21:[function(require,module,exports){
+},{"../parsers/template":55,"../util":64,"_process":77}],13:[function(require,module,exports){
 module.exports = {
 
   /**
@@ -2621,7 +2507,7 @@ Object.defineProperty(module.exports, 'unsafeDelimiters', {
   }
 })
 
-},{"./parsers/text":64}],22:[function(require,module,exports){
+},{"./parsers/text":56}],14:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var Watcher = require('./watcher')
@@ -2947,11 +2833,11 @@ Directive.prototype._teardown = function () {
 module.exports = Directive
 
 }).call(this,require('_process'))
-},{"./parsers/expression":61,"./util":72,"./watcher":76,"_process":77}],23:[function(require,module,exports){
+},{"./parsers/expression":53,"./util":64,"./watcher":68,"_process":77}],15:[function(require,module,exports){
 exports.slot = require('./slot')
 exports.partial = require('./partial')
 
-},{"./partial":24,"./slot":25}],24:[function(require,module,exports){
+},{"./partial":16,"./slot":17}],16:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var vIf = require('../public/if')
@@ -2998,7 +2884,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":50,"../../util":72,"../public/if":37,"_process":77}],25:[function(require,module,exports){
+},{"../../fragment/factory":42,"../../util":64,"../public/if":29,"_process":77}],17:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -3124,7 +3010,7 @@ function extractFragment (nodes, parent, main) {
   }
 }
 
-},{"../../parsers/template":63,"../../util":72}],26:[function(require,module,exports){
+},{"../../parsers/template":55,"../../util":64}],18:[function(require,module,exports){
 var _ = require('../../util')
 var addClass = _.addClass
 var removeClass = _.removeClass
@@ -3197,7 +3083,7 @@ function contains (value, key) {
     : value.hasOwnProperty(key)
 }
 
-},{"../../util":72}],27:[function(require,module,exports){
+},{"../../util":64}],19:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
@@ -3549,14 +3435,14 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../parsers/template":63,"../../util":72,"_process":77}],28:[function(require,module,exports){
+},{"../../parsers/template":55,"../../util":64,"_process":77}],20:[function(require,module,exports){
 exports.style = require('./style')
 exports['class'] = require('./class')
 exports.component = require('./component')
 exports.prop = require('./prop')
 exports.transition = require('./transition')
 
-},{"./class":26,"./component":27,"./prop":29,"./style":30,"./transition":31}],29:[function(require,module,exports){
+},{"./class":18,"./component":19,"./prop":21,"./style":22,"./transition":23}],21:[function(require,module,exports){
 // NOTE: the prop internal directive is compiled and linked
 // during _initScope(), before the created hook is called.
 // The purpose is to make the initial prop values available
@@ -3627,7 +3513,7 @@ module.exports = {
   }
 }
 
-},{"../../config":21,"../../util":72,"../../watcher":76}],30:[function(require,module,exports){
+},{"../../config":13,"../../util":64,"../../watcher":68}],22:[function(require,module,exports){
 var _ = require('../../util')
 var prefixes = ['-webkit-', '-moz-', '-ms-']
 var camelPrefixes = ['Webkit', 'Moz', 'ms']
@@ -3736,7 +3622,7 @@ function prefix (prop) {
   }
 }
 
-},{"../../util":72}],31:[function(require,module,exports){
+},{"../../util":64}],23:[function(require,module,exports){
 var _ = require('../../util')
 var Transition = require('../../transition/transition')
 
@@ -3758,7 +3644,7 @@ module.exports = {
   }
 }
 
-},{"../../transition/transition":67,"../../util":72}],32:[function(require,module,exports){
+},{"../../transition/transition":59,"../../util":64}],24:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 
@@ -3885,7 +3771,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":72,"../internal/style":30,"_process":77}],33:[function(require,module,exports){
+},{"../../util":64,"../internal/style":22,"_process":77}],25:[function(require,module,exports){
 module.exports = {
   bind: function () {
     var el = this.el
@@ -3895,7 +3781,7 @@ module.exports = {
   }
 }
 
-},{}],34:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 var _ = require('../../util')
 
 module.exports = {
@@ -3924,7 +3810,7 @@ module.exports = {
   }
 }
 
-},{"../../util":72}],35:[function(require,module,exports){
+},{"../../util":64}],27:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var FragmentFactory = require('../../fragment/factory')
@@ -4517,7 +4403,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":50,"../../util":72,"_process":77}],36:[function(require,module,exports){
+},{"../../fragment/factory":42,"../../util":64,"_process":77}],28:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -4559,7 +4445,7 @@ module.exports = {
   }
 }
 
-},{"../../parsers/template":63,"../../util":72}],37:[function(require,module,exports){
+},{"../../parsers/template":55,"../../util":64}],29:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var FragmentFactory = require('../../fragment/factory')
@@ -4629,7 +4515,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":50,"../../util":72,"_process":77}],38:[function(require,module,exports){
+},{"../../fragment/factory":42,"../../util":64,"_process":77}],30:[function(require,module,exports){
 // text & html
 exports.text = require('./text')
 exports.html = require('./html')
@@ -4655,7 +4541,7 @@ exports.ref = require('./ref')
 // cloak
 exports.cloak = require('./cloak')
 
-},{"./bind":32,"./cloak":33,"./el":34,"./for":35,"./html":36,"./if":37,"./model":40,"./on":44,"./ref":45,"./show":46,"./text":47}],39:[function(require,module,exports){
+},{"./bind":24,"./cloak":25,"./el":26,"./for":27,"./html":28,"./if":29,"./model":32,"./on":36,"./ref":37,"./show":38,"./text":39}],31:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4719,7 +4605,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":72}],40:[function(require,module,exports){
+},{"../../../util":64}],32:[function(require,module,exports){
 (function (process){
 var _ = require('../../../util')
 
@@ -4805,7 +4691,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../../util":72,"./checkbox":39,"./radio":41,"./select":42,"./text":43,"_process":77}],41:[function(require,module,exports){
+},{"../../../util":64,"./checkbox":31,"./radio":33,"./select":34,"./text":35,"_process":77}],33:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4841,7 +4727,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":72}],42:[function(require,module,exports){
+},{"../../../util":64}],34:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4961,7 +4847,7 @@ function indexOf (arr, val) {
   return -1
 }
 
-},{"../../../util":72}],43:[function(require,module,exports){
+},{"../../../util":64}],35:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -5090,7 +4976,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":72}],44:[function(require,module,exports){
+},{"../../../util":64}],36:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 
@@ -5218,7 +5104,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":72,"_process":77}],45:[function(require,module,exports){
+},{"../../util":64,"_process":77}],37:[function(require,module,exports){
 (function (process){
 if (process.env.NODE_ENV !== 'production') {
   module.exports = {
@@ -5232,7 +5118,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../util":72,"_process":77}],46:[function(require,module,exports){
+},{"../../util":64,"_process":77}],38:[function(require,module,exports){
 var _ = require('../../util')
 var transition = require('../../transition')
 
@@ -5260,7 +5146,7 @@ module.exports = {
   }
 }
 
-},{"../../transition":65,"../../util":72}],47:[function(require,module,exports){
+},{"../../transition":57,"../../util":64}],39:[function(require,module,exports){
 var _ = require('../../util')
 
 module.exports = {
@@ -5276,7 +5162,7 @@ module.exports = {
   }
 }
 
-},{"../../util":72}],48:[function(require,module,exports){
+},{"../../util":64}],40:[function(require,module,exports){
 var _ = require('../util')
 var Path = require('../parsers/path')
 var toArray = require('../directives/public/for')._postProcess
@@ -5396,7 +5282,7 @@ function contains (val, search) {
   }
 }
 
-},{"../directives/public/for":35,"../parsers/path":62,"../util":72}],49:[function(require,module,exports){
+},{"../directives/public/for":27,"../parsers/path":54,"../util":64}],41:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -5516,7 +5402,7 @@ exports.debounce = function (handler, delay) {
 
 _.extend(exports, require('./array-filters'))
 
-},{"../util":72,"./array-filters":48}],50:[function(require,module,exports){
+},{"../util":64,"./array-filters":40}],42:[function(require,module,exports){
 var _ = require('../util')
 var compiler = require('../compiler')
 var templateParser = require('../parsers/template')
@@ -5574,7 +5460,7 @@ FragmentFactory.prototype.create = function (host, scope, parentFrag) {
 
 module.exports = FragmentFactory
 
-},{"../cache":16,"../compiler":19,"../parsers/template":63,"../util":72,"./fragment":51}],51:[function(require,module,exports){
+},{"../cache":8,"../compiler":11,"../parsers/template":55,"../util":64,"./fragment":43}],43:[function(require,module,exports){
 var _ = require('../util')
 var transition = require('../transition')
 
@@ -5762,7 +5648,7 @@ function detach (child) {
 
 module.exports = Fragment
 
-},{"../transition":65,"../util":72}],52:[function(require,module,exports){
+},{"../transition":57,"../util":64}],44:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var inDoc = _.inDoc
@@ -5929,7 +5815,7 @@ exports._callHook = function (hook) {
 }
 
 }).call(this,require('_process'))
-},{"../util":72,"_process":77}],53:[function(require,module,exports){
+},{"../util":64,"_process":77}],45:[function(require,module,exports){
 var mergeOptions = require('../util').mergeOptions
 var uid = 0
 
@@ -6043,7 +5929,7 @@ exports._init = function (options) {
   }
 }
 
-},{"../util":72}],54:[function(require,module,exports){
+},{"../util":64}],46:[function(require,module,exports){
 var _ = require('../util')
 var Directive = require('../directive')
 var compiler = require('../compiler')
@@ -6282,7 +6168,7 @@ exports._cleanup = function () {
   this.$off()
 }
 
-},{"../compiler":19,"../directive":22,"../util":72}],55:[function(require,module,exports){
+},{"../compiler":11,"../directive":14,"../util":64}],47:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 
@@ -6379,7 +6265,7 @@ exports._resolveComponent = function (id, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../util":72,"_process":77}],56:[function(require,module,exports){
+},{"../util":64,"_process":77}],48:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -6624,7 +6510,7 @@ exports._initMeta = function () {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":19,"../observer":59,"../observer/dep":58,"../util":72,"../watcher":76,"_process":77}],57:[function(require,module,exports){
+},{"../compiler":11,"../observer":51,"../observer/dep":50,"../util":64,"../watcher":68,"_process":77}],49:[function(require,module,exports){
 var _ = require('../util')
 var arrayProto = Array.prototype
 var arrayMethods = Object.create(arrayProto)
@@ -6716,7 +6602,7 @@ _.define(
 
 module.exports = arrayMethods
 
-},{"../util":72}],58:[function(require,module,exports){
+},{"../util":64}],50:[function(require,module,exports){
 var _ = require('../util')
 var uid = 0
 
@@ -6779,7 +6665,7 @@ Dep.prototype.notify = function () {
 
 module.exports = Dep
 
-},{"../util":72}],59:[function(require,module,exports){
+},{"../util":64}],51:[function(require,module,exports){
 var _ = require('../util')
 var config = require('../config')
 var Dep = require('./dep')
@@ -7008,7 +6894,7 @@ _.defineReactive = defineReactive
 
 module.exports = Observer
 
-},{"../config":21,"../util":72,"./array":57,"./dep":58}],60:[function(require,module,exports){
+},{"../config":13,"../util":64,"./array":49,"./dep":50}],52:[function(require,module,exports){
 var _ = require('../util')
 var Cache = require('../cache')
 var cache = new Cache(1000)
@@ -7144,7 +7030,7 @@ exports.parse = function (s) {
   return dir
 }
 
-},{"../cache":16,"../util":72}],61:[function(require,module,exports){
+},{"../cache":8,"../util":64}],53:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var Path = require('./path')
@@ -7412,7 +7298,7 @@ exports.isSimplePath = function (exp) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":16,"../util":72,"./path":62,"_process":77}],62:[function(require,module,exports){
+},{"../cache":8,"../util":64,"./path":54,"_process":77}],54:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var Cache = require('../cache')
@@ -7774,7 +7660,7 @@ exports.set = function (obj, path, val) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":16,"../util":72,"_process":77}],63:[function(require,module,exports){
+},{"../cache":8,"../util":64,"_process":77}],55:[function(require,module,exports){
 var _ = require('../util')
 var Cache = require('../cache')
 var templateCache = new Cache(1000)
@@ -8064,7 +7950,7 @@ exports.parse = function (template, clone, noSelector) {
     : frag
 }
 
-},{"../cache":16,"../util":72}],64:[function(require,module,exports){
+},{"../cache":8,"../util":64}],56:[function(require,module,exports){
 var Cache = require('../cache')
 var config = require('../config')
 var dirParser = require('./directive')
@@ -8226,7 +8112,7 @@ function inlineFilters (exp, single) {
   }
 }
 
-},{"../cache":16,"../config":21,"./directive":60}],65:[function(require,module,exports){
+},{"../cache":8,"../config":13,"./directive":52}],57:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -8307,7 +8193,7 @@ var apply = exports.apply = function (el, direction, op, vm, cb) {
   transition[action](op, cb)
 }
 
-},{"../util":72}],66:[function(require,module,exports){
+},{"../util":64}],58:[function(require,module,exports){
 var _ = require('../util')
 var queue = []
 var queued = false
@@ -8344,7 +8230,7 @@ function flush () {
   return f
 }
 
-},{"../util":72}],67:[function(require,module,exports){
+},{"../util":64}],59:[function(require,module,exports){
 var _ = require('../util')
 var queue = require('./queue')
 var addClass = _.addClass
@@ -8713,7 +8599,7 @@ function isHidden (el) {
 
 module.exports = Transition
 
-},{"../util":72,"./queue":66}],68:[function(require,module,exports){
+},{"../util":64,"./queue":58}],60:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 
@@ -8867,7 +8753,7 @@ function formatValue (val) {
 }
 
 }).call(this,require('_process'))
-},{"./index":72,"_process":77}],69:[function(require,module,exports){
+},{"./index":64,"_process":77}],61:[function(require,module,exports){
 (function (process){
 /**
  * Enable debug utilities.
@@ -8918,7 +8804,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../config":21,"_process":77}],70:[function(require,module,exports){
+},{"../config":13,"_process":77}],62:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 var config = require('../config')
@@ -9285,7 +9171,7 @@ exports.removeNodeRange = function (start, end, vm, frag, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../config":21,"../transition":65,"./index":72,"_process":77}],71:[function(require,module,exports){
+},{"../config":13,"../transition":57,"./index":64,"_process":77}],63:[function(require,module,exports){
 // can we use __proto__?
 exports.hasProto = '__proto__' in {}
 
@@ -9372,7 +9258,7 @@ exports.nextTick = (function () {
   }
 })()
 
-},{}],72:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 var lang = require('./lang')
 var extend = lang.extend
 
@@ -9383,7 +9269,7 @@ extend(exports, require('./options'))
 extend(exports, require('./component'))
 extend(exports, require('./debug'))
 
-},{"./component":68,"./debug":69,"./dom":70,"./env":71,"./lang":73,"./options":74}],73:[function(require,module,exports){
+},{"./component":60,"./debug":61,"./dom":62,"./env":63,"./lang":65,"./options":66}],65:[function(require,module,exports){
 /**
  * Set a property on an object. Adds the new property and
  * triggers change notification if the property doesn't
@@ -9775,7 +9661,7 @@ exports.looseEqual = function (a, b) {
   /* eslint-enable eqeqeq */
 }
 
-},{}],74:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 var config = require('../config')
@@ -10138,7 +10024,7 @@ exports.resolveAsset = function resolve (options, type, id) {
 }
 
 }).call(this,require('_process'))
-},{"../config":21,"./index":72,"_process":77}],75:[function(require,module,exports){
+},{"../config":13,"./index":64,"_process":77}],67:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var extend = _.extend
@@ -10238,7 +10124,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./api/data":10,"./api/dom":11,"./api/events":12,"./api/global":13,"./api/lifecycle":14,"./directives/element":23,"./directives/public":38,"./filters":49,"./instance/events":52,"./instance/init":53,"./instance/lifecycle":54,"./instance/misc":55,"./instance/state":56,"./util":72,"_process":77}],76:[function(require,module,exports){
+},{"./api/data":2,"./api/dom":3,"./api/events":4,"./api/global":5,"./api/lifecycle":6,"./directives/element":15,"./directives/public":30,"./filters":41,"./instance/events":44,"./instance/init":45,"./instance/lifecycle":46,"./instance/misc":47,"./instance/state":48,"./util":64,"_process":77}],68:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -10578,7 +10464,121 @@ function traverse (val) {
 module.exports = Watcher
 
 }).call(this,require('_process'))
-},{"./batcher":15,"./config":21,"./observer/dep":58,"./parsers/expression":61,"./util":72,"_process":77}],77:[function(require,module,exports){
+},{"./batcher":7,"./config":13,"./observer/dep":50,"./parsers/expression":53,"./util":64,"_process":77}],69:[function(require,module,exports){
+var Vue = require('vue');
+var Nav = require('./components/navigation.vue');
+var Cover = require('./components/cover.vue');
+var Services = require('./components/services.vue');
+var Skills = require('./components/skills.vue');
+var Projects = require('./components/project.vue');
+var Experience = require('./components/experience.vue');
+var Contact = require('./components/contact.vue');
+
+new Vue({
+  el: 'body',
+  components: {
+    navigation: Nav,
+    cover: Cover,
+    services: Services,
+    skills: Skills,
+    projects: Projects,
+    experience: Experience,
+    contact: Contact
+  }
+});
+
+},{"./components/contact.vue":70,"./components/cover.vue":71,"./components/experience.vue":72,"./components/navigation.vue":73,"./components/project.vue":74,"./components/services.vue":75,"./components/skills.vue":76,"vue":67}],70:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Contact Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/contact.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],71:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <img src=\"https://s.gravatar.com/avatar/d809533c5ce964b709e2b38e6573973b?s=180\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n      <h1 class=\"display-3\">Fluid jumbotron</h1>\n      <p class=\"lead\">This is a modified jumbotron that occupies the entire horizontal space of it's parent.</p>\n    </div>\n  </div>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/cover.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],72:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"experience\" class=\"experience-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Experience Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/experience.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],73:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n          <div class=\"navbar-header page-scroll\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                  <span class=\"sr-only\">Toggle navigation</span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n              </button>\n              <a class=\"navbar-brand page-scroll\" href=\"#cover-wrapper\">Start Bootstrap</a>\n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n              <ul class=\"nav navbar-nav pull-rigth\">\n                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->\n                  <li class=\"hidden\">\n                      <a class=\"page-scroll\" href=\"#cover-wrapper\"></a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#services\">Servicios</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#skills\">Habilidades</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#projects\">Proyectos</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#experience\">Experiencia</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#contact\">Contacto</a>\n                  </li>\n              </ul>\n          </div>\n          <!-- /.navbar-collapse -->\n      </div>\n      <!-- /.container -->\n  </nav>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/navigation.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],74:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Projects Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/project.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],75:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"services\" class=\"services-section\">\n    <h1>¿Qué hago?</h1>\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-desktop fa-5x\"></i>\n                  <p class=\"service-title\">Diseño web</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-globe fa-5x\"></i>\n                  <p class=\"service-title\">Desarrollo web</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-mobile fa-5x\"></i>\n                  <p class=\"service-title\">Desarrollo móvil</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n              <div class=\"col-lg-3\">\n                  <i class=\"fa fa-code fa-5x\"></i>\n                  <p class=\"service-title\">Última tecnología</p>\n                  <p class=\"lead\">Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. </p>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/services.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],76:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                <!-- Tabs -->\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                  <li role=\"presentation\" class=\"active\"><a href=\"#frontend\" aria-controls=\"frontend\" role=\"tab\" data-toggle=\"tab\">Front-end</a></li>\n                  <li role=\"presentation\"><a href=\"#backend\" aria-controls=\"backend\" role=\"tab\" data-toggle=\"tab\">Back-end</a></li>\n                  <li role=\"presentation\"><a href=\"#mobile\" aria-controls=\"mobile\" role=\"tab\" data-toggle=\"tab\">Mobile</a></li>\n                </ul>\n\n                <!-- Tabs content -->\n                <div class=\"tab-content\">\n                  <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"frontend\">\n                    <div class=\"row\">\n                      <div class=\"container\">\n                        <div class=\"col-md-7\">\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%\">\n                              <span class=\"sr-only\">40% Complete (success)</span>\n                            </div>\n                          </div>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 20%\">\n                              <span class=\"sr-only\">20% Complete</span>\n                            </div>\n                          </div>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-warning\" role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 60%\">\n                              <span class=\"sr-only\">60% Complete (warning)</span>\n                            </div>\n                          </div>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-danger\" role=\"progressbar\" aria-valuenow=\"80\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 80%\">\n                              <span class=\"sr-only\">80% Complete (danger)</span>\n                            </div>\n                          </div>\n                        </div>\n                        <div class=\"col-md-5\">\n                          <div class=\"jumbotron\">\n                            <h3>Hello, world!</h3>\n                            <p>...</p>\n                            <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a></p>\n                          </div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"backend\">...</div>\n                  <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"mobile\">...</div>\n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/skills.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],77:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -10671,4 +10671,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[8]);
+},{}]},{},[69]);
