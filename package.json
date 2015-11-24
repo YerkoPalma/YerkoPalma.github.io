@@ -13,8 +13,8 @@
     "vueify-insert-css": "^1.0.0"
   },
   "devDependencies": {},
-  "scripts": {    
-    "build": "browserify -t vueify -e js/app.js -o js/app.production.js"
+  "scripts": {
+    "build": "browserify -t vueify -e src/app.js -o dist/app.production.js"
   },
   "repository": {
     "type": "git",
