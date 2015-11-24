@@ -1,0 +1,183 @@
+//@import "../bower_components/bootstrap/less/bootstrap";
+@import "mixins.less";
+@import "variables.less";
+
+// Reset and dependencies
+@import "normalize.less";
+@import "print.less";
+@import "glyphicons.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+@import "jumbotron.less";
+@import "progress-bars.less";
+
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+//Redefine some vars
+@navbar-default-bg: transparent;
+
+//own vars
+@primary-color: #F44336;
+@dark-primary-color: #D32F2F;
+@light-primary-color: #FFCDD2;
+@accent-color: #607D8B;
+@primary-text: #212121;
+@secondary-text: #727272;
+@divider-color: #B6B6B6;
+@link-menu-color: #F4F4F4;
+@white-text: #FCFCFC;
+
+/* ----------- GENERAL STYLES -----------*/
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------- HEADER STYLES -----------*/
+header {
+  height: 100%;
+  nav.navbar.navbar-default.navbar-fixed-top {
+    /*border-bottom-color: fade(@well-bg, 30%);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 0.7em 2em;*/
+
+    ul.nav.navbar-nav.pull-rigth {
+      @media (min-width: 768px){
+        float: right;
+        padding: 2px;
+        li {
+          .active {
+            background-color: lighten(@primary-color, 20%);
+            color: @primary-text;
+            & a{
+              color: @primary-text;
+            }
+            .border-top-radius(5px);
+            .border-left-radius(5px);
+            .border-bottom-radius(5px);
+            .border-right-radius(5px);
+          }
+
+          &:hover{
+            & a{
+              color: @white-text;
+            }
+          }
+        }
+      }
+    }
+    a {
+      color: @secondary-text;
+    }
+
+    &.top-nav-collapse{
+      @media (min-width: 768px){
+        background-color: @dark-primary-color;
+      }
+    }
+  }
+  #cover-wrapper{
+    background-image: url(../img/wallpaper.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    //position: fixed;
+    padding: 0;
+    z-index: 10;
+    #cover{
+      background-color: fade(black, 90%);
+      color: @white-text;
+      padding: 9em 2rem;
+      z-index: 100;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+  }
+  @media(min-width:767px) {
+      .navbar {
+          padding: 20px 0;
+          -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+          -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+          transition: background .5s ease-in-out,padding .5s ease-in-out;
+      }
+
+      nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
+          padding: 0;
+          a{
+            color: @link-menu-color;
+          }
+      }
+  }
+}
+
+/* ----------- MAIN STYLES -----------*/
+main{
+  //height: 100%;
+
+  section{
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+
+    &#services {
+        padding-top: 100px;
+        background: #eee;
+
+        .service-title{
+          color: @dark-primary-color;
+          font-weight: 900;
+          font-size: 2em;
+        }
+
+        h1{
+          font-size: 4em;
+          margin-bottom: 50px;
+        }
+
+        i.fa {
+          margin-bottom: 0.5em;
+        }
+    }
+
+    &.skills-section {
+        background: #fff;
+    }
+
+    &.projects-section {
+        background: #eee;
+    }
+    &.experience-section {
+        background: #eee;
+    }
+    &.contact-section {
+        background: #eee;
+    }
+  }
+}
