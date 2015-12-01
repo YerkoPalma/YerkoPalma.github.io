@@ -1,9 +1,26 @@
 <template>
   <div class="container-fluid" id="cover-wrapper">
     <div class="row text-center" id="cover">
-      <img src="https://s.gravatar.com/avatar/d809533c5ce964b709e2b38e6573973b?s=180" class="img-circle center-block" style="display: block;" alt="...">
-      <h1 class="display-3">Fluid jumbotron</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of it's parent.</p>
+      <img src="{{src}}" class="img-circle center-block" style="display: block;" alt="...">
+      <h1 class="display-3">{{title}}</h1>
+      <p class="lead">{{subTitle}}</p>
     </div>
   </div>
 </template>
+
+<script>
+  export default{
+    props: {
+      src: {
+        type: String
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      subTitle: {
+        type: String,
+      }
+    }
+  }
+</script>
