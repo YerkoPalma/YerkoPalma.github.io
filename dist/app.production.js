@@ -10501,7 +10501,27 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":67,"vue-hot-reload-api":1}],71:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <img src=\"https://s.gravatar.com/avatar/d809533c5ce964b709e2b38e6573973b?s=180\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n      <h1 class=\"display-3\">Fluid jumbotron</h1>\n      <p class=\"lead\">This is a modified jumbotron that occupies the entire horizontal space of it's parent.</p>\n    </div>\n  </div>\n"
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: {
+    src: {
+      type: String
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    subTitle: {
+      type: String
+    }
+  }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <img src=\"{{src}}\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n      <h1 class=\"display-3\">{{title}}</h1>\n      <p class=\"lead\">{{subTitle}}</p>\n    </div>\n  </div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
