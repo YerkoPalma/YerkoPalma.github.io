@@ -1,4 +1,5 @@
 var Vue = require('vue');
+var NavLink = require('./components/navlink.vue');
 var Nav = require('./components/navigation.vue');
 var Cover = require('./components/cover.vue');
 var Services = require('./components/services.vue');
@@ -16,6 +17,7 @@ new Vue({
     skills: Skills,
     projects: Projects,
     experience: Experience,
-    contact: Contact
+    contact: Contact,
+    navLink: NavLink
   }
 });

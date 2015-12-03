@@ -18,21 +18,7 @@
                   <li class="hidden">
                       <a class="page-scroll" href="#cover-wrapper"></a>
                   </li>
-                  <li>
-                      <a class="page-scroll" href="#services">Servicios</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#skills">Habilidades</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#projects">Proyectos</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#experience">Experiencia</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#contact">Contacto</a>
-                  </li>
+                  <slot></slot>                  
               </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -42,6 +28,7 @@
 </template>
 
 <script>
+
   export default{
     props: {
       root: {
