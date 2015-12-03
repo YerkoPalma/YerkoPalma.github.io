@@ -10547,7 +10547,27 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":67,"vue-hot-reload-api":1}],73:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n          <div class=\"navbar-header page-scroll\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                  <span class=\"sr-only\">Toggle navigation</span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n              </button>\n              <a class=\"navbar-brand page-scroll\" href=\"#cover-wrapper\">Start Bootstrap</a>\n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n              <ul class=\"nav navbar-nav pull-rigth\">\n                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->\n                  <li class=\"hidden\">\n                      <a class=\"page-scroll\" href=\"#cover-wrapper\"></a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#services\">Servicios</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#skills\">Habilidades</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#projects\">Proyectos</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#experience\">Experiencia</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#contact\">Contacto</a>\n                  </li>\n              </ul>\n          </div>\n          <!-- /.navbar-collapse -->\n      </div>\n      <!-- /.container -->\n  </nav>\n"
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: {
+    root: {
+      type: Object,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      url: "#",
+      name: ""
+    };
+  }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n          <div class=\"navbar-header page-scroll\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                  <span class=\"sr-only\">Toggle navigation</span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n              </button>\n              <a class=\"navbar-brand page-scroll\" href=\"{{root.url}}\">{{root.name}}</a>\n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n              <ul class=\"nav navbar-nav pull-rigth\">\n                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->\n                  <li class=\"hidden\">\n                      <a class=\"page-scroll\" href=\"#cover-wrapper\"></a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#services\">Servicios</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#skills\">Habilidades</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#projects\">Proyectos</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#experience\">Experiencia</a>\n                  </li>\n                  <li>\n                      <a class=\"page-scroll\" href=\"#contact\">Contacto</a>\n                  </li>\n              </ul>\n          </div>\n          <!-- /.navbar-collapse -->\n      </div>\n      <!-- /.container -->\n  </nav>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
