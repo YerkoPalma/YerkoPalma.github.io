@@ -67,6 +67,29 @@ export default{
         { target: "frontend", name: "Front-end"},
         { target: "backend", name: "Back-end"},
         { target: "mobile", name: "Mobile"}
+      ],
+      areas: [
+        {
+          name: 'frontend',
+          level: 80,
+          tools: [
+            {name: 'vue.js', level: 50, type: 'js-mvvm'},
+            {name: 'angular', level: 40, type: 'js-mvc'},
+            {name: 'jquery', level: 90, type: 'js-dom'},
+            {name: 'd3.js', level: 30, type: 'data-visualization'},
+            {name: 'css3', level: 80, type: 'style'},
+            {name: 'less', level: 85, type: 'style'},
+            {name: 'sass', level: 75, type: 'style'},
+            {name: 'compass', level: 40, type: 'style'}
+          ]
+        },
+        {
+          name: 'backend',
+          level: 75,
+          tools: [
+            {name: ''}
+          ]
+        }
       ]
     }
   }
