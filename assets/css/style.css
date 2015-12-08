@@ -5091,3 +5091,7 @@ main section.experience-section {
 main section.contact-section {
   background: #eee;
 }
+/* ------------------ SKILLS SECTION ------------------ */
+.tab-pane .container {
+  padding: 1em;
+}
