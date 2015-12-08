@@ -5092,6 +5092,13 @@ main section.contact-section {
   background: #eee;
 }
 /* ------------------ SKILLS SECTION ------------------ */
-.tab-pane .container {
+#skills .tab-pane .container {
+  padding: 1em;
+}
+#skills .tab-pane p {
+  margin: 0;
+  color: #666;
+}
+#skills .col-md-5 {
   padding: 1em;
 }
