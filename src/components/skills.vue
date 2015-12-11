@@ -66,12 +66,13 @@ export default{
       tabs: [
         { target: "frontend", name: "Front-end"},
         { target: "backend", name: "Back-end"},
+        { target: "database", name: "Bases de datos"},
         { target: "mobile", name: "Mobile"}
       ],
       areas: [
         {
           name: 'frontend',
-          level: 80,
+          level: 75,
           tools: [
             {name: 'vue.js', level: 50, type: 'js-mvvm'},
             {name: 'angular', level: 40, type: 'js-mvc'},
@@ -85,9 +86,37 @@ export default{
         },
         {
           name: 'backend',
-          level: 75,
+          level: 85,
           tools: [
-            {name: ''}
+            {name: 'ruby on rails', level: 85, type: 'mvc'},
+            {name: 'node.js', level: 75, type: 'backend'},
+            {name: 'express.js', level: 80, type: 'mvc'},
+            {name: 'cakePhp', level: 90, type: 'mvc'},
+            {name: 'wordpress', level: 85, type: 'cms'},
+            {name: 'pagekit', level: 70, type: 'cms'},
+            {name: '.net', level: 90, type: 'mvc'}
+          ]
+        },
+        {
+          name: 'database',
+          level: 60,
+          tools: [
+            {name: 'mysql', level: 75, type: 'sql'},
+            {name: 'postgresql', level: 85, type: 'sql'},
+            {name: 'sql server', level: 80, type: 'sql'},
+            {name: 'mongodb', level: 90, type: 'nosql - document'},
+            {name: 'dynamodb', level: 30, type: 'nosql - key/value'}
+          ]
+        },
+        {
+          name: 'mobile',
+          level: 70,
+          tools: [
+            {name: 'android', level: 55, type: 'native'},
+            {name: 'ios', level: 0, type: 'native'},
+            {name: 'ionic', level: 90, type: 'hibrid - webview'},
+            {name: 'cordova', level: 80, type: 'hibrid - webview'},
+            {name: 'nativescript', level: 20, type: 'hibrid - native'}
           ]
         }
       ]
