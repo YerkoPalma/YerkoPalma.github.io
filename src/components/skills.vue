@@ -13,32 +13,13 @@
                 <!-- Tabs content -->
                 <div class="tab-content">
                   <!-- Front-end -->
-                  <div role="tabpanel" class="tab-pane fade in active" id="frontend">
-                    <div class="row">
-                      <div class="container">
-                        <div class="col-md-7">
-                          <p class="text-left">Js-Dom</p>
-                          <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                              <span class="sr-only">40% Complete (success)</span>
-                            </div>
-                          </div>
-                          <p class="text-left">Js-MVC/MVVM</p>
-                          <div class="progress">
-                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                              <span class="sr-only">20% Complete</span>
-                            </div>
-                          </div>
-                          <p class="text-left">Css-Style</p>
-                          <div class="progress">
-                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                              <span class="sr-only">60% Complete (warning)</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> <!-- /Front-end -->
+                  <skill v-for="area in areas"
+                    :tools="area.tools"
+                    level="area.level"
+                    skill-id="area.name">
+                  </skill>
+
+                   <!-- /Front-end -->
 
                   <!-- Back-end -->
                   <div role="tabpanel" class="tab-pane fade" id="backend">
@@ -60,6 +41,8 @@
 </template>
 
 <script>
+import skill from './skill.vue'
+
 export default{
   data(){
     return {
@@ -121,6 +104,9 @@ export default{
         }
       ]
     }
+  },
+  components: {
+    skill
   }
 }
 </script>
