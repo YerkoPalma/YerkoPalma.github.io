@@ -954,7 +954,7 @@ config._assetTypes.forEach(function (type) {
 })
 
 }).call(this,require('_process'))
-},{"../compiler":11,"../config":13,"../directives/internal":20,"../fragment/factory":42,"../parsers/directive":52,"../parsers/expression":53,"../parsers/path":54,"../parsers/template":55,"../parsers/text":56,"../util":64,"_process":79}],6:[function(require,module,exports){
+},{"../compiler":11,"../config":13,"../directives/internal":20,"../fragment/factory":42,"../parsers/directive":52,"../parsers/expression":53,"../parsers/path":54,"../parsers/template":55,"../parsers/text":56,"../util":64,"_process":80}],6:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -1026,7 +1026,7 @@ exports.$compile = function (el, host, scope, frag) {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":11,"../util":64,"_process":79}],7:[function(require,module,exports){
+},{"../compiler":11,"../util":64,"_process":80}],7:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -1135,7 +1135,7 @@ exports.push = function (watcher) {
 }
 
 }).call(this,require('_process'))
-},{"./config":13,"./util":64,"_process":79}],8:[function(require,module,exports){
+},{"./config":13,"./util":64,"_process":80}],8:[function(require,module,exports){
 /**
  * A doubly linked list-based Least Recently Used (LRU)
  * cache. Will keep most recently used items while
@@ -1460,7 +1460,7 @@ function getDefault (vm, options) {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"../directives/internal/prop":21,"../parsers/directive":52,"../parsers/path":54,"../util":64,"_process":79}],10:[function(require,module,exports){
+},{"../config":13,"../directives/internal/prop":21,"../parsers/directive":52,"../parsers/path":54,"../util":64,"_process":80}],10:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var publicDirectives = require('../directives/public')
@@ -2235,7 +2235,7 @@ function makeNodeLinkFn (directives) {
 }
 
 }).call(this,require('_process'))
-},{"../directives/internal":20,"../directives/public":30,"../parsers/directive":52,"../parsers/template":55,"../parsers/text":56,"../util":64,"./compile-props":9,"_process":79}],11:[function(require,module,exports){
+},{"../directives/internal":20,"../directives/public":30,"../parsers/directive":52,"../parsers/template":55,"../parsers/text":56,"../util":64,"./compile-props":9,"_process":80}],11:[function(require,module,exports){
 var _ = require('../util')
 
 _.extend(exports, require('./compile'))
@@ -2393,7 +2393,7 @@ function mergeAttrs (from, to) {
 }
 
 }).call(this,require('_process'))
-},{"../parsers/template":55,"../util":64,"_process":79}],13:[function(require,module,exports){
+},{"../parsers/template":55,"../util":64,"_process":80}],13:[function(require,module,exports){
 module.exports = {
 
   /**
@@ -2833,7 +2833,7 @@ Directive.prototype._teardown = function () {
 module.exports = Directive
 
 }).call(this,require('_process'))
-},{"./parsers/expression":53,"./util":64,"./watcher":68,"_process":79}],15:[function(require,module,exports){
+},{"./parsers/expression":53,"./util":64,"./watcher":68,"_process":80}],15:[function(require,module,exports){
 exports.slot = require('./slot')
 exports.partial = require('./partial')
 
@@ -2884,7 +2884,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":42,"../../util":64,"../public/if":29,"_process":79}],17:[function(require,module,exports){
+},{"../../fragment/factory":42,"../../util":64,"../public/if":29,"_process":80}],17:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -3435,7 +3435,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../parsers/template":55,"../../util":64,"_process":79}],20:[function(require,module,exports){
+},{"../../parsers/template":55,"../../util":64,"_process":80}],20:[function(require,module,exports){
 exports.style = require('./style')
 exports['class'] = require('./class')
 exports.component = require('./component')
@@ -3771,7 +3771,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":64,"../internal/style":22,"_process":79}],25:[function(require,module,exports){
+},{"../../util":64,"../internal/style":22,"_process":80}],25:[function(require,module,exports){
 module.exports = {
   bind: function () {
     var el = this.el
@@ -4403,7 +4403,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":42,"../../util":64,"_process":79}],28:[function(require,module,exports){
+},{"../../fragment/factory":42,"../../util":64,"_process":80}],28:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -4515,7 +4515,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":42,"../../util":64,"_process":79}],30:[function(require,module,exports){
+},{"../../fragment/factory":42,"../../util":64,"_process":80}],30:[function(require,module,exports){
 // text & html
 exports.text = require('./text')
 exports.html = require('./html')
@@ -4691,7 +4691,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../../util":64,"./checkbox":31,"./radio":33,"./select":34,"./text":35,"_process":79}],33:[function(require,module,exports){
+},{"../../../util":64,"./checkbox":31,"./radio":33,"./select":34,"./text":35,"_process":80}],33:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -5104,7 +5104,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":64,"_process":79}],37:[function(require,module,exports){
+},{"../../util":64,"_process":80}],37:[function(require,module,exports){
 (function (process){
 if (process.env.NODE_ENV !== 'production') {
   module.exports = {
@@ -5118,7 +5118,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../util":64,"_process":79}],38:[function(require,module,exports){
+},{"../../util":64,"_process":80}],38:[function(require,module,exports){
 var _ = require('../../util')
 var transition = require('../../transition')
 
@@ -5815,7 +5815,7 @@ exports._callHook = function (hook) {
 }
 
 }).call(this,require('_process'))
-},{"../util":64,"_process":79}],45:[function(require,module,exports){
+},{"../util":64,"_process":80}],45:[function(require,module,exports){
 var mergeOptions = require('../util').mergeOptions
 var uid = 0
 
@@ -6265,7 +6265,7 @@ exports._resolveComponent = function (id, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../util":64,"_process":79}],48:[function(require,module,exports){
+},{"../util":64,"_process":80}],48:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -6510,7 +6510,7 @@ exports._initMeta = function () {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":11,"../observer":51,"../observer/dep":50,"../util":64,"../watcher":68,"_process":79}],49:[function(require,module,exports){
+},{"../compiler":11,"../observer":51,"../observer/dep":50,"../util":64,"../watcher":68,"_process":80}],49:[function(require,module,exports){
 var _ = require('../util')
 var arrayProto = Array.prototype
 var arrayMethods = Object.create(arrayProto)
@@ -7298,7 +7298,7 @@ exports.isSimplePath = function (exp) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":8,"../util":64,"./path":54,"_process":79}],54:[function(require,module,exports){
+},{"../cache":8,"../util":64,"./path":54,"_process":80}],54:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var Cache = require('../cache')
@@ -7660,7 +7660,7 @@ exports.set = function (obj, path, val) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":8,"../util":64,"_process":79}],55:[function(require,module,exports){
+},{"../cache":8,"../util":64,"_process":80}],55:[function(require,module,exports){
 var _ = require('../util')
 var Cache = require('../cache')
 var templateCache = new Cache(1000)
@@ -8753,7 +8753,7 @@ function formatValue (val) {
 }
 
 }).call(this,require('_process'))
-},{"./index":64,"_process":79}],61:[function(require,module,exports){
+},{"./index":64,"_process":80}],61:[function(require,module,exports){
 (function (process){
 /**
  * Enable debug utilities.
@@ -8804,7 +8804,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"_process":79}],62:[function(require,module,exports){
+},{"../config":13,"_process":80}],62:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 var config = require('../config')
@@ -9171,7 +9171,7 @@ exports.removeNodeRange = function (start, end, vm, frag, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"../transition":57,"./index":64,"_process":79}],63:[function(require,module,exports){
+},{"../config":13,"../transition":57,"./index":64,"_process":80}],63:[function(require,module,exports){
 // can we use __proto__?
 exports.hasProto = '__proto__' in {}
 
@@ -10024,7 +10024,7 @@ exports.resolveAsset = function resolve (options, type, id) {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"./index":64,"_process":79}],67:[function(require,module,exports){
+},{"../config":13,"./index":64,"_process":80}],67:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var extend = _.extend
@@ -10124,7 +10124,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./api/data":2,"./api/dom":3,"./api/events":4,"./api/global":5,"./api/lifecycle":6,"./directives/element":15,"./directives/public":30,"./filters":41,"./instance/events":44,"./instance/init":45,"./instance/lifecycle":46,"./instance/misc":47,"./instance/state":48,"./util":64,"_process":79}],68:[function(require,module,exports){
+},{"./api/data":2,"./api/dom":3,"./api/events":4,"./api/global":5,"./api/lifecycle":6,"./directives/element":15,"./directives/public":30,"./filters":41,"./instance/events":44,"./instance/init":45,"./instance/lifecycle":46,"./instance/misc":47,"./instance/state":48,"./util":64,"_process":80}],68:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -10464,7 +10464,7 @@ function traverse (val) {
 module.exports = Watcher
 
 }).call(this,require('_process'))
-},{"./batcher":7,"./config":13,"./observer/dep":50,"./parsers/expression":53,"./util":64,"_process":79}],69:[function(require,module,exports){
+},{"./batcher":7,"./config":13,"./observer/dep":50,"./parsers/expression":53,"./util":64,"_process":80}],69:[function(require,module,exports){
 var Vue = require('vue');
 var NavLink = require('./components/navlink.vue');
 var Service = require('./components/service.vue');
@@ -10475,6 +10475,8 @@ var Skills = require('./components/skills.vue');
 var Projects = require('./components/project.vue');
 var Experience = require('./components/experience.vue');
 var Contact = require('./components/contact.vue');
+
+Vue.config.debug = true;
 
 new Vue({
   el: 'body',
@@ -10491,7 +10493,7 @@ new Vue({
   }
 });
 
-},{"./components/contact.vue":70,"./components/cover.vue":71,"./components/experience.vue":72,"./components/navigation.vue":73,"./components/navlink.vue":74,"./components/project.vue":75,"./components/service.vue":76,"./components/services.vue":77,"./components/skills.vue":78,"vue":67}],70:[function(require,module,exports){
+},{"./components/contact.vue":70,"./components/cover.vue":71,"./components/experience.vue":72,"./components/navigation.vue":73,"./components/navlink.vue":74,"./components/project.vue":75,"./components/service.vue":76,"./components/services.vue":77,"./components/skills.vue":79,"vue":67}],70:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Contact Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -10753,6 +10755,80 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
+  props: {
+    tools: {
+      type: Array,
+      required: true
+    },
+    level: {
+      type: Number
+    },
+    skillId: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    groups: function groups() {
+      //needs to return an object with the computed data to iterate through it
+      var _groups = [];
+
+      var getIndex = function getIndex(arr, obj) {
+        for (var i = 0; i < arr.length; i++) {
+          if (obj.type === arr[i].type) {
+            return i;
+          }
+        }
+        return -1;
+      };
+
+      for (var i = 0; i < this.tools.length; i++) {
+        var actual = this.tools[i];
+        var index = getIndex(_groups, actual);
+        console.log("i: " + i + ", index: " + index);
+        //si se encuentra el type
+        if (index >= 0) {
+          //se suma el value al objeto ya ingresaod en _groups
+          var sum = _groups[index];
+          sum.value = sum.value + actual.level;
+          _groups[index] = sum;
+          //si no se encuentra el type
+        } else {
+            //se agrega el obj con type y valor
+            _groups.push({ type: actual.type, value: actual.level });
+          }
+      }
+      return _groups;
+    }
+  }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div role=\"tabpanel\" class=\"tab-pane fade in active\" v-bind:class=\"{'in' : $index === 0, 'active' : $index === 0}\" id=\"{{skillId}}\">\n    <div class=\"row\">\n      <div class=\"container\">\n        <div class=\"col-md-7\">\n\n          <template v-for=\"group in groups\">\n            <p class=\"text-left\">{{group.type}}</p>\n            <div class=\"progress\">\n              <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"{{group.value}}\" aria-valuemin=\"0\" aria-valuemax=\"100\" v-bind:style=\"{width: group.value + '%'}\">\n                <span class=\"sr-only\">{{group.value}}% Complete (success)</span>\n              </div>\n            </div>\n          </template>\n\n        </div>\n      </div>\n    </div>\n  </div>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/skill.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":67,"vue-hot-reload-api":1}],79:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _skill = require("./skill.vue");
+
+var _skill2 = _interopRequireDefault(_skill);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
   data: function data() {
     return {
       tabs: [{ target: "frontend", name: "Front-end" }, { target: "backend", name: "Back-end" }, { target: "database", name: "Bases de datos" }, { target: "mobile", name: "Mobile" }],
@@ -10774,10 +10850,14 @@ exports.default = {
         tools: [{ name: 'android', level: 55, type: 'native' }, { name: 'ios', level: 0, type: 'native' }, { name: 'ionic', level: 90, type: 'hibrid - webview' }, { name: 'cordova', level: 80, type: 'hibrid - webview' }, { name: 'nativescript', level: 20, type: 'hibrid - native' }]
       }]
     };
+  },
+
+  components: {
+    skill: _skill2.default
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-7\">\n                <!-- Tabs -->\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                  <li role=\"presentation\" v-for=\"tab in tabs\" v-bind:class=\"{ 'active' : $index === 0 }\">\n                    <a href=\"#{{tab.target}}\" role=\"tab\" aria-controls=\"{{tab.target}}\" data-toggle=\"tab\">{{tab.name}}</a>\n                  </li>\n                </ul>\n\n                <!-- Tabs content -->\n                <div class=\"tab-content\">\n                  <!-- Front-end -->\n                  <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"frontend\">\n                    <div class=\"row\">\n                      <div class=\"container\">\n                        <div class=\"col-md-7\">\n                          <p class=\"text-left\">Js-Dom</p>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%\">\n                              <span class=\"sr-only\">40% Complete (success)</span>\n                            </div>\n                          </div>\n                          <p class=\"text-left\">Js-MVC/MVVM</p>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 20%\">\n                              <span class=\"sr-only\">20% Complete</span>\n                            </div>\n                          </div>\n                          <p class=\"text-left\">Css-Style</p>\n                          <div class=\"progress\">\n                            <div class=\"progress-bar progress-bar-warning\" role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 60%\">\n                              <span class=\"sr-only\">60% Complete (warning)</span>\n                            </div>\n                          </div>\n                        </div>\n                      </div>\n                    </div>\n                  </div> <!-- /Front-end -->\n\n                  <!-- Back-end -->\n                  <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"backend\">\n\n                  </div><!-- /Back-end -->\n                  <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"mobile\">...</div>\n                </div>\n              </div>\n              <div class=\"col-md-5\">\n                <div class=\"jumbotron\">\n                  <h3>Hello, world!</h3>\n                  <p>...</p>\n                  <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a></p>\n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-7\">\n                <!-- Tabs -->\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                  <li role=\"presentation\" v-for=\"tab in tabs\" v-bind:class=\"{ 'active' : $index === 0 }\">\n                    <a href=\"#{{tab.target}}\" role=\"tab\" aria-controls=\"{{tab.target}}\" data-toggle=\"tab\">{{tab.name}}</a>\n                  </li>\n                </ul>\n\n                <!-- Tabs content -->\n                <div class=\"tab-content\">\n                  <!-- Front-end -->\n                  <skill v-for=\"area in areas\" :tools=\"area.tools\" :level=\"area.level\" :skill-id=\"area.name\">\n                  </skill>\n\n                   <!-- /Front-end -->\n\n                </div>\n              </div>\n              <div class=\"col-md-5\">\n                <div class=\"jumbotron\">\n                  <h3>Hello, world!</h3>\n                  <p>...</p>\n                  <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a></p>\n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10789,7 +10869,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],79:[function(require,module,exports){
+},{"./skill.vue":78,"vue":67,"vue-hot-reload-api":1}],80:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};

@@ -9,6 +9,8 @@ var Projects = require('./components/project.vue');
 var Experience = require('./components/experience.vue');
 var Contact = require('./components/contact.vue');
 
+Vue.config.debug = true;
+
 new Vue({
   el: 'body',
   components: {

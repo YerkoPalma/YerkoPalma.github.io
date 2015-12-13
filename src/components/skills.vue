@@ -15,17 +15,12 @@
                   <!-- Front-end -->
                   <skill v-for="area in areas"
                     :tools="area.tools"
-                    level="area.level"
-                    skill-id="area.name">
+                    :level="area.level"
+                    :skill-id="area.name">
                   </skill>
 
                    <!-- /Front-end -->
 
-                  <!-- Back-end -->
-                  <div role="tabpanel" class="tab-pane fade" id="backend">
-
-                  </div><!-- /Back-end -->
-                  <div role="tabpanel" class="tab-pane fade" id="mobile">...</div>
                 </div>
               </div>
               <div class="col-md-5">
