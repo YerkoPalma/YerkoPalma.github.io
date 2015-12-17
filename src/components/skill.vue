@@ -5,12 +5,14 @@
         <div class="col-md-7">
 
           <template v-for="group in groups">
-            <p class="text-left">{{group.type}}</p>
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{group.value}}" aria-valuemin="0" aria-valuemax="100" v-bind:style="{width: group.value + '%'}">
-                <span class="sr-only">{{group.value}}% Complete (success)</span>
+            <a href="#" v-on:click="draw( group.type, $event )" id="{{group.type}}">
+              <p class="text-left">{{group.type}}</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{group.value}}" aria-valuemin="0" aria-valuemax="100" v-bind:style="{width: group.value + '%'}">
+                  <span class="sr-only">{{group.value}}% Complete (success)</span>
+                </div>
               </div>
-            </div>
+            </a>
           </template>
 
         </div>
@@ -34,6 +36,14 @@ export default{
       required: true
     }
   },
+  methods: {
+    draw: function ( type, event) {
+      event.preventDefault();
+      //dispatch to the parent the data selected
+      
+      this.$dispatch('chartify', this.tools.filter(function(element) { return element.type === type }));
+    }
+  },
   computed: {
     groups: function() {
       //needs to return an object with the computed data to iterate through it
@@ -51,7 +61,6 @@ export default{
       for (var i = 0; i < this.tools.length; i++){
         var actual = this.tools[i];
         var index = getIndex(_groups, actual);
-        console.log("i: " + i + ", index: " + index);
         //si se encuentra el type
         if ( index >= 0 ) {
           //se suma el value al objeto ya ingresaod en _groups

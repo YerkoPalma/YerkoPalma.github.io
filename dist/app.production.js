@@ -1,4 +1,14 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/json/stringify"), __esModule: true };
+},{"core-js/library/fn/json/stringify":2}],2:[function(require,module,exports){
+var core = require('../../modules/$.core');
+module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+  return (core.JSON && core.JSON.stringify || JSON.stringify).apply(JSON, arguments);
+};
+},{"../../modules/$.core":3}],3:[function(require,module,exports){
+var core = module.exports = {version: '1.2.6'};
+if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+},{}],4:[function(require,module,exports){
 var Vue // late bind
 var map = Object.create(null)
 var shimmed = false
@@ -236,7 +246,7 @@ function format (id) {
   return id.match(/[^\/]+\.vue$/)[0]
 }
 
-},{}],2:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 var _ = require('../util')
 var Watcher = require('../watcher')
 var Path = require('../parsers/path')
@@ -412,7 +422,7 @@ function clean (obj) {
   return JSON.parse(JSON.stringify(obj))
 }
 
-},{"../parsers/directive":52,"../parsers/expression":53,"../parsers/path":54,"../parsers/text":56,"../util":64,"../watcher":68}],3:[function(require,module,exports){
+},{"../parsers/directive":55,"../parsers/expression":56,"../parsers/path":57,"../parsers/text":59,"../util":67,"../watcher":71}],6:[function(require,module,exports){
 var _ = require('../util')
 var transition = require('../transition')
 
@@ -618,7 +628,7 @@ function remove (el, vm, cb) {
   if (cb) cb()
 }
 
-},{"../transition":57,"../util":64}],4:[function(require,module,exports){
+},{"../transition":60,"../util":67}],7:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -789,7 +799,7 @@ function modifyListenerCount (vm, event, count) {
   }
 }
 
-},{"../util":64}],5:[function(require,module,exports){
+},{"../util":67}],8:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var config = require('../config')
@@ -954,7 +964,7 @@ config._assetTypes.forEach(function (type) {
 })
 
 }).call(this,require('_process'))
-},{"../compiler":11,"../config":13,"../directives/internal":20,"../fragment/factory":42,"../parsers/directive":52,"../parsers/expression":53,"../parsers/path":54,"../parsers/template":55,"../parsers/text":56,"../util":64,"_process":80}],6:[function(require,module,exports){
+},{"../compiler":14,"../config":16,"../directives/internal":23,"../fragment/factory":45,"../parsers/directive":55,"../parsers/expression":56,"../parsers/path":57,"../parsers/template":58,"../parsers/text":59,"../util":67,"_process":83}],9:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -1026,7 +1036,7 @@ exports.$compile = function (el, host, scope, frag) {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":11,"../util":64,"_process":80}],7:[function(require,module,exports){
+},{"../compiler":14,"../util":67,"_process":83}],10:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -1135,7 +1145,7 @@ exports.push = function (watcher) {
 }
 
 }).call(this,require('_process'))
-},{"./config":13,"./util":64,"_process":80}],8:[function(require,module,exports){
+},{"./config":16,"./util":67,"_process":83}],11:[function(require,module,exports){
 /**
  * A doubly linked list-based Least Recently Used (LRU)
  * cache. Will keep most recently used items while
@@ -1249,7 +1259,7 @@ p.get = function (key, returnEntry) {
 
 module.exports = Cache
 
-},{}],9:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var dirParser = require('../parsers/directive')
@@ -1460,7 +1470,7 @@ function getDefault (vm, options) {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"../directives/internal/prop":21,"../parsers/directive":52,"../parsers/path":54,"../util":64,"_process":80}],10:[function(require,module,exports){
+},{"../config":16,"../directives/internal/prop":24,"../parsers/directive":55,"../parsers/path":57,"../util":67,"_process":83}],13:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var publicDirectives = require('../directives/public')
@@ -2235,13 +2245,13 @@ function makeNodeLinkFn (directives) {
 }
 
 }).call(this,require('_process'))
-},{"../directives/internal":20,"../directives/public":30,"../parsers/directive":52,"../parsers/template":55,"../parsers/text":56,"../util":64,"./compile-props":9,"_process":80}],11:[function(require,module,exports){
+},{"../directives/internal":23,"../directives/public":33,"../parsers/directive":55,"../parsers/template":58,"../parsers/text":59,"../util":67,"./compile-props":12,"_process":83}],14:[function(require,module,exports){
 var _ = require('../util')
 
 _.extend(exports, require('./compile'))
 _.extend(exports, require('./transclude'))
 
-},{"../util":64,"./compile":10,"./transclude":12}],12:[function(require,module,exports){
+},{"../util":67,"./compile":13,"./transclude":15}],15:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var templateParser = require('../parsers/template')
@@ -2393,7 +2403,7 @@ function mergeAttrs (from, to) {
 }
 
 }).call(this,require('_process'))
-},{"../parsers/template":55,"../util":64,"_process":80}],13:[function(require,module,exports){
+},{"../parsers/template":58,"../util":67,"_process":83}],16:[function(require,module,exports){
 module.exports = {
 
   /**
@@ -2507,7 +2517,7 @@ Object.defineProperty(module.exports, 'unsafeDelimiters', {
   }
 })
 
-},{"./parsers/text":56}],14:[function(require,module,exports){
+},{"./parsers/text":59}],17:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var Watcher = require('./watcher')
@@ -2833,11 +2843,11 @@ Directive.prototype._teardown = function () {
 module.exports = Directive
 
 }).call(this,require('_process'))
-},{"./parsers/expression":53,"./util":64,"./watcher":68,"_process":80}],15:[function(require,module,exports){
+},{"./parsers/expression":56,"./util":67,"./watcher":71,"_process":83}],18:[function(require,module,exports){
 exports.slot = require('./slot')
 exports.partial = require('./partial')
 
-},{"./partial":16,"./slot":17}],16:[function(require,module,exports){
+},{"./partial":19,"./slot":20}],19:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var vIf = require('../public/if')
@@ -2884,7 +2894,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":42,"../../util":64,"../public/if":29,"_process":80}],17:[function(require,module,exports){
+},{"../../fragment/factory":45,"../../util":67,"../public/if":32,"_process":83}],20:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -3010,7 +3020,7 @@ function extractFragment (nodes, parent, main) {
   }
 }
 
-},{"../../parsers/template":55,"../../util":64}],18:[function(require,module,exports){
+},{"../../parsers/template":58,"../../util":67}],21:[function(require,module,exports){
 var _ = require('../../util')
 var addClass = _.addClass
 var removeClass = _.removeClass
@@ -3083,7 +3093,7 @@ function contains (value, key) {
     : value.hasOwnProperty(key)
 }
 
-},{"../../util":64}],19:[function(require,module,exports){
+},{"../../util":67}],22:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
@@ -3435,14 +3445,14 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../parsers/template":55,"../../util":64,"_process":80}],20:[function(require,module,exports){
+},{"../../parsers/template":58,"../../util":67,"_process":83}],23:[function(require,module,exports){
 exports.style = require('./style')
 exports['class'] = require('./class')
 exports.component = require('./component')
 exports.prop = require('./prop')
 exports.transition = require('./transition')
 
-},{"./class":18,"./component":19,"./prop":21,"./style":22,"./transition":23}],21:[function(require,module,exports){
+},{"./class":21,"./component":22,"./prop":24,"./style":25,"./transition":26}],24:[function(require,module,exports){
 // NOTE: the prop internal directive is compiled and linked
 // during _initScope(), before the created hook is called.
 // The purpose is to make the initial prop values available
@@ -3513,7 +3523,7 @@ module.exports = {
   }
 }
 
-},{"../../config":13,"../../util":64,"../../watcher":68}],22:[function(require,module,exports){
+},{"../../config":16,"../../util":67,"../../watcher":71}],25:[function(require,module,exports){
 var _ = require('../../util')
 var prefixes = ['-webkit-', '-moz-', '-ms-']
 var camelPrefixes = ['Webkit', 'Moz', 'ms']
@@ -3622,7 +3632,7 @@ function prefix (prop) {
   }
 }
 
-},{"../../util":64}],23:[function(require,module,exports){
+},{"../../util":67}],26:[function(require,module,exports){
 var _ = require('../../util')
 var Transition = require('../../transition/transition')
 
@@ -3644,7 +3654,7 @@ module.exports = {
   }
 }
 
-},{"../../transition/transition":59,"../../util":64}],24:[function(require,module,exports){
+},{"../../transition/transition":62,"../../util":67}],27:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 
@@ -3771,7 +3781,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":64,"../internal/style":22,"_process":80}],25:[function(require,module,exports){
+},{"../../util":67,"../internal/style":25,"_process":83}],28:[function(require,module,exports){
 module.exports = {
   bind: function () {
     var el = this.el
@@ -3781,7 +3791,7 @@ module.exports = {
   }
 }
 
-},{}],26:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 var _ = require('../../util')
 
 module.exports = {
@@ -3810,7 +3820,7 @@ module.exports = {
   }
 }
 
-},{"../../util":64}],27:[function(require,module,exports){
+},{"../../util":67}],30:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var FragmentFactory = require('../../fragment/factory')
@@ -4403,7 +4413,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":42,"../../util":64,"_process":80}],28:[function(require,module,exports){
+},{"../../fragment/factory":45,"../../util":67,"_process":83}],31:[function(require,module,exports){
 var _ = require('../../util')
 var templateParser = require('../../parsers/template')
 
@@ -4445,7 +4455,7 @@ module.exports = {
   }
 }
 
-},{"../../parsers/template":55,"../../util":64}],29:[function(require,module,exports){
+},{"../../parsers/template":58,"../../util":67}],32:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 var FragmentFactory = require('../../fragment/factory')
@@ -4515,7 +4525,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../fragment/factory":42,"../../util":64,"_process":80}],30:[function(require,module,exports){
+},{"../../fragment/factory":45,"../../util":67,"_process":83}],33:[function(require,module,exports){
 // text & html
 exports.text = require('./text')
 exports.html = require('./html')
@@ -4541,7 +4551,7 @@ exports.ref = require('./ref')
 // cloak
 exports.cloak = require('./cloak')
 
-},{"./bind":24,"./cloak":25,"./el":26,"./for":27,"./html":28,"./if":29,"./model":32,"./on":36,"./ref":37,"./show":38,"./text":39}],31:[function(require,module,exports){
+},{"./bind":27,"./cloak":28,"./el":29,"./for":30,"./html":31,"./if":32,"./model":35,"./on":39,"./ref":40,"./show":41,"./text":42}],34:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4605,7 +4615,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":64}],32:[function(require,module,exports){
+},{"../../../util":67}],35:[function(require,module,exports){
 (function (process){
 var _ = require('../../../util')
 
@@ -4691,7 +4701,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../../util":64,"./checkbox":31,"./radio":33,"./select":34,"./text":35,"_process":80}],33:[function(require,module,exports){
+},{"../../../util":67,"./checkbox":34,"./radio":36,"./select":37,"./text":38,"_process":83}],36:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4727,7 +4737,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":64}],34:[function(require,module,exports){
+},{"../../../util":67}],37:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4847,7 +4857,7 @@ function indexOf (arr, val) {
   return -1
 }
 
-},{"../../../util":64}],35:[function(require,module,exports){
+},{"../../../util":67}],38:[function(require,module,exports){
 var _ = require('../../../util')
 
 module.exports = {
@@ -4976,7 +4986,7 @@ module.exports = {
   }
 }
 
-},{"../../../util":64}],36:[function(require,module,exports){
+},{"../../../util":67}],39:[function(require,module,exports){
 (function (process){
 var _ = require('../../util')
 
@@ -5104,7 +5114,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'))
-},{"../../util":64,"_process":80}],37:[function(require,module,exports){
+},{"../../util":67,"_process":83}],40:[function(require,module,exports){
 (function (process){
 if (process.env.NODE_ENV !== 'production') {
   module.exports = {
@@ -5118,7 +5128,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../../util":64,"_process":80}],38:[function(require,module,exports){
+},{"../../util":67,"_process":83}],41:[function(require,module,exports){
 var _ = require('../../util')
 var transition = require('../../transition')
 
@@ -5146,7 +5156,7 @@ module.exports = {
   }
 }
 
-},{"../../transition":57,"../../util":64}],39:[function(require,module,exports){
+},{"../../transition":60,"../../util":67}],42:[function(require,module,exports){
 var _ = require('../../util')
 
 module.exports = {
@@ -5162,7 +5172,7 @@ module.exports = {
   }
 }
 
-},{"../../util":64}],40:[function(require,module,exports){
+},{"../../util":67}],43:[function(require,module,exports){
 var _ = require('../util')
 var Path = require('../parsers/path')
 var toArray = require('../directives/public/for')._postProcess
@@ -5282,7 +5292,7 @@ function contains (val, search) {
   }
 }
 
-},{"../directives/public/for":27,"../parsers/path":54,"../util":64}],41:[function(require,module,exports){
+},{"../directives/public/for":30,"../parsers/path":57,"../util":67}],44:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -5402,7 +5412,7 @@ exports.debounce = function (handler, delay) {
 
 _.extend(exports, require('./array-filters'))
 
-},{"../util":64,"./array-filters":40}],42:[function(require,module,exports){
+},{"../util":67,"./array-filters":43}],45:[function(require,module,exports){
 var _ = require('../util')
 var compiler = require('../compiler')
 var templateParser = require('../parsers/template')
@@ -5460,7 +5470,7 @@ FragmentFactory.prototype.create = function (host, scope, parentFrag) {
 
 module.exports = FragmentFactory
 
-},{"../cache":8,"../compiler":11,"../parsers/template":55,"../util":64,"./fragment":43}],43:[function(require,module,exports){
+},{"../cache":11,"../compiler":14,"../parsers/template":58,"../util":67,"./fragment":46}],46:[function(require,module,exports){
 var _ = require('../util')
 var transition = require('../transition')
 
@@ -5648,7 +5658,7 @@ function detach (child) {
 
 module.exports = Fragment
 
-},{"../transition":57,"../util":64}],44:[function(require,module,exports){
+},{"../transition":60,"../util":67}],47:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var inDoc = _.inDoc
@@ -5815,7 +5825,7 @@ exports._callHook = function (hook) {
 }
 
 }).call(this,require('_process'))
-},{"../util":64,"_process":80}],45:[function(require,module,exports){
+},{"../util":67,"_process":83}],48:[function(require,module,exports){
 var mergeOptions = require('../util').mergeOptions
 var uid = 0
 
@@ -5929,7 +5939,7 @@ exports._init = function (options) {
   }
 }
 
-},{"../util":64}],46:[function(require,module,exports){
+},{"../util":67}],49:[function(require,module,exports){
 var _ = require('../util')
 var Directive = require('../directive')
 var compiler = require('../compiler')
@@ -6168,7 +6178,7 @@ exports._cleanup = function () {
   this.$off()
 }
 
-},{"../compiler":11,"../directive":14,"../util":64}],47:[function(require,module,exports){
+},{"../compiler":14,"../directive":17,"../util":67}],50:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 
@@ -6265,7 +6275,7 @@ exports._resolveComponent = function (id, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../util":64,"_process":80}],48:[function(require,module,exports){
+},{"../util":67,"_process":83}],51:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var compiler = require('../compiler')
@@ -6510,7 +6520,7 @@ exports._initMeta = function () {
 }
 
 }).call(this,require('_process'))
-},{"../compiler":11,"../observer":51,"../observer/dep":50,"../util":64,"../watcher":68,"_process":80}],49:[function(require,module,exports){
+},{"../compiler":14,"../observer":54,"../observer/dep":53,"../util":67,"../watcher":71,"_process":83}],52:[function(require,module,exports){
 var _ = require('../util')
 var arrayProto = Array.prototype
 var arrayMethods = Object.create(arrayProto)
@@ -6602,7 +6612,7 @@ _.define(
 
 module.exports = arrayMethods
 
-},{"../util":64}],50:[function(require,module,exports){
+},{"../util":67}],53:[function(require,module,exports){
 var _ = require('../util')
 var uid = 0
 
@@ -6665,7 +6675,7 @@ Dep.prototype.notify = function () {
 
 module.exports = Dep
 
-},{"../util":64}],51:[function(require,module,exports){
+},{"../util":67}],54:[function(require,module,exports){
 var _ = require('../util')
 var config = require('../config')
 var Dep = require('./dep')
@@ -6894,7 +6904,7 @@ _.defineReactive = defineReactive
 
 module.exports = Observer
 
-},{"../config":13,"../util":64,"./array":49,"./dep":50}],52:[function(require,module,exports){
+},{"../config":16,"../util":67,"./array":52,"./dep":53}],55:[function(require,module,exports){
 var _ = require('../util')
 var Cache = require('../cache')
 var cache = new Cache(1000)
@@ -7030,7 +7040,7 @@ exports.parse = function (s) {
   return dir
 }
 
-},{"../cache":8,"../util":64}],53:[function(require,module,exports){
+},{"../cache":11,"../util":67}],56:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var Path = require('./path')
@@ -7298,7 +7308,7 @@ exports.isSimplePath = function (exp) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":8,"../util":64,"./path":54,"_process":80}],54:[function(require,module,exports){
+},{"../cache":11,"../util":67,"./path":57,"_process":83}],57:[function(require,module,exports){
 (function (process){
 var _ = require('../util')
 var Cache = require('../cache')
@@ -7660,7 +7670,7 @@ exports.set = function (obj, path, val) {
 }
 
 }).call(this,require('_process'))
-},{"../cache":8,"../util":64,"_process":80}],55:[function(require,module,exports){
+},{"../cache":11,"../util":67,"_process":83}],58:[function(require,module,exports){
 var _ = require('../util')
 var Cache = require('../cache')
 var templateCache = new Cache(1000)
@@ -7950,7 +7960,7 @@ exports.parse = function (template, clone, noSelector) {
     : frag
 }
 
-},{"../cache":8,"../util":64}],56:[function(require,module,exports){
+},{"../cache":11,"../util":67}],59:[function(require,module,exports){
 var Cache = require('../cache')
 var config = require('../config')
 var dirParser = require('./directive')
@@ -8112,7 +8122,7 @@ function inlineFilters (exp, single) {
   }
 }
 
-},{"../cache":8,"../config":13,"./directive":52}],57:[function(require,module,exports){
+},{"../cache":11,"../config":16,"./directive":55}],60:[function(require,module,exports){
 var _ = require('../util')
 
 /**
@@ -8193,7 +8203,7 @@ var apply = exports.apply = function (el, direction, op, vm, cb) {
   transition[action](op, cb)
 }
 
-},{"../util":64}],58:[function(require,module,exports){
+},{"../util":67}],61:[function(require,module,exports){
 var _ = require('../util')
 var queue = []
 var queued = false
@@ -8230,7 +8240,7 @@ function flush () {
   return f
 }
 
-},{"../util":64}],59:[function(require,module,exports){
+},{"../util":67}],62:[function(require,module,exports){
 var _ = require('../util')
 var queue = require('./queue')
 var addClass = _.addClass
@@ -8599,7 +8609,7 @@ function isHidden (el) {
 
 module.exports = Transition
 
-},{"../util":64,"./queue":58}],60:[function(require,module,exports){
+},{"../util":67,"./queue":61}],63:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 
@@ -8753,7 +8763,7 @@ function formatValue (val) {
 }
 
 }).call(this,require('_process'))
-},{"./index":64,"_process":80}],61:[function(require,module,exports){
+},{"./index":67,"_process":83}],64:[function(require,module,exports){
 (function (process){
 /**
  * Enable debug utilities.
@@ -8804,7 +8814,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"_process":80}],62:[function(require,module,exports){
+},{"../config":16,"_process":83}],65:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 var config = require('../config')
@@ -9171,7 +9181,7 @@ exports.removeNodeRange = function (start, end, vm, frag, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"../transition":57,"./index":64,"_process":80}],63:[function(require,module,exports){
+},{"../config":16,"../transition":60,"./index":67,"_process":83}],66:[function(require,module,exports){
 // can we use __proto__?
 exports.hasProto = '__proto__' in {}
 
@@ -9258,7 +9268,7 @@ exports.nextTick = (function () {
   }
 })()
 
-},{}],64:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 var lang = require('./lang')
 var extend = lang.extend
 
@@ -9269,7 +9279,7 @@ extend(exports, require('./options'))
 extend(exports, require('./component'))
 extend(exports, require('./debug'))
 
-},{"./component":60,"./debug":61,"./dom":62,"./env":63,"./lang":65,"./options":66}],65:[function(require,module,exports){
+},{"./component":63,"./debug":64,"./dom":65,"./env":66,"./lang":68,"./options":69}],68:[function(require,module,exports){
 /**
  * Set a property on an object. Adds the new property and
  * triggers change notification if the property doesn't
@@ -9661,7 +9671,7 @@ exports.looseEqual = function (a, b) {
   /* eslint-enable eqeqeq */
 }
 
-},{}],66:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 (function (process){
 var _ = require('./index')
 var config = require('../config')
@@ -10024,7 +10034,7 @@ exports.resolveAsset = function resolve (options, type, id) {
 }
 
 }).call(this,require('_process'))
-},{"../config":13,"./index":64,"_process":80}],67:[function(require,module,exports){
+},{"../config":16,"./index":67,"_process":83}],70:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var extend = _.extend
@@ -10124,7 +10134,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./api/data":2,"./api/dom":3,"./api/events":4,"./api/global":5,"./api/lifecycle":6,"./directives/element":15,"./directives/public":30,"./filters":41,"./instance/events":44,"./instance/init":45,"./instance/lifecycle":46,"./instance/misc":47,"./instance/state":48,"./util":64,"_process":80}],68:[function(require,module,exports){
+},{"./api/data":5,"./api/dom":6,"./api/events":7,"./api/global":8,"./api/lifecycle":9,"./directives/element":18,"./directives/public":33,"./filters":44,"./instance/events":47,"./instance/init":48,"./instance/lifecycle":49,"./instance/misc":50,"./instance/state":51,"./util":67,"_process":83}],71:[function(require,module,exports){
 (function (process){
 var _ = require('./util')
 var config = require('./config')
@@ -10464,7 +10474,7 @@ function traverse (val) {
 module.exports = Watcher
 
 }).call(this,require('_process'))
-},{"./batcher":7,"./config":13,"./observer/dep":50,"./parsers/expression":53,"./util":64,"_process":80}],69:[function(require,module,exports){
+},{"./batcher":10,"./config":16,"./observer/dep":53,"./parsers/expression":56,"./util":67,"_process":83}],72:[function(require,module,exports){
 var Vue = require('vue');
 var NavLink = require('./components/navlink.vue');
 var Service = require('./components/service.vue');
@@ -10493,7 +10503,7 @@ new Vue({
   }
 });
 
-},{"./components/contact.vue":70,"./components/cover.vue":71,"./components/experience.vue":72,"./components/navigation.vue":73,"./components/navlink.vue":74,"./components/project.vue":75,"./components/service.vue":76,"./components/services.vue":77,"./components/skills.vue":79,"vue":67}],70:[function(require,module,exports){
+},{"./components/contact.vue":73,"./components/cover.vue":74,"./components/experience.vue":75,"./components/navigation.vue":76,"./components/navlink.vue":77,"./components/project.vue":78,"./components/service.vue":79,"./components/services.vue":80,"./components/skills.vue":82,"vue":70}],73:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Contact Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -10506,7 +10516,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],71:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],74:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10620,7 +10630,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],72:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],75:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"experience\" class=\"experience-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Experience Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -10633,7 +10643,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],73:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],76:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10666,7 +10676,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],74:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],77:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10693,7 +10703,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],75:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],78:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Projects Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -10706,7 +10716,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],76:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],79:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10735,7 +10745,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],77:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],80:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"services\" class=\"services-section\">\n    <h1>¿Qué hago?</h1>\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-3\">\n                  <slot name=\"design\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"develop\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"mobile\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"tech\"></slot>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -10748,8 +10758,8 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],78:[function(require,module,exports){
-"use strict";
+},{"vue":70,"vue-hot-reload-api":4}],81:[function(require,module,exports){
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -10766,6 +10776,16 @@ exports.default = {
     skillId: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    draw: function draw(type, event) {
+      event.preventDefault();
+      //dispatch to the parent the data selected
+
+      this.$dispatch('chartify', this.tools.filter(function (element) {
+        return element.type === type;
+      }));
     }
   },
   computed: {
@@ -10785,7 +10805,6 @@ exports.default = {
       for (var i = 0; i < this.tools.length; i++) {
         var actual = this.tools[i];
         var index = getIndex(_groups, actual);
-        console.log("i: " + i + ", index: " + index);
         //si se encuentra el type
         if (index >= 0) {
           //se suma el value al objeto ya ingresaod en _groups
@@ -10803,7 +10822,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div role=\"tabpanel\" class=\"tab-pane fade in active\" v-bind:class=\"{'in' : $index === 0, 'active' : $index === 0}\" id=\"{{skillId}}\">\n    <div class=\"row\">\n      <div class=\"container\">\n        <div class=\"col-md-7\">\n\n          <template v-for=\"group in groups\">\n            <p class=\"text-left\">{{group.type}}</p>\n            <div class=\"progress\">\n              <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"{{group.value}}\" aria-valuemin=\"0\" aria-valuemax=\"100\" v-bind:style=\"{width: group.value + '%'}\">\n                <span class=\"sr-only\">{{group.value}}% Complete (success)</span>\n              </div>\n            </div>\n          </template>\n\n        </div>\n      </div>\n    </div>\n  </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div role=\"tabpanel\" class=\"tab-pane fade in active\" v-bind:class=\"{'in' : $index === 0, 'active' : $index === 0}\" id=\"{{skillId}}\">\n    <div class=\"row\">\n      <div class=\"container\">\n        <div class=\"col-md-7\">\n\n          <template v-for=\"group in groups\">\n            <a href=\"#\" v-on:click=\"draw( group.type, $event )\" id=\"{{group.type}}\">\n              <p class=\"text-left\">{{group.type}}</p>\n              <div class=\"progress\">\n                <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"{{group.value}}\" aria-valuemin=\"0\" aria-valuemax=\"100\" v-bind:style=\"{width: group.value + '%'}\">\n                  <span class=\"sr-only\">{{group.value}}% Complete (success)</span>\n                </div>\n              </div>\n            </a>\n          </template>\n\n        </div>\n      </div>\n    </div>\n  </div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10815,12 +10834,16 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":67,"vue-hot-reload-api":1}],79:[function(require,module,exports){
+},{"vue":70,"vue-hot-reload-api":4}],82:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _stringify = require("babel-runtime/core-js/json/stringify");
+
+var _stringify2 = _interopRequireDefault(_stringify);
 
 var _skill = require("./skill.vue");
 
@@ -10852,12 +10875,39 @@ exports.default = {
     };
   },
 
+  events: {
+    'chartify': function chartify(data) {
+      //var Chart = require('chart.js/Chart');
+      //console.log('typeof chart: ' + typeof Chart);
+      var ctx = document.getElementById("myChart").getContext("2d");
+
+      var _data = {
+        labels: data.map(function (obj) {
+          return obj.name;
+        }),
+        datasets: [{
+          label: "",
+          fillColor: "rgba(220,220,220,0.2)",
+          strokeColor: "rgba(220,220,220,1)",
+          pointColor: "rgba(220,220,220,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: data.map(function (obj) {
+            return obj.level;
+          })
+        }]
+      };
+      console.log((0, _stringify2.default)(_data.datasets.data));
+      var myRadarChart = new Chart(ctx).Radar(_data);
+    }
+  },
   components: {
     skill: _skill2.default
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-7\">\n                <!-- Tabs -->\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                  <li role=\"presentation\" v-for=\"tab in tabs\" v-bind:class=\"{ 'active' : $index === 0 }\">\n                    <a href=\"#{{tab.target}}\" role=\"tab\" aria-controls=\"{{tab.target}}\" data-toggle=\"tab\">{{tab.name}}</a>\n                  </li>\n                </ul>\n\n                <!-- Tabs content -->\n                <div class=\"tab-content\">\n                  <!-- Front-end -->\n                  <skill v-for=\"area in areas\" :tools=\"area.tools\" :level=\"area.level\" :skill-id=\"area.name\">\n                  </skill>\n\n                   <!-- /Front-end -->\n\n                </div>\n              </div>\n              <div class=\"col-md-5\">\n                <div class=\"jumbotron\">\n                  <h3>Hello, world!</h3>\n                  <p>...</p>\n                  <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a></p>\n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-7\">\n                <!-- Tabs -->\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                  <li role=\"presentation\" v-for=\"tab in tabs\" v-bind:class=\"{ 'active' : $index === 0 }\">\n                    <a href=\"#{{tab.target}}\" role=\"tab\" aria-controls=\"{{tab.target}}\" data-toggle=\"tab\">{{tab.name}}</a>\n                  </li>\n                </ul>\n\n                <!-- Tabs content -->\n                <div class=\"tab-content\">\n                  <!-- Front-end -->\n                  <skill v-for=\"area in areas\" :tools=\"area.tools\" :level=\"area.level\" :skill-id=\"area.name\">\n                  </skill>\n\n                   <!-- /Front-end -->\n\n                </div>\n              </div>\n              <div class=\"col-md-5\">\n                <div class=\"jumbotron\">\n                  <canvas id=\"myChart\" width=\"400\" height=\"400\"></canvas>\n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10869,7 +10919,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"./skill.vue":78,"vue":67,"vue-hot-reload-api":1}],80:[function(require,module,exports){
+},{"./skill.vue":81,"babel-runtime/core-js/json/stringify":1,"vue":70,"vue-hot-reload-api":4}],83:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -10962,4 +11012,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[69]);
+},{}]},{},[72]);
