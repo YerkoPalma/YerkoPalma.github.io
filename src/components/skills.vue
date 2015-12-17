@@ -25,9 +25,7 @@
               </div>
               <div class="col-md-5">
                 <div class="jumbotron">
-                  <h3>Hello, world!</h3>
-                  <p>...</p>
-                  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                  <canvas id="myChart" width="400" height="400"></canvas>
                 </div>
               </div>
           </div>
@@ -98,6 +96,29 @@ export default{
           ]
         }
       ]
+    }
+  },
+  events: {
+    'chartify' : function (data) {
+      //var Chart = require('chart.js/Chart');
+      //console.log('typeof chart: ' + typeof Chart);
+      var ctx = document.getElementById("myChart").getContext("2d");
+
+      var _data = {
+        labels: data.map(function (obj) { return obj.name }),
+        datasets: [{
+          label: "",
+          fillColor: "rgba(220,220,220,0.2)",
+          strokeColor: "rgba(220,220,220,1)",
+          pointColor: "rgba(220,220,220,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: data.map(function (obj) { return obj.level })
+        }]
+      };
+      console.log(JSON.stringify(_data.datasets.data));
+      var myRadarChart = new Chart(ctx).Radar(_data);
     }
   },
   components: {
