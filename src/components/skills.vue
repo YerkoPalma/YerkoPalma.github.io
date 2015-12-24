@@ -53,17 +53,14 @@ export default{
             {name: 'vue.js', level: 60, type: 'js'},
             {name: 'angular', level: 40, type: 'js'},
             {name: 'jquery', level: 90, type: 'js'},
-            {name: 'react', level: 10, type: 'js'},
             {name: 'ember', level: 25, type: 'js'},
-            {name: 'backbone', level: 5, type: 'js'},
             {name: 'sass', level: 75, type: 'style'},
             {name: 'compass', level: 40, type: 'style'},
             {name: 'css', level: 90, type: 'style'},
             {name: 'less', level: 85, type: 'style'},
             {name: 'photoshop', level: 20, type: 'design'},
             {name: 'gimp', level: 60, type: 'design'},
-            {name: 'ilustrator', level: 30, type: 'design'},
-            {name: 'inkscape', level: 0, type: 'style'}
+            {name: 'ilustrator', level: 30, type: 'design'}            
           ]
         },
         {
@@ -114,7 +111,7 @@ export default{
       //var Chart = require('chart.js/Chart');
       //console.log('typeof chart: ' + typeof Chart);
       var ctx = document.getElementById("myChart").getContext("2d");
-
+      //ctx.clearRect(0, 0, canvas.width, canvas.height);
       var _data = {
         labels: data.map(function (obj) { return obj.name }),
         datasets: [{

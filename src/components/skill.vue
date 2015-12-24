@@ -40,7 +40,7 @@ export default{
     draw: function ( type, event) {
       event.preventDefault();
       //dispatch to the parent the data selected
-
+      
       this.$dispatch('chartify', this.tools.filter(function(element) { return element.type === type }));
     }
   },
