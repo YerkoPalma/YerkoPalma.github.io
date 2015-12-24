@@ -50,14 +50,20 @@ export default{
           name: 'frontend',
           level: 75,
           tools: [
-            {name: 'vue.js', level: 50, type: 'js-mvvm'},
-            {name: 'angular', level: 40, type: 'js-mvc'},
-            {name: 'jquery', level: 90, type: 'js-dom'},
-            {name: 'd3.js', level: 30, type: 'data-visualization'},
-            {name: 'css3', level: 80, type: 'style'},
-            {name: 'less', level: 85, type: 'style'},
+            {name: 'vue.js', level: 60, type: 'js'},
+            {name: 'angular', level: 40, type: 'js'},
+            {name: 'jquery', level: 90, type: 'js'},
+            {name: 'react', level: 10, type: 'js'},
+            {name: 'ember', level: 25, type: 'js'},
+            {name: 'backbone', level: 5, type: 'js'},
             {name: 'sass', level: 75, type: 'style'},
-            {name: 'compass', level: 40, type: 'style'}
+            {name: 'compass', level: 40, type: 'style'},
+            {name: 'css', level: 90, type: 'style'},
+            {name: 'less', level: 85, type: 'style'},
+            {name: 'photoshop', level: 20, type: 'design'},
+            {name: 'gimp', level: 60, type: 'design'},
+            {name: 'ilustrator', level: 30, type: 'design'},
+            {name: 'inkscape', level: 0, type: 'style'}
           ]
         },
         {
@@ -65,11 +71,11 @@ export default{
           level: 85,
           tools: [
             {name: 'ruby on rails', level: 85, type: 'mvc'},
-            {name: 'node.js', level: 75, type: 'backend'},
             {name: 'express.js', level: 80, type: 'mvc'},
             {name: 'cakePhp', level: 90, type: 'mvc'},
             {name: 'wordpress', level: 85, type: 'cms'},
             {name: 'pagekit', level: 70, type: 'cms'},
+            {name: 'crogo', level: 5, type: 'cms'},
             {name: '.net', level: 90, type: 'mvc'}
           ]
         },
@@ -80,19 +86,24 @@ export default{
             {name: 'mysql', level: 75, type: 'sql'},
             {name: 'postgresql', level: 85, type: 'sql'},
             {name: 'sql server', level: 80, type: 'sql'},
-            {name: 'mongodb', level: 90, type: 'nosql - document'},
-            {name: 'dynamodb', level: 30, type: 'nosql - key/value'}
+            {name: 'sqlite', level: 30, type: 'sql'},
+            {name: 'mongodb', level: 90, type: 'nosql'},
+            {name: 'dynamodb', level: 30, type: 'nosql'},
+            {name: 'redis', level: 0, type: 'nosql'},
           ]
         },
         {
           name: 'mobile',
           level: 70,
           tools: [
-            {name: 'android', level: 55, type: 'native'},
-            {name: 'ios', level: 0, type: 'native'},
-            {name: 'ionic', level: 90, type: 'hibrid - webview'},
-            {name: 'cordova', level: 80, type: 'hibrid - webview'},
-            {name: 'nativescript', level: 20, type: 'hibrid - native'}
+            {name: 'java (android)', level: 55, type: 'native'},
+            {name: 'swift (iOS)', level: 0, type: 'native'},
+            {name: 'objective-c (iOS)', level: 0, type: 'native'},
+            {name: 'c# (windows phone)', level: 30, type: 'native'},
+            {name: 'ionic', level: 90, type: 'hibrid'},
+            {name: 'cordova', level: 80, type: 'hibrid'},
+            {name: 'titanium', level: 20, type: 'hibrid'},
+            {name: 'phonegap', level: 80, type: 'hibrid'}
           ]
         }
       ]

@@ -10789,9 +10789,15 @@ exports.default = {
     }
   },
   computed: {
+    progressclass: function progressclass() {
+      var classess = ['progress-bar-success', 'progress-bar-info', 'progress-bar-warning', 'progress-bar-danger'];
+
+      return classess;
+    },
     groups: function groups() {
       //needs to return an object with the computed data to iterate through it
       var _groups = [];
+      var self = this;
 
       var getIndex = function getIndex(arr, obj) {
         for (var i = 0; i < arr.length; i++) {
@@ -10800,6 +10806,13 @@ exports.default = {
           }
         }
         return -1;
+      };
+
+      var countPerType = function countPerType(type) {
+        var filtered = self.tools.filter(function (el, i) {
+          return el.type === type;
+        });
+        return filtered.length;
       };
 
       for (var i = 0; i < this.tools.length; i++) {
@@ -10817,12 +10830,18 @@ exports.default = {
             _groups.push({ type: actual.type, value: actual.level });
           }
       }
+
+      _groups.forEach(function (el) {
+        //console.log(countPerType(el.type));
+        el.value = el.value / countPerType(el.type);
+      });
+
       return _groups;
     }
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div role=\"tabpanel\" class=\"tab-pane fade in active\" v-bind:class=\"{'in' : $index === 0, 'active' : $index === 0}\" id=\"{{skillId}}\">\n    <div class=\"row\">\n      <div class=\"container\">\n        <div class=\"col-md-7\">\n\n          <template v-for=\"group in groups\">\n            <a href=\"#\" v-on:click=\"draw( group.type, $event )\" id=\"{{group.type}}\">\n              <p class=\"text-left\">{{group.type}}</p>\n              <div class=\"progress\">\n                <div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"{{group.value}}\" aria-valuemin=\"0\" aria-valuemax=\"100\" v-bind:style=\"{width: group.value + '%'}\">\n                  <span class=\"sr-only\">{{group.value}}% Complete (success)</span>\n                </div>\n              </div>\n            </a>\n          </template>\n\n        </div>\n      </div>\n    </div>\n  </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div role=\"tabpanel\" class=\"tab-pane fade in active\" v-bind:class=\"{'in' : $index === 0, 'active' : $index === 0}\" id=\"{{skillId}}\">\n    <div class=\"row\">\n      <div class=\"container\">\n        <div class=\"col-md-7\">\n\n          <template v-for=\"group in groups\">\n            <a href=\"#\" v-on:click=\"draw( group.type, $event )\" id=\"{{group.type}}\">\n              <p class=\"text-left\">{{group.type}}</p>\n              <div class=\"progress\">\n                <div class=\"progress-bar {{progressclass[$index]}}\" role=\"progressbar\" aria-valuenow=\"{{group.value}}\" aria-valuemin=\"0\" aria-valuemax=\"100\" v-bind:style=\"{width: group.value + '%'}\">\n                  <span class=\"sr-only\">{{group.value}}% Complete (success)</span>\n                </div>\n              </div>\n            </a>\n          </template>\n\n        </div>\n      </div>\n    </div>\n  </div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10858,19 +10877,19 @@ exports.default = {
       areas: [{
         name: 'frontend',
         level: 75,
-        tools: [{ name: 'vue.js', level: 50, type: 'js-mvvm' }, { name: 'angular', level: 40, type: 'js-mvc' }, { name: 'jquery', level: 90, type: 'js-dom' }, { name: 'd3.js', level: 30, type: 'data-visualization' }, { name: 'css3', level: 80, type: 'style' }, { name: 'less', level: 85, type: 'style' }, { name: 'sass', level: 75, type: 'style' }, { name: 'compass', level: 40, type: 'style' }]
+        tools: [{ name: 'vue.js', level: 60, type: 'js' }, { name: 'angular', level: 40, type: 'js' }, { name: 'jquery', level: 90, type: 'js' }, { name: 'react', level: 10, type: 'js' }, { name: 'ember', level: 25, type: 'js' }, { name: 'backbone', level: 5, type: 'js' }, { name: 'sass', level: 75, type: 'style' }, { name: 'compass', level: 40, type: 'style' }, { name: 'css', level: 90, type: 'style' }, { name: 'less', level: 85, type: 'style' }, { name: 'photoshop', level: 20, type: 'design' }, { name: 'gimp', level: 60, type: 'design' }, { name: 'ilustrator', level: 30, type: 'design' }, { name: 'inkscape', level: 0, type: 'style' }]
       }, {
         name: 'backend',
         level: 85,
-        tools: [{ name: 'ruby on rails', level: 85, type: 'mvc' }, { name: 'node.js', level: 75, type: 'backend' }, { name: 'express.js', level: 80, type: 'mvc' }, { name: 'cakePhp', level: 90, type: 'mvc' }, { name: 'wordpress', level: 85, type: 'cms' }, { name: 'pagekit', level: 70, type: 'cms' }, { name: '.net', level: 90, type: 'mvc' }]
+        tools: [{ name: 'ruby on rails', level: 85, type: 'mvc' }, { name: 'express.js', level: 80, type: 'mvc' }, { name: 'cakePhp', level: 90, type: 'mvc' }, { name: 'wordpress', level: 85, type: 'cms' }, { name: 'pagekit', level: 70, type: 'cms' }, { name: 'crogo', level: 5, type: 'cms' }, { name: '.net', level: 90, type: 'mvc' }]
       }, {
         name: 'database',
         level: 60,
-        tools: [{ name: 'mysql', level: 75, type: 'sql' }, { name: 'postgresql', level: 85, type: 'sql' }, { name: 'sql server', level: 80, type: 'sql' }, { name: 'mongodb', level: 90, type: 'nosql - document' }, { name: 'dynamodb', level: 30, type: 'nosql - key/value' }]
+        tools: [{ name: 'mysql', level: 75, type: 'sql' }, { name: 'postgresql', level: 85, type: 'sql' }, { name: 'sql server', level: 80, type: 'sql' }, { name: 'sqlite', level: 30, type: 'sql' }, { name: 'mongodb', level: 90, type: 'nosql' }, { name: 'dynamodb', level: 30, type: 'nosql' }, { name: 'redis', level: 0, type: 'nosql' }]
       }, {
         name: 'mobile',
         level: 70,
-        tools: [{ name: 'android', level: 55, type: 'native' }, { name: 'ios', level: 0, type: 'native' }, { name: 'ionic', level: 90, type: 'hibrid - webview' }, { name: 'cordova', level: 80, type: 'hibrid - webview' }, { name: 'nativescript', level: 20, type: 'hibrid - native' }]
+        tools: [{ name: 'java (android)', level: 55, type: 'native' }, { name: 'swift (iOS)', level: 0, type: 'native' }, { name: 'objective-c (iOS)', level: 0, type: 'native' }, { name: 'c# (windows phone)', level: 30, type: 'native' }, { name: 'ionic', level: 90, type: 'hibrid' }, { name: 'cordova', level: 80, type: 'hibrid' }, { name: 'titanium', level: 20, type: 'hibrid' }, { name: 'phonegap', level: 80, type: 'hibrid' }]
       }]
     };
   },

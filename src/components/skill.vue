@@ -8,7 +8,7 @@
             <a href="#" v-on:click="draw( group.type, $event )" id="{{group.type}}">
               <p class="text-left">{{group.type}}</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{group.value}}" aria-valuemin="0" aria-valuemax="100" v-bind:style="{width: group.value + '%'}">
+                <div class="progress-bar {{progressclass[$index]}}" role="progressbar" aria-valuenow="{{group.value}}" aria-valuemin="0" aria-valuemax="100" v-bind:style="{width: group.value + '%'}">
                   <span class="sr-only">{{group.value}}% Complete (success)</span>
                 </div>
               </div>
@@ -40,14 +40,20 @@ export default{
     draw: function ( type, event) {
       event.preventDefault();
       //dispatch to the parent the data selected
-      
+
       this.$dispatch('chartify', this.tools.filter(function(element) { return element.type === type }));
     }
   },
   computed: {
+    progressclass: function() {
+      var classess = ['progress-bar-success', 'progress-bar-info', 'progress-bar-warning', 'progress-bar-danger'];
+
+      return classess;
+    },
     groups: function() {
       //needs to return an object with the computed data to iterate through it
       var _groups = [];
+      var self = this;
 
       var getIndex = function(arr, obj){
         for (var i = 0; i < arr.length; i++){
@@ -56,6 +62,13 @@ export default{
           }
         }
         return -1;
+      };
+
+      var countPerType = function(type) {
+          var filtered = self.tools.filter(function(el, i) {
+            return el.type === type;
+          });
+          return filtered.length;
       };
 
       for (var i = 0; i < this.tools.length; i++){
@@ -73,6 +86,12 @@ export default{
           _groups.push({type: actual.type, value: actual.level});
         }
       }
+
+      _groups.forEach(function(el){
+        //console.log(countPerType(el.type));
+        el.value = el.value / countPerType(el.type);
+      });
+
       return _groups;
     }
   }
