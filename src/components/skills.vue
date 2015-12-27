@@ -25,7 +25,8 @@
               </div>
               <div class="col-md-5">
                 <div class="jumbotron">
-                  <canvas id="myChart" width="400" height="400"></canvas>
+                  <h3>Detalles</h3>
+                  <canvas id="myChart" width="370" height="400"></canvas>
                 </div>
               </div>
           </div>
@@ -60,7 +61,7 @@ export default{
             {name: 'less', level: 85, type: 'style'},
             {name: 'photoshop', level: 20, type: 'design'},
             {name: 'gimp', level: 60, type: 'design'},
-            {name: 'ilustrator', level: 30, type: 'design'}            
+            {name: 'ilustrator', level: 30, type: 'design'}
           ]
         },
         {

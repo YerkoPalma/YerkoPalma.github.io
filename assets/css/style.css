@@ -5102,3 +5102,6 @@ main section.contact-section {
 #skills .col-md-5 {
   padding: 1em;
 }
+#skills .jumbotron h3 {
+  margin: 0;
+}
