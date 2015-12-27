@@ -2,6 +2,7 @@
   <section id="skills" class="skills-section">
       <div class="container">
           <div class="row">
+            <h1>¿Para qué soy bueno?</h1>
               <div class="col-lg-7">
                 <!-- Tabs -->
                 <ul class="nav nav-tabs" role="tablist">

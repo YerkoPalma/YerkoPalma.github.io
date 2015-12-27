@@ -5060,11 +5060,11 @@ header #cover-wrapper #cover {
 /* ----------- MAIN STYLES -----------*/
 main section {
   height: 100%;
-  padding-top: 100px;
+  padding-top: 50px;
   text-align: center;
 }
 main section#services {
-  padding-top: 100px;
+  padding-top: 50px;
   background: #eee;
 }
 main section#services .service-title {
@@ -5092,6 +5092,10 @@ main section.contact-section {
   background: #eee;
 }
 /* ------------------ SKILLS SECTION ------------------ */
+#skills h1 {
+  font-size: 4em;
+  margin-bottom: 50px;
+}
 #skills .tab-pane .container {
   padding: 1em;
 }
@@ -5101,6 +5105,10 @@ main section.contact-section {
 }
 #skills .col-md-5 {
   padding: 1em;
+}
+#skills .jumbotron {
+  padding: 0;
+  padding-top: 20px;
 }
 #skills .jumbotron h3 {
   margin: 0;
