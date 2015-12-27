@@ -5,7 +5,7 @@ var Nav = require('./components/navigation.vue');
 var Cover = require('./components/cover.vue');
 var Services = require('./components/services.vue');
 var Skills = require('./components/skills.vue');
-var Projects = require('./components/project.vue');
+var Projects = require('./components/projects.vue');
 var Experience = require('./components/experience.vue');
 var Contact = require('./components/contact.vue');
 

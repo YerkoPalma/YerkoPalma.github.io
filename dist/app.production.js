@@ -10482,7 +10482,7 @@ var Nav = require('./components/navigation.vue');
 var Cover = require('./components/cover.vue');
 var Services = require('./components/services.vue');
 var Skills = require('./components/skills.vue');
-var Projects = require('./components/project.vue');
+var Projects = require('./components/projects.vue');
 var Experience = require('./components/experience.vue');
 var Contact = require('./components/contact.vue');
 
@@ -10503,7 +10503,7 @@ new Vue({
   }
 });
 
-},{"./components/contact.vue":73,"./components/cover.vue":74,"./components/experience.vue":75,"./components/navigation.vue":76,"./components/navlink.vue":77,"./components/project.vue":78,"./components/service.vue":79,"./components/services.vue":80,"./components/skills.vue":82,"vue":70}],73:[function(require,module,exports){
+},{"./components/contact.vue":73,"./components/cover.vue":74,"./components/experience.vue":75,"./components/navigation.vue":76,"./components/navlink.vue":77,"./components/projects.vue":78,"./components/service.vue":79,"./components/services.vue":80,"./components/skills.vue":82,"vue":70}],73:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Contact Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -10709,7 +10709,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/project.vue"
+  var id = "/home/yerko/Dropbox/Dev/Javascript/Yerko/YerkoPalma.github.io/src/components/projects.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
