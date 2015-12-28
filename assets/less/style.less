@@ -203,9 +203,84 @@ main{
   .jumbotron {
     padding: 0;
     padding-top: 20px;
-    
+
     h3 {
       margin: 0;
+    }
+  }
+}
+
+/* ------------------ PROJECTS SECTION ------------------ */
+#projects{
+  h1{
+    font-size: 4em;
+    margin-bottom: 50px;
+  }
+  .projects-wrapper {
+    .make-row();
+  }
+  .project-thumbnail {
+    position: relative;
+
+    // Calculate width based on number of columns available
+    @media (min-width: @screen-md-min) {
+      float: left;
+      width: 29.9%;
+    }
+
+    &:first-child {
+      margin-left: 30px;
+    }
+
+    min-height: 300px;
+    background-color: #fff;
+    margin: 0 20px;
+
+    .project-content{
+      min-height: 200px;
+      position: relative;
+      img {
+        height: 200px;
+      }
+
+      .project-hover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s;
+
+        .fa {
+          position: absolute;
+          top: 60px;
+          left: 180px;
+        }
+
+        background-color: transparent;
+        color: transparent;
+        &:hover {
+          background-color: rgba(249, 157, 151, 0.9);
+          color: #333333;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .project-caption {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      min-height: 10px;
+
+      h3 {
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      .sub-title {
+        font-style: italic;
+        color: #aaa;
+        font-size: large;
+        letter-spacing: .9px;
+      }
     }
   }
 }

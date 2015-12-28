@@ -4715,7 +4715,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar-header:before,
 .navbar-header:after,
 .navbar-collapse:before,
-.navbar-collapse:after {
+.navbar-collapse:after,
+#projects .projects-wrapper:before,
+#projects .projects-wrapper:after {
   content: " ";
   display: table;
 }
@@ -4730,7 +4732,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .nav:after,
 .navbar:after,
 .navbar-header:after,
-.navbar-collapse:after {
+.navbar-collapse:after,
+#projects .projects-wrapper:after {
   clear: both;
 }
 .center-block {
@@ -5112,4 +5115,69 @@ main section.contact-section {
 }
 #skills .jumbotron h3 {
   margin: 0;
+}
+/* ------------------ PROJECTS SECTION ------------------ */
+#projects h1 {
+  font-size: 4em;
+  margin-bottom: 50px;
+}
+#projects .projects-wrapper {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#projects .project-thumbnail {
+  position: relative;
+  min-height: 300px;
+  background-color: #fff;
+  margin: 0 20px;
+}
+@media (min-width: 992px) {
+  #projects .project-thumbnail {
+    float: left;
+    width: 29.9%;
+  }
+}
+#projects .project-thumbnail:first-child {
+  margin-left: 30px;
+}
+#projects .project-thumbnail .project-content {
+  min-height: 200px;
+  position: relative;
+}
+#projects .project-thumbnail .project-content img {
+  height: 200px;
+}
+#projects .project-thumbnail .project-content .project-hover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+  background-color: transparent;
+  color: transparent;
+}
+#projects .project-thumbnail .project-content .project-hover .fa {
+  position: absolute;
+  top: 60px;
+  left: 180px;
+}
+#projects .project-thumbnail .project-content .project-hover:hover {
+  background-color: rgba(249, 157, 151, 0.9);
+  color: #333333;
+  cursor: pointer;
+}
+#projects .project-thumbnail .project-caption {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  min-height: 10px;
+}
+#projects .project-thumbnail .project-caption h3 {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#projects .project-thumbnail .project-caption .sub-title {
+  font-style: italic;
+  color: #aaa;
+  font-size: large;
+  letter-spacing: .9px;
 }
