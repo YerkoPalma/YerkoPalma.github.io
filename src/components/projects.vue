@@ -5,7 +5,7 @@
         <div class="projects-wrapper">
           <div class="project-thumbnail" id="palmacontabilidad">
             <div class="project-content">
-              <div class="project-hover">
+              <div class="project-hover" v-on:click="fadeIn()">
                 <i class="fa fa-plus fa-5x"></i>
               </div>
               <img class="img-responsive" src="assets/img/palmacontabilidad-thumbnail.png"/>
@@ -14,6 +14,10 @@
               <h3>Palma Contabilidad</h3>
               <span class="sub-title">Website design</span>
             </div>
+          </div>
+
+          <div class="project-panel" id="palmacontabilidad-modal">
+            <i v-on:click="fadeOut()" class="fa fa-times fa-5x"></i>
           </div>
 
           <div class="project-thumbnail" id="salvador">
@@ -45,3 +49,26 @@
       </div>
   </section>
 </template>
+
+<script>
+export default{
+  methods: {
+    fadeIn: function(el) {
+      el = document.getElementById('palmacontabilidad-modal');
+      console.log(el);
+      if (el.classList)
+        el.classList.add('shown');
+      else
+        el.className += ' ' + 'shown';
+    },
+    fadeOut: function(el){
+      el = document.getElementById('palmacontabilidad-modal');
+      console.log(el);
+      if (el.classList)
+        el.classList.remove('shown');
+      else
+        el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+  }
+}
+</script>

@@ -10704,7 +10704,27 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":70,"vue-hot-reload-api":4}],78:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n    <h1>¿Qué he hecho?</h1>\n      <div class=\"container-fluid\">\n        <div class=\"projects-wrapper\">\n          <div class=\"project-thumbnail\" id=\"palmacontabilidad\">\n            <div class=\"project-content\">\n              <div class=\"project-hover\">\n                <i class=\"fa fa-plus fa-5x\"></i>\n              </div>\n              <img class=\"img-responsive\" src=\"assets/img/palmacontabilidad-thumbnail.png\">\n            </div>\n            <div class=\"project-caption\">\n              <h3>Palma Contabilidad</h3>\n              <span class=\"sub-title\">Website design</span>\n            </div>\n          </div>\n\n          <div class=\"project-thumbnail\" id=\"salvador\">\n            <div class=\"project-content\">\n              <div class=\"project-hover\">\n                <i class=\"fa fa-plus fa-5x\"></i>\n              </div>\n              <img class=\"img-responsive\" src=\"assets/img/salvador.png\">\n            </div>\n            <div class=\"project-caption\">\n              <h3>Salvador Aarón</h3>\n              <span class=\"sub-title\">Website design</span>\n            </div>\n          </div>\n\n          <div class=\"project-thumbnail\" id=\"chilena\">\n            <div class=\"project-content\">\n              <div class=\"project-hover\">\n                <i class=\"fa fa-plus fa-5x\"></i>\n              </div>\n              <img class=\"img-responsive\" src=\"assets/img/chilena-thumbnail.png\">\n            </div>\n            <div class=\"project-caption\">\n              <h3>Chilena Reembolsos</h3>\n              <span class=\"sub-title\">Mobile app</span>\n            </div>\n          </div>\n        </div>\n      </div>\n  </section>\n"
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  methods: {
+    fadeIn: function fadeIn(el) {
+      el = document.getElementById('palmacontabilidad-modal');
+      console.log(el);
+      if (el.classList) el.classList.add('shown');else el.className += ' ' + 'shown';
+    },
+    fadeOut: function fadeOut(el) {
+      el = document.getElementById('palmacontabilidad-modal');
+      console.log(el);
+      if (el.classList) el.classList.remove('shown');else el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+  }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n    <h1>¿Qué he hecho?</h1>\n      <div class=\"container-fluid\">\n        <div class=\"projects-wrapper\">\n          <div class=\"project-thumbnail\" id=\"palmacontabilidad\">\n            <div class=\"project-content\">\n              <div class=\"project-hover\" v-on:click=\"fadeIn()\">\n                <i class=\"fa fa-plus fa-5x\"></i>\n              </div>\n              <img class=\"img-responsive\" src=\"assets/img/palmacontabilidad-thumbnail.png\">\n            </div>\n            <div class=\"project-caption\">\n              <h3>Palma Contabilidad</h3>\n              <span class=\"sub-title\">Website design</span>\n            </div>\n          </div>\n\n          <div class=\"project-panel\" id=\"palmacontabilidad-modal\">\n            <i v-on:click=\"fadeOut()\" class=\"fa fa-times fa-5x\"></i>\n          </div>\n\n          <div class=\"project-thumbnail\" id=\"salvador\">\n            <div class=\"project-content\">\n              <div class=\"project-hover\">\n                <i class=\"fa fa-plus fa-5x\"></i>\n              </div>\n              <img class=\"img-responsive\" src=\"assets/img/salvador.png\">\n            </div>\n            <div class=\"project-caption\">\n              <h3>Salvador Aarón</h3>\n              <span class=\"sub-title\">Website design</span>\n            </div>\n          </div>\n\n          <div class=\"project-thumbnail\" id=\"chilena\">\n            <div class=\"project-content\">\n              <div class=\"project-hover\">\n                <i class=\"fa fa-plus fa-5x\"></i>\n              </div>\n              <img class=\"img-responsive\" src=\"assets/img/chilena-thumbnail.png\">\n            </div>\n            <div class=\"project-caption\">\n              <h3>Chilena Reembolsos</h3>\n              <span class=\"sub-title\">Mobile app</span>\n            </div>\n          </div>\n        </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
