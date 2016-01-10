@@ -5187,15 +5187,22 @@ main section.contact-section {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.99);
   z-index: 10000;
   transition: all 0.5s;
+  overflow: hidden;
 }
 #projects .project-panel.shown {
   display: block;
 }
-#projects .project-panel.shown .fa.fa-times {
+#projects .project-panel.shown .fa.fa-times,
+#projects .project-panel.shown span.times {
   float: right;
   margin: 20px;
   cursor: pointer;
+}
+#projects .project-panel.shown span.times {
+  font-size: 100px;
+  font-weight: lighter;
+  margin-top: -20px;
 }
