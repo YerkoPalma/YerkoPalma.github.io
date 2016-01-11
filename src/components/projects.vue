@@ -14,6 +14,9 @@
               <div class="project-caption">
                 <h3>{{project.name}}</h3>
                 <span class="sub-title">{{project.description}}</span>
+                <div class="container">
+                  <div v-html="project.content | marked"></div>
+                </div>
               </div>
             </div>
 
@@ -59,6 +62,9 @@ export default{
 
       ]
     }
+  },
+  filters: {
+    marked: marked
   }
 }
 </script>
