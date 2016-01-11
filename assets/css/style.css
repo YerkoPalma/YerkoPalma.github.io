@@ -5130,6 +5130,7 @@ main section.contact-section {
   min-height: 300px;
   background-color: #fff;
   margin: 0 20px;
+  margin-bottom: 40px;
 }
 @media (min-width: 992px) {
   #projects .project-thumbnail {
@@ -5137,7 +5138,8 @@ main section.contact-section {
     width: 29.9%;
   }
 }
-#projects .project-thumbnail:first-child {
+#projects .project-thumbnail:first-child,
+#projects .project-thumbnail.new-row {
   margin-left: 30px;
 }
 #projects .project-thumbnail .project-content {

@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="projects-wrapper">
           <template v-for="project in projects">
-            <div class="project-thumbnail" id="{{project.id}}">
+            <div class="project-thumbnail" id="{{project.id}}" v-bind:class="{ 'new-row': $index % 3 == 0 }" >
               <div class="project-content">
                 <div class="project-hover" v-on:click="fadeIn()">
                   <i class="fa fa-plus fa-5x"></i>
@@ -53,9 +53,9 @@ export default{
         { id: 'palmacontabilidad', name: 'Palma Contabilidad', description: 'Website design', thumbnail: 'assets/img/palmacontabilidad-thumbnail.png', content: '' },
         { id: 'salvador', name: 'Salvador Palma Navea', description: 'Website design', thumbnail: 'assets/img/salvador.png', content: '' },
         { id: 'chilena', name: 'Reembolsos Movil', description: 'Mobile app', thumbnail: 'assets/img/chilena-thumbnail.png', content: '' },
-        { id: 'observatorioweb', name: 'Observatorio Web', description: 'Web App', thumbnail: '', content: '' },
-        { id: 'github', name: 'Github Projects', description: 'Open Source Projects', thumbnail: '', content: '' },
-        { id: 'codepen', name: 'CodePen Projects', description: 'Open Source Pens', thumbnail: '', content: ''}
+        { id: 'observatorioweb', name: 'Observatorio Web', description: 'Web App', thumbnail: 'assets/img/observatorioweb.png', content: '' },
+        { id: 'github', name: 'Github Projects', description: 'Open Source Projects', thumbnail: 'assets/img/github.png', content: '' },
+        { id: 'codepen', name: 'CodePen Projects', description: 'Open Source Pens', thumbnail: 'assets/img/codepen.png', content: ''}
 
       ]
     }
