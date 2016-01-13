@@ -14,14 +14,13 @@
               <div class="project-caption">
                 <h3>{{project.name}}</h3>
                 <span class="sub-title">{{project.description}}</span>
-                <div class="container">
-                  <div v-html="project.content | marked"></div>
-                </div>
               </div>
             </div>
-
             <div class="project-panel" id="{{project.id}}-modal">
               <span v-on:click="fadeOut()" class="times">&times;</span>
+              <div class="container">
+                <div v-html="project.content | marked"></div>
+              </div>
             </div>
           </template>
 
@@ -31,11 +30,14 @@
 </template>
 
 <script>
+var marked = require('marked');
+//var fs = require('fs');
+
 export default{
   methods: {
     fadeIn: function(el) {
       el = document.getElementById('palmacontabilidad-modal');
-      console.log(el);
+      //console.log(el);
       if (el.classList)
         el.classList.add('shown');
       else
@@ -43,22 +45,75 @@ export default{
     },
     fadeOut: function(el){
       el = document.getElementById('palmacontabilidad-modal');
-      console.log(el);
+      //console.log(el);
       if (el.classList)
         el.classList.remove('shown');
       else
         el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   },
+  ready() {
+
+    //update the content of every project, loading the md content
+    //var html = fs.readFileSync(__dirname + '/robot.html', 'utf8');
+    for (let project of this.projects){
+      //let tmpContent = require(project.content)
+      //project.content = tmpContent
+
+      var client = new XMLHttpRequest();
+      client.open('GET', project.content);
+      client.onreadystatechange = function() {
+        project.content = client.responseText;
+        console.log(client.responseText);
+      }
+      client.send();
+    }
+  },
   data() {
     return {
       projects: [
-        { id: 'palmacontabilidad', name: 'Palma Contabilidad', description: 'Website design', thumbnail: 'assets/img/palmacontabilidad-thumbnail.png', content: '' },
-        { id: 'salvador', name: 'Salvador Palma Navea', description: 'Website design', thumbnail: 'assets/img/salvador.png', content: '' },
-        { id: 'chilena', name: 'Reembolsos Movil', description: 'Mobile app', thumbnail: 'assets/img/chilena-thumbnail.png', content: '' },
-        { id: 'observatorioweb', name: 'Observatorio Web', description: 'Web App', thumbnail: 'assets/img/observatorioweb.png', content: '' },
-        { id: 'github', name: 'Github Projects', description: 'Open Source Projects', thumbnail: 'assets/img/github.png', content: '' },
-        { id: 'codepen', name: 'CodePen Projects', description: 'Open Source Pens', thumbnail: 'assets/img/codepen.png', content: ''}
+        {
+          id: 'palmacontabilidad',
+          name: 'Palma Contabilidad',
+          description: 'Website design',
+          thumbnail: 'assets/img/palmacontabilidad-thumbnail.png',
+          content: '/src/media/palmacontabilidad.md'
+        },
+        {
+          id: 'salvador',
+          name: 'Salvador Palma Navea',
+          description: 'Website design',
+          thumbnail: 'assets/img/salvador.png',
+          content: '/src/media/salvador.md'
+        },
+        {
+          id: 'chilena',
+          name: 'Reembolsos Movil',
+          description: 'Mobile app',
+          thumbnail: 'assets/img/chilena-thumbnail.png',
+          content: '/src/media/chilena.md'
+        },
+        {
+          id: 'observatorioweb',
+          name: 'Observatorio Web',
+          description: 'Web App',
+          thumbnail: 'assets/img/observatorioweb.png',
+          content: '/src/media/observatorioweb.md'
+        },
+        {
+          id: 'github',
+          name: 'Github Projects',
+          description: 'Open Source Projects',
+          thumbnail: 'assets/img/github.png',
+          content: '/src/media/github.md'
+        },
+        {
+          id: 'codepen',
+          name: 'CodePen Projects',
+          description: 'Open Source Pens',
+          thumbnail: 'assets/img/codepen.png',
+          content: '/src/media/codepen.md'
+        }
 
       ]
     }
