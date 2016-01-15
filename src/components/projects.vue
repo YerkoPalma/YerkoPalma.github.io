@@ -6,7 +6,7 @@
           <template v-for="project in projects">
             <div class="project-thumbnail" id="{{project.id}}" v-bind:class="{ 'new-row': $index % 3 == 0 }" >
               <div class="project-content">
-                <div class="project-hover" v-on:click="fadeIn()">
+                <div class="project-hover" v-on:click="fadeIn(project.id)">
                   <i class="fa fa-plus fa-5x"></i>
                 </div>
                 <img class="img-responsive" src="{{project.thumbnail}}"/>
@@ -17,7 +17,7 @@
               </div>
             </div>
             <div class="project-panel" id="{{project.id}}-modal">
-              <span v-on:click="fadeOut()" class="times">&times;</span>
+              <span v-on:click="fadeOut(project.id)" class="times">&times;</span>
               <div class="container">
                 <div v-html="project.content | marked"></div>
               </div>
@@ -35,16 +35,16 @@ var marked = require('marked');
 
 export default{
   methods: {
-    fadeIn: function(el) {
-      el = document.getElementById('palmacontabilidad-modal');
+    fadeIn: function(id) {
+      var el = document.getElementById(id + '-modal');
       //console.log(el);
       if (el.classList)
         el.classList.add('shown');
       else
         el.className += ' ' + 'shown';
     },
-    fadeOut: function(el){
-      el = document.getElementById('palmacontabilidad-modal');
+    fadeOut: function(id){
+      var el = document.getElementById(id + '-modal');
       //console.log(el);
       if (el.classList)
         el.classList.remove('shown');
@@ -61,12 +61,12 @@ export default{
       //project.content = tmpContent
 
       var client = new XMLHttpRequest();
-      client.open('GET', project.content);
+      client.open('GET', project.content, false);
       client.onreadystatechange = function() {
         project.content = client.responseText;
         console.log(client.responseText);
       }
-      client.send();
+      client.send(null);
     }
   },
   data() {

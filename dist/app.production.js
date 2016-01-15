@@ -12417,13 +12417,13 @@ var marked = require('marked');
 
 exports.default = {
   methods: {
-    fadeIn: function fadeIn(el) {
-      el = document.getElementById('palmacontabilidad-modal');
+    fadeIn: function fadeIn(id) {
+      var el = document.getElementById(id + '-modal');
       //console.log(el);
       if (el.classList) el.classList.add('shown');else el.className += ' ' + 'shown';
     },
-    fadeOut: function fadeOut(el) {
-      el = document.getElementById('palmacontabilidad-modal');
+    fadeOut: function fadeOut(id) {
+      var el = document.getElementById(id + '-modal');
       //console.log(el);
       if (el.classList) el.classList.remove('shown');else el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
@@ -12445,12 +12445,12 @@ exports.default = {
 
         client = new XMLHttpRequest();
 
-        client.open('GET', project.content);
+        client.open('GET', project.content, false);
         client.onreadystatechange = function () {
           project.content = client.responseText;
           console.log(client.responseText);
         };
-        client.send();
+        client.send(null);
       };
 
       for (var _iterator = (0, _getIterator3.default)(this.projects), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
@@ -12520,7 +12520,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n    <h1>¿Qué he hecho?</h1>\n      <div class=\"container-fluid\">\n        <div class=\"projects-wrapper\">\n          <template v-for=\"project in projects\">\n            <div class=\"project-thumbnail\" id=\"{{project.id}}\" v-bind:class=\"{ 'new-row': $index % 3 == 0 }\">\n              <div class=\"project-content\">\n                <div class=\"project-hover\" v-on:click=\"fadeIn()\">\n                  <i class=\"fa fa-plus fa-5x\"></i>\n                </div>\n                <img class=\"img-responsive\" src=\"{{project.thumbnail}}\">\n              </div>\n              <div class=\"project-caption\">\n                <h3>{{project.name}}</h3>\n                <span class=\"sub-title\">{{project.description}}</span>\n              </div>\n            </div>\n            <div class=\"project-panel\" id=\"{{project.id}}-modal\">\n              <span v-on:click=\"fadeOut()\" class=\"times\">×</span>\n              <div class=\"container\">\n                <div v-html=\"project.content | marked\"></div>\n              </div>\n            </div>\n          </template>\n\n        </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n    <h1>¿Qué he hecho?</h1>\n      <div class=\"container-fluid\">\n        <div class=\"projects-wrapper\">\n          <template v-for=\"project in projects\">\n            <div class=\"project-thumbnail\" id=\"{{project.id}}\" v-bind:class=\"{ 'new-row': $index % 3 == 0 }\">\n              <div class=\"project-content\">\n                <div class=\"project-hover\" v-on:click=\"fadeIn(project.id)\">\n                  <i class=\"fa fa-plus fa-5x\"></i>\n                </div>\n                <img class=\"img-responsive\" src=\"{{project.thumbnail}}\">\n              </div>\n              <div class=\"project-caption\">\n                <h3>{{project.name}}</h3>\n                <span class=\"sub-title\">{{project.description}}</span>\n              </div>\n            </div>\n            <div class=\"project-panel\" id=\"{{project.id}}-modal\">\n              <span v-on:click=\"fadeOut(project.id)\" class=\"times\">×</span>\n              <div class=\"container\">\n                <div v-html=\"project.content | marked\"></div>\n              </div>\n            </div>\n          </template>\n\n        </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
