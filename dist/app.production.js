@@ -12327,7 +12327,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":108,"vue-hot-reload-api":42}],113:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"experience\" class=\"experience-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Experience Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"experience\" class=\"experience-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <h1>Experience Section</h1>\n              <div class=\"col-lg-12\">\n                  <div class=\"event\"></div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

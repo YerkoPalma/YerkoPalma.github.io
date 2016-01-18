@@ -1,14 +1,24 @@
 var gulp = require('gulp'),
   connect = require('gulp-connect'),
   less = require('gulp-less'),
-  browserify = require('gulp-browserify'),
+  browserify = require('browserify'),
   plumber = require('gulp-plumber'),
+  vueify = require('vueify'),
   fs = require('fs');
 
 gulp.task('webserver', function() {
   connect.server({
     livereload: true
   });
+});
+
+gulp.task('browserify', function() {
+  return browserify('./src/app.js')
+  .transform(vueify)
+  .bundle()
+  //.on('error', handleErrors)
+  //.pipe(source('application.js'))
+  .pipe(fs.createWriteStream("./dist/app.production.js"));
 });
 
 gulp.task('less', function() {
