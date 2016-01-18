@@ -35,6 +35,7 @@ gulp.task('less', function() {
 
 gulp.task('watch', function() {
     gulp.watch('assets/less/*.less', ['less']);
+    gulp.watch('src/app.js', ['browserify']);
 })
 
-gulp.task('default', ['less', 'webserver', 'watch']);
+gulp.task('default', ['less', 'browserify', 'webserver', 'watch']);
