@@ -16,8 +16,6 @@ gulp.task('browserify', function() {
   return browserify('./src/app.js')
   .transform(vueify)
   .bundle()
-  //.on('error', handleErrors)
-  //.pipe(source('application.js'))
   .pipe(fs.createWriteStream("./dist/app.production.js"));
 });
 
