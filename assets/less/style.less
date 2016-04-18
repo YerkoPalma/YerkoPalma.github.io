@@ -24,6 +24,7 @@
 @import "navbar.less";
 @import "jumbotron.less";
 @import "progress-bars.less";
+@import "thumbnails.less";
 
 
 // Utility classes
@@ -316,4 +317,33 @@ main{
 /* ------------------ EXPERIENCE SECTION ------------------ */
 #experience {
   background-color: #fff;
+
+  & > .container > .row {
+    position: relative;
+    .timeline {
+      position: absolute;
+      width: 5px;
+      background-color: #777;
+      height: 100%;
+      display: table-cell;
+      left: 50%;
+      
+      .node {
+        border-color: #333;
+        border-radius: 999px;
+        background-color: #fff;
+        width: 15px;
+        height: 15px;
+        border-width: 5px;
+        border-style: solid;
+        position: absolute;
+        left: -5px;
+        margin-top: 5px;
+        
+        &:first-child {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
 }

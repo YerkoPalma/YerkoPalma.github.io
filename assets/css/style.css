@@ -1100,7 +1100,9 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive {
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -4692,6 +4694,32 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333333;
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -5211,4 +5239,30 @@ main section.contact-section {
 /* ------------------ EXPERIENCE SECTION ------------------ */
 #experience {
   background-color: #fff;
+}
+#experience > .container > .row {
+  position: relative;
+}
+#experience > .container > .row .timeline {
+  position: absolute;
+  width: 5px;
+  background-color: #777;
+  height: 100%;
+  display: table-cell;
+  left: 50%;
+}
+#experience > .container > .row .timeline .node {
+  border-color: #333;
+  border-radius: 999px;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-width: 5px;
+  border-style: solid;
+  position: absolute;
+  left: -5px;
+  margin-top: 5px;
+}
+#experience > .container > .row .timeline .node:first-child {
+  margin-top: 20px;
 }
