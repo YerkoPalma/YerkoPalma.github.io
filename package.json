@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "brfs": "^1.4.2",
+    "browserify": "^13.0.0",
     "browserify-fs": "^1.0.0",
     "browserify-hmr": "^0.3.1",
     "gulp": "^3.9.0",

@@ -27,7 +27,9 @@
               <div class="col-md-5">
                 <div class="jumbotron">
                   <h3>Detalles</h3>
-                  <canvas id="myChart" width="370" height="400"></canvas>
+                  <div id="canvas-container">
+                    <canvas id="myChart" width="370" height="400"></canvas>
+                  </div>
                 </div>
               </div>
           </div>
@@ -110,9 +112,24 @@ export default{
   },
   events: {
     'chartify' : function (data) {
-      //var Chart = require('chart.js/Chart');
-      //console.log('typeof chart: ' + typeof Chart);
-      var ctx = document.getElementById("myChart").getContext("2d");
+      // remove previous canvas
+      let container = document.getElementById('canvas-container')
+      
+      while (container.firstChild) {
+        container.removeChild(container.firstChild)
+      }
+      // add a new canvas
+      var canvas = document.createElement('canvas');
+
+      canvas.id = "chart";
+      canvas.width = 370;
+      canvas.height = 400;
+      canvas.style.zIndex = 8;
+      
+      container.appendChild(canvas);
+      
+      let chartLayer = document.getElementById("chart");
+      var ctx = chartLayer.getContext("2d");
       //ctx.clearRect(0, 0, canvas.width, canvas.height);
       var _data = {
         labels: data.map(function (obj) { return obj.name }),

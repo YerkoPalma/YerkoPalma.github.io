@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid" id="cover-wrapper">
     <div class="row text-center" id="cover">
-      <img src="{{gravatar}}" class="img-circle center-block" style="display: block;" alt="...">
+      <img :src="gravatar" class="img-circle center-block" style="display: block;" alt="...">
       <h1 class="display-3">{{title}}</h1>
       <p class="lead">{{subTitle}}</p>
     </div>

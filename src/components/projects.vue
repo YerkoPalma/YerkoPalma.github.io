@@ -9,7 +9,7 @@
                 <div class="project-hover" v-on:click="fadeIn(project.id)">
                   <i class="fa fa-plus fa-5x"></i>
                 </div>
-                <img class="img-responsive" src="{{project.thumbnail}}"/>
+                <img class="img-responsive" :src="project.thumbnail"/>
               </div>
               <div class="project-caption">
                 <h3>{{project.name}}</h3>
