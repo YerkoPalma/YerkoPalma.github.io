@@ -37,62 +37,58 @@ export default{
     }
   },
   methods: {
-    draw: function ( type, event) {
-      event.preventDefault();
-      //dispatch to the parent the data selected
-
-      this.$dispatch('chartify', this.tools.filter(function(element) { return element.type === type }));
+    draw: function (type, event) {
+      event.preventDefault()
+      // dispatch to the parent the data selected
+      this.$dispatch('chartify', this.tools.filter(element => { return element.type === type }))
     }
   },
   computed: {
-    progressclass: function() {
-      var classess = ['progress-bar-success', 'progress-bar-info', 'progress-bar-warning', 'progress-bar-danger'];
-
-      return classess;
+    progressclass: function () {
+      const classess = ['progress-bar-success', 'progress-bar-info', 'progress-bar-warning', 'progress-bar-danger']
+      return classess
     },
-    groups: function() {
-      //needs to return an object with the computed data to iterate through it
-      var _groups = [];
-      var self = this;
+    groups: function () {
+      // needs to return an object with the computed data to iterate through it
+      let _groups = []
+      let self = this
 
-      var getIndex = function(arr, obj){
-        for (var i = 0; i < arr.length; i++){
+      let getIndex = (arr, obj) => {
+        for (let i = 0; i < arr.length; i++){
           if (obj.type === arr[i].type){
-            return i;
+            return i
           }
         }
-        return -1;
-      };
+        return -1
+      }
 
-      var countPerType = function(type) {
-          var filtered = self.tools.filter(function(el, i) {
-            return el.type === type;
-          });
-          return filtered.length;
-      };
+      let countPerType = type => {
+          let filtered = self.tools.filter((el, i) => {
+            return el.type === type
+          })
+          return filtered.length
+      }
 
-      for (var i = 0; i < this.tools.length; i++){
-        var actual = this.tools[i];
-        var index = getIndex(_groups, actual);
-        //si se encuentra el type
+      for (let i = 0; i < this.tools.length; i++){
+        let actual = this.tools[i]
+        let index = getIndex(_groups, actual)
+        // if type found
         if ( index >= 0 ) {
-          //se suma el value al objeto ya ingresaod en _groups
-          var sum = _groups[index];
-          sum.value = sum.value + actual.level;
-          _groups[index] = sum;
-        //si no se encuentra el type
+          // added to what is already on _groups
+          let sum = _groups[index]
+          sum.value = sum.value + actual.level
+          _groups[index] = sum
+        // if there is no type
         } else {
-          //se agrega el obj con type y valor
-          _groups.push({type: actual.type, value: actual.level});
+          // add the object to _group
+          _groups.push({type: actual.type, value: actual.level})
         }
       }
 
-      _groups.forEach(function(el){
-        //console.log(countPerType(el.type));
-        el.value = el.value / countPerType(el.type);
-      });
-
-      return _groups;
+      _groups.forEach(el => {
+        el.value = el.value / countPerType(el.type)
+      })
+      return _groups
     }
   }
 }

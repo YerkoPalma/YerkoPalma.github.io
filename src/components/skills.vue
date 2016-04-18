@@ -44,10 +44,10 @@ export default{
   data(){
     return {
       tabs: [
-        { target: "frontend", name: "Front-end"},
-        { target: "backend", name: "Back-end"},
-        { target: "database", name: "Bases de datos"},
-        { target: "mobile", name: "Mobile"}
+        { target: 'frontend', name: 'Front-end'},
+        { target: 'backend', name: 'Back-end'},
+        { target: 'database', name: 'Bases de datos'},
+        { target: 'mobile', name: 'Mobile'}
       ],
       areas: [
         {
@@ -119,33 +119,32 @@ export default{
         container.removeChild(container.firstChild)
       }
       // add a new canvas
-      var canvas = document.createElement('canvas');
+      let canvas = document.createElement('canvas')
 
-      canvas.id = "chart";
-      canvas.width = 370;
-      canvas.height = 400;
-      canvas.style.zIndex = 8;
+      canvas.id = 'chart'
+      canvas.width = 370
+      canvas.height = 400
+      canvas.style.zIndex = 8
       
-      container.appendChild(canvas);
+      container.appendChild(canvas)
       
-      let chartLayer = document.getElementById("chart");
-      var ctx = chartLayer.getContext("2d");
-      //ctx.clearRect(0, 0, canvas.width, canvas.height);
-      var _data = {
-        labels: data.map(function (obj) { return obj.name }),
+      let chartLayer = document.getElementById('chart')
+      let ctx = chartLayer.getContext('2d')
+      
+      let _data = {
+        labels: data.map(obj => { return obj.name }),
         datasets: [{
-          label: "",
-          fillColor: "rgba(220,220,220,0.2)",
-          strokeColor: "rgba(220,220,220,1)",
-          pointColor: "rgba(220,220,220,1)",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(220,220,220,1)",
-          data: data.map(function (obj) { return obj.level })
+          label: '',
+          fillColor: 'rgba(220,220,220,0.2)',
+          strokeColor: 'rgba(220,220,220,1)',
+          pointColor: 'rgba(220,220,220,1)',
+          pointStrokeColor: '#fff',
+          pointHighlightFill: '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data: data.map(obj => { return obj.level })
         }]
-      };
-      console.log(JSON.stringify(_data.datasets.data));
-      var myRadarChart = new Chart(ctx).Radar(_data);
+      }
+      let myRadarChart = new Chart(ctx).Radar(_data)
     }
   },
   components: {

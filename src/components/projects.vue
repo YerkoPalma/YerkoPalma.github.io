@@ -30,43 +30,35 @@
 </template>
 
 <script>
-var marked = require('marked');
-//var fs = require('fs');
+import marked from 'marked'
 
 export default{
   methods: {
     fadeIn: function(id) {
-      var el = document.getElementById(id + '-modal');
-      //console.log(el);
+      let el = document.getElementById(id + '-modal')
+      
       if (el.classList)
-        el.classList.add('shown');
+        el.classList.add('shown')
       else
-        el.className += ' ' + 'shown';
+        el.className += ' ' + 'shown'
     },
     fadeOut: function(id){
-      var el = document.getElementById(id + '-modal');
-      //console.log(el);
+      let el = document.getElementById(id + '-modal')
       if (el.classList)
-        el.classList.remove('shown');
+        el.classList.remove('shown')
       else
-        el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
     }
   },
   ready() {
-
     //update the content of every project, loading the md content
-    //var html = fs.readFileSync(__dirname + '/robot.html', 'utf8');
     for (let project of this.projects){
-      //let tmpContent = require(project.content)
-      //project.content = tmpContent
-
-      var client = new XMLHttpRequest();
-      client.open('GET', project.content, false);
+      let client = new XMLHttpRequest()
+      client.open('GET', project.content, false)
       client.onreadystatechange = function() {
-        project.content = client.responseText;
-        console.log(client.responseText);
+        project.content = client.responseText
       }
-      client.send(null);
+      client.send(null)
     }
   },
   data() {
@@ -114,7 +106,6 @@ export default{
           thumbnail: 'assets/img/codepen.png',
           content: '/src/media/codepen.md'
         }
-
       ]
     }
   },

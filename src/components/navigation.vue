@@ -18,7 +18,7 @@
                   <li class="hidden">
                       <a class="page-scroll" href="#cover-wrapper"></a>
                   </li>
-                  <slot></slot>                  
+                  <slot></slot>
               </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -26,21 +26,19 @@
       <!-- /.container -->
   </nav>
 </template>
-
 <script>
-
-  export default{
-    props: {
-      root: {
-        type: Object,
-        required: true
-      }
-    },
-    data(){
-      return {
-        url: "#",
-        name: ""
-      }
+export default{
+  props: {
+    root: {
+      type: Object,
+      required: true
+    }
+  },
+  data(){
+    return {
+      url: '#',
+      name: ''
     }
   }
+}
 </script>
