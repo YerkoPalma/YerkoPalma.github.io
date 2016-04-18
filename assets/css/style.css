@@ -5266,3 +5266,13 @@ main section.contact-section {
 #experience > .container > .row .timeline .node:first-child {
   margin-top: 20px;
 }
+#experience > .container > .row .thumbnail-event.event-left .caption {
+  text-align: left;
+}
+#experience > .container > .row .thumbnail-event.event-right .caption {
+  text-align: right;
+}
+#experience > .container > .row .thumbnail-event .caption h3 {
+  position: absolute;
+  top: 150px;
+}
