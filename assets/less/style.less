@@ -317,7 +317,11 @@ main{
 /* ------------------ EXPERIENCE SECTION ------------------ */
 #experience {
   background-color: #fff;
-
+  h1{
+    font-size: 4em;
+    margin-bottom: 50px;
+  }
+  
   & > .container > .row {
     position: relative;
     .timeline {
@@ -327,6 +331,15 @@ main{
       height: 100%;
       display: table-cell;
       left: 50%;
+      
+      .node-year {
+        position: absolute;
+        left: -15px;
+        padding: 2px;
+        background-color: #fff;
+        border: solid 1px;
+        border-radius: 3px;
+      }
       
       .node {
         border-color: #333;
@@ -338,7 +351,7 @@ main{
         border-style: solid;
         position: absolute;
         left: -5px;
-        margin-top: 5px;
+        margin-top: 28px;
         
         &:first-child {
           margin-top: 20px;

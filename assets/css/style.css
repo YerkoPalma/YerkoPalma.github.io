@@ -5240,6 +5240,10 @@ main section.contact-section {
 #experience {
   background-color: #fff;
 }
+#experience h1 {
+  font-size: 4em;
+  margin-bottom: 50px;
+}
 #experience > .container > .row {
   position: relative;
 }
@@ -5251,6 +5255,14 @@ main section.contact-section {
   display: table-cell;
   left: 50%;
 }
+#experience > .container > .row .timeline .node-year {
+  position: absolute;
+  left: -15px;
+  padding: 2px;
+  background-color: #fff;
+  border: solid 1px;
+  border-radius: 3px;
+}
 #experience > .container > .row .timeline .node {
   border-color: #333;
   border-radius: 999px;
@@ -5261,7 +5273,7 @@ main section.contact-section {
   border-style: solid;
   position: absolute;
   left: -5px;
-  margin-top: 5px;
+  margin-top: 28px;
 }
 #experience > .container > .row .timeline .node:first-child {
   margin-top: 20px;
