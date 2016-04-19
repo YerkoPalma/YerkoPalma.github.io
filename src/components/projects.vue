@@ -4,9 +4,9 @@
       <div class="container-fluid">
         <div class="projects-wrapper">
           <template v-for="project in projects">
-            <div class="project-thumbnail" id="{{project.id}}" v-bind:class="{ 'new-row': $index % 3 == 0 }" >
+            <div class="project-thumbnail" id="{{project.id}}" :class="{ 'new-row': $index % 3 == 0 }" >
               <div class="project-content">
-                <div class="project-hover" v-on:click="fadeIn(project.id)">
+                <div class="project-hover" @click="fadeIn($index)">
                   <i class="fa fa-plus fa-5x"></i>
                 </div>
                 <img class="img-responsive" :src="project.thumbnail"/>
@@ -16,8 +16,8 @@
                 <span class="sub-title">{{project.description}}</span>
               </div>
             </div>
-            <div class="project-panel" id="{{project.id}}-modal">
-              <span v-on:click="fadeOut(project.id)" class="times">&times;</span>
+            <div class="project-panel" id="{{project.id}}-modal" v-show="project.show" transition="bounce">
+              <span @click="fadeOut($index)" class="times">&times;</span>
               <div class="container">
                 <div v-html="project.content | marked"></div>
               </div>
@@ -34,20 +34,22 @@ import marked from 'marked'
 
 export default{
   methods: {
-    fadeIn: function(id) {
-      let el = document.getElementById(id + '-modal')
+    fadeIn: function(index) {
+      let projectSelected = this.projects[index]
+      projectSelected.show = true
+      this.projects[index] = projectSelected
+      let body = document.getElementsByTagName('body')[0]
       
-      if (el.classList)
-        el.classList.add('shown')
-      else
-        el.className += ' ' + 'shown'
+      body.style.overflow = 'hidden'
+      
     },
-    fadeOut: function(id){
-      let el = document.getElementById(id + '-modal')
-      if (el.classList)
-        el.classList.remove('shown')
-      else
-        el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
+    fadeOut: function(index){
+      let projectSelected = this.projects[index]
+      projectSelected.show = false
+      this.projects[index] = projectSelected
+      let body = document.getElementsByTagName('body')[0]
+      
+      body.style.overflow = 'visible'
     }
   },
   ready() {
@@ -69,42 +71,48 @@ export default{
           name: 'Palma Contabilidad',
           description: 'Website design',
           thumbnail: 'assets/img/palmacontabilidad-thumbnail.png',
-          content: '/src/media/palmacontabilidad.md'
+          content: '/src/media/palmacontabilidad.md',
+          show: false
         },
         {
           id: 'salvador',
           name: 'Salvador Palma Navea',
           description: 'Website design',
           thumbnail: 'assets/img/salvador.png',
-          content: '/src/media/salvador.md'
+          content: '/src/media/salvador.md',
+          show: false
         },
         {
           id: 'chilena',
           name: 'Reembolsos Movil',
           description: 'Mobile app',
           thumbnail: 'assets/img/chilena-thumbnail.png',
-          content: '/src/media/chilena.md'
+          content: '/src/media/chilena.md',
+          show: false
         },
         {
           id: 'observatorioweb',
           name: 'Observatorio Web',
           description: 'Web App',
           thumbnail: 'assets/img/observatorioweb.png',
-          content: '/src/media/observatorioweb.md'
+          content: '/src/media/observatorioweb.md',
+          show: false
         },
         {
           id: 'github',
           name: 'Github Projects',
           description: 'Open Source Projects',
           thumbnail: 'assets/img/github.png',
-          content: '/src/media/github.md'
+          content: '/src/media/github.md',
+          show: false
         },
         {
           id: 'codepen',
           name: 'CodePen Projects',
           description: 'Open Source Pens',
           thumbnail: 'assets/img/codepen.png',
-          content: '/src/media/codepen.md'
+          content: '/src/media/codepen.md',
+          show: false
         }
       ]
     }

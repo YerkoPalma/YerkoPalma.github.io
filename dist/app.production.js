@@ -12516,14 +12516,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
   methods: {
-    fadeIn: function fadeIn(id) {
-      var el = document.getElementById(id + '-modal');
+    fadeIn: function fadeIn(index) {
+      var projectSelected = this.projects[index];
+      projectSelected.show = true;
+      this.projects[index] = projectSelected;
+      var body = document.getElementsByTagName('body')[0];
 
-      if (el.classList) el.classList.add('shown');else el.className += ' ' + 'shown';
+      body.style.overflow = 'hidden';
     },
-    fadeOut: function fadeOut(id) {
-      var el = document.getElementById(id + '-modal');
-      if (el.classList) el.classList.remove('shown');else el.className = el.className.replace(new RegExp('(^|\\b)' + 'shown'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    fadeOut: function fadeOut(index) {
+      var projectSelected = this.projects[index];
+      projectSelected.show = false;
+      this.projects[index] = projectSelected;
+      var body = document.getElementsByTagName('body')[0];
+
+      body.style.overflow = 'visible';
     }
   },
   ready: function ready() {
@@ -12569,37 +12576,43 @@ exports.default = {
         name: 'Palma Contabilidad',
         description: 'Website design',
         thumbnail: 'assets/img/palmacontabilidad-thumbnail.png',
-        content: '/src/media/palmacontabilidad.md'
+        content: '/src/media/palmacontabilidad.md',
+        show: false
       }, {
         id: 'salvador',
         name: 'Salvador Palma Navea',
         description: 'Website design',
         thumbnail: 'assets/img/salvador.png',
-        content: '/src/media/salvador.md'
+        content: '/src/media/salvador.md',
+        show: false
       }, {
         id: 'chilena',
         name: 'Reembolsos Movil',
         description: 'Mobile app',
         thumbnail: 'assets/img/chilena-thumbnail.png',
-        content: '/src/media/chilena.md'
+        content: '/src/media/chilena.md',
+        show: false
       }, {
         id: 'observatorioweb',
         name: 'Observatorio Web',
         description: 'Web App',
         thumbnail: 'assets/img/observatorioweb.png',
-        content: '/src/media/observatorioweb.md'
+        content: '/src/media/observatorioweb.md',
+        show: false
       }, {
         id: 'github',
         name: 'Github Projects',
         description: 'Open Source Projects',
         thumbnail: 'assets/img/github.png',
-        content: '/src/media/github.md'
+        content: '/src/media/github.md',
+        show: false
       }, {
         id: 'codepen',
         name: 'CodePen Projects',
         description: 'Open Source Pens',
         thumbnail: 'assets/img/codepen.png',
-        content: '/src/media/codepen.md'
+        content: '/src/media/codepen.md',
+        show: false
       }]
     };
   },
@@ -12609,7 +12622,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n    <h1>¿Qué he hecho?</h1>\n      <div class=\"container-fluid\">\n        <div class=\"projects-wrapper\">\n          <template v-for=\"project in projects\">\n            <div class=\"project-thumbnail\" id=\"{{project.id}}\" v-bind:class=\"{ 'new-row': $index % 3 == 0 }\">\n              <div class=\"project-content\">\n                <div class=\"project-hover\" v-on:click=\"fadeIn(project.id)\">\n                  <i class=\"fa fa-plus fa-5x\"></i>\n                </div>\n                <img class=\"img-responsive\" :src=\"project.thumbnail\">\n              </div>\n              <div class=\"project-caption\">\n                <h3>{{project.name}}</h3>\n                <span class=\"sub-title\">{{project.description}}</span>\n              </div>\n            </div>\n            <div class=\"project-panel\" id=\"{{project.id}}-modal\">\n              <span v-on:click=\"fadeOut(project.id)\" class=\"times\">×</span>\n              <div class=\"container\">\n                <div v-html=\"project.content | marked\"></div>\n              </div>\n            </div>\n          </template>\n\n        </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n    <h1>¿Qué he hecho?</h1>\n      <div class=\"container-fluid\">\n        <div class=\"projects-wrapper\">\n          <template v-for=\"project in projects\">\n            <div class=\"project-thumbnail\" id=\"{{project.id}}\" :class=\"{ 'new-row': $index % 3 == 0 }\">\n              <div class=\"project-content\">\n                <div class=\"project-hover\" @click=\"fadeIn($index)\">\n                  <i class=\"fa fa-plus fa-5x\"></i>\n                </div>\n                <img class=\"img-responsive\" :src=\"project.thumbnail\">\n              </div>\n              <div class=\"project-caption\">\n                <h3>{{project.name}}</h3>\n                <span class=\"sub-title\">{{project.description}}</span>\n              </div>\n            </div>\n            <div class=\"project-panel\" id=\"{{project.id}}-modal\" v-show=\"project.show\" transition=\"bounce\">\n              <span @click=\"fadeOut($index)\" class=\"times\">×</span>\n              <div class=\"container\">\n                <div v-html=\"project.content | marked\"></div>\n              </div>\n            </div>\n          </template>\n\n        </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

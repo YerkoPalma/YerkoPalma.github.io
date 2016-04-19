@@ -286,9 +286,10 @@ main{
     }
   }
   .project-panel {
-    display: none;
+    // display: none;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(255,255,255,.99);
@@ -296,8 +297,8 @@ main{
     transition: all 0.5s;
     overflow: hidden;
 
-    &.shown {
-      display: block;
+    //&.shown {
+    //  display: block;
 
       .fa.fa-times,
       span.times {
@@ -310,7 +311,7 @@ main{
         font-weight: lighter;
         margin-top: -20px;
       }
-    }
+    //}
   }
 }
 
@@ -375,4 +376,15 @@ main{
       }
     }
   }
+}
+/* ------------------ TRANSITION SECTION ------------------ */
+.bounce-transition {
+  display: inline-block; /* otherwise scale animation won't work */
+  transition: all 0.5s;
+}
+.bounce-enter {
+  transform: scale(1);
+}
+.bounce-leave {
+  transform: scale(0);
 }
