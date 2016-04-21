@@ -1,7 +1,17 @@
 <template>
   <div class="container-fluid" id="cover-wrapper">
     <div class="row text-center" id="cover">
-      <img :src="gravatar" class="img-circle center-block" style="display: block;" alt="...">
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+            <img :src="gravatar" class="img-circle center-block" style="display: block;" alt="...">
+          </div>
+          <div class="back">
+            <!-- back content -->
+            <div class="card"></div>
+          </div>
+        </div>
+      </div>
       <h1 class="display-3">{{title}}</h1>
       <p class="lead">{{subTitle}}</p>
     </div>

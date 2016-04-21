@@ -12376,7 +12376,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <img :src=\"gravatar\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n      <h1 class=\"display-3\">{{title}}</h1>\n      <p class=\"lead\">{{subTitle}}</p>\n    </div>\n  </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <div class=\"flip-container\" ontouchstart=\"this.classList.toggle('hover');\">\n        <div class=\"flipper\">\n          <div class=\"front\">\n            <img :src=\"gravatar\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n          </div>\n          <div class=\"back\">\n            <!-- back content -->\n            <div class=\"card\"></div>\n          </div>\n        </div>\n      </div>\n      <h1 class=\"display-3\">{{title}}</h1>\n      <p class=\"lead\">{{subTitle}}</p>\n    </div>\n  </div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
