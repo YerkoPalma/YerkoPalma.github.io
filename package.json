@@ -53,7 +53,7 @@
   "scripts": {
     "build": "browserify -t vueify -e src/app.js -o dist/app.production.js",
     "compile": "browserify -t stringify -t vueify -e src/app.js -o dist/app.production.js",
-    "test": "xo --ignore=lib/*.js"
+    "test": "xo --ignore=lib/*.js --plugin=vue"
   },
   "repository": {
     "type": "git",
