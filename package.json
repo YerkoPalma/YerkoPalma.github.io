@@ -27,11 +27,31 @@
     "gulp-load-plugins": "^1.1.0",
     "gulp-plumber": "^1.0.1",
     "partialify": "^3.1.5",
-    "stringify": "^3.2.0"
+    "stringify": "^3.2.0",
+    "xo": "^0.14.0"
+  },
+  "xo": {
+    "esnext": true,
+    "space": 2,
+    "semicolon": false,
+    "overrides": [
+      {
+        "files": "gulpfile.js",
+        "esnext": false
+      },
+      {
+        "files": "src/app.js",
+        "esnext": false
+      }
+    ],
+    "rules": {
+      "no-new": 0
+    }
   },
   "scripts": {
     "build": "browserify -t vueify -e src/app.js -o dist/app.production.js",
-    "compile": "browserify -t stringify -t vueify -e src/app.js -o dist/app.production.js"
+    "compile": "browserify -t stringify -t vueify -e src/app.js -o dist/app.production.js",
+    "test": "xo --ignore=lib/*.js"
   },
   "repository": {
     "type": "git",

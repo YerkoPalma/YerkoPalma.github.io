@@ -1,15 +1,15 @@
-var Vue = require('vue');
-var NavLink = require('./components/navlink.vue');
-var Service = require('./components/service.vue');
-var Nav = require('./components/navigation.vue');
-var Cover = require('./components/cover.vue');
-var Services = require('./components/services.vue');
-var Skills = require('./components/skills.vue');
-var Projects = require('./components/projects.vue');
-var Experience = require('./components/experience.vue');
-var Contact = require('./components/contact.vue');
+var Vue = require('vue')
+var NavLink = require('./components/navlink.vue')
+var Service = require('./components/service.vue')
+var Nav = require('./components/navigation.vue')
+var Cover = require('./components/cover.vue')
+var Services = require('./components/services.vue')
+var Skills = require('./components/skills.vue')
+var Projects = require('./components/projects.vue')
+var Experience = require('./components/experience.vue')
+var Contact = require('./components/contact.vue')
 
-Vue.config.debug = true;
+Vue.config.debug = true
 
 new Vue({
   el: 'body',
@@ -24,4 +24,4 @@ new Vue({
     contact: Contact,
     navLink: NavLink
   }
-});
+})
