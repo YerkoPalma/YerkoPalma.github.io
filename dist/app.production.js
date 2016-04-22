@@ -33339,13 +33339,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   data: function data() {
     return {
-      mail: 'yerko.palma@usach.cl'
+      mail: 'yerko.palma@usach.cl',
+      description: ''
     };
   },
 
   computed: {
     gravatar: function gravatar() {
-      //https://s.gravatar.com/avatar/d809533c5ce964b709e2b38e6573973b?s=180
       var src = 'https://s.gravatar.com/avatar/' + (0, _jsMd2.default)(this.mail) + '?s=180';
       return src;
     }
@@ -33361,7 +33361,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <div class=\"flip-container\" ontouchstart=\"this.classList.toggle('hover');\">\n        <div class=\"flipper\">\n          <div class=\"front\">\n            <img :src=\"gravatar\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n          </div>\n          <div class=\"back\">\n            <!-- back content -->\n            <div class=\"card\"></div>\n          </div>\n        </div>\n      </div>\n      <h1 class=\"display-3\">{{title}}</h1>\n      <p class=\"lead\">{{subTitle}}</p>\n    </div>\n  </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <div class=\"flip-container\" ontouchstart=\"this.classList.toggle('hover');\">\n        <div class=\"flipper\">\n          <div class=\"front\">\n            <img :src=\"gravatar\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n          </div>\n          <div class=\"back\">\n            <!-- back content -->\n            <div class=\"card\">\n              <a class=\"publicity\" href=\"https://github.com/YerkoPalma\" target=\"_blank\">\n                <i class=\"fa fa-github uncolor\" aria-hidden=\"true\"></i>\n              </a>\n              <a class=\"publicity\" href=\"http://stackoverflow.com/users/3178237/yerko-palma\" target=\"_blank\">\n                <i class=\"fa fa-stack-overflow uncolor\" aria-hidden=\"true\"></i>\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      <h1 class=\"display-3\">{{title}}</h1>\n      <p class=\"lead\">{{subTitle}}</p>\n      <div class=\"self-description\">\n        <p>{{description}}</p>\n      </div>\n    </div>\n  </div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

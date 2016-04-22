@@ -26,6 +26,8 @@
 @import "progress-bars.less";
 @import "thumbnails.less";
 
+// Brands
+@import "brands.less";
 
 // Utility classes
 @import "utilities.less";
@@ -119,6 +121,10 @@ header {
       height: 100%;
       width: 100%;
       margin: 0;
+
+      .lead {
+        color: #777;
+      }
     }
   }
   @media(min-width:767px) {
@@ -322,7 +328,7 @@ main{
     font-size: 4em;
     margin-bottom: 50px;
   }
-  
+
   & > .container > .row {
     position: relative;
     .timeline {
@@ -332,7 +338,7 @@ main{
       height: 100%;
       display: table-cell;
       left: 50%;
-      
+
       .node-year {
         position: absolute;
         left: -15px;
@@ -341,7 +347,7 @@ main{
         border: solid 1px;
         border-radius: 3px;
       }
-      
+
       .node {
         border-color: #333;
         border-radius: 999px;
@@ -353,7 +359,7 @@ main{
         position: absolute;
         left: -5px;
         margin-top: 28px;
-        
+
         &:first-child {
           margin-top: 20px;
         }
@@ -367,7 +373,7 @@ main{
       &.event-right .caption {
         text-align: right;
       }
-      
+
       .caption {
         h3 {
           position: absolute;
@@ -403,12 +409,28 @@ main{
 .flip-container, .front, .back {
 	width: 180px;
 	height: 180px;
-	
+
 	.card {
-	  background-color: #eee;
+	  background-color: #999;
     width: 100%;
     height: 100%;
     border-radius: 99px;
+
+    .publicity {
+      font-size: 2.5em;
+      color: #fff;
+      padding: 2px 12px;
+      top: 30%;
+      left: 30px;
+      position: absolute;
+      &:last-child {
+        left: 100px;
+      }
+      &:hover {
+        background-color: darken(#fff, 80%);
+        border-radius: 99px;
+      }
+    }
 	}
 }
 

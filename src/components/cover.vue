@@ -8,12 +8,22 @@
           </div>
           <div class="back">
             <!-- back content -->
-            <div class="card"></div>
+            <div class="card">
+              <a class="publicity" href="https://github.com/YerkoPalma" target="_blank">
+                <i class="fa fa-github uncolor" aria-hidden="true"></i>
+              </a>
+              <a class="publicity" href="http://stackoverflow.com/users/3178237/yerko-palma" target="_blank">
+                <i class="fa fa-stack-overflow uncolor" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <h1 class="display-3">{{title}}</h1>
       <p class="lead">{{subTitle}}</p>
+      <div class="self-description">
+        <p>{{description}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -22,19 +32,19 @@
 import md5 from 'js-md5'
 
   export default{
-    data(){
+    data () {
       return{
-        mail: 'yerko.palma@usach.cl'
+        mail: 'yerko.palma@usach.cl',
+        description: ''
       }
     },
     computed: {
-      gravatar: function() {
-        //https://s.gravatar.com/avatar/d809533c5ce964b709e2b38e6573973b?s=180
+      gravatar: function () {        
         var src = 'https://s.gravatar.com/avatar/' + md5(this.mail) + '?s=180'
         return src;
       }
     },
-    props: {      
+    props: {
       title: {
         type: String,
         required: true

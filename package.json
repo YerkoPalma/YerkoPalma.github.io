@@ -20,6 +20,8 @@
     "browserify": "^13.0.0",
     "browserify-fs": "^1.0.0",
     "browserify-hmr": "^0.3.1",
+    "eslint": "^2.8.0",
+    "eslint-plugin-vue": "^0.1.1",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-connect": "^2.2.0",
