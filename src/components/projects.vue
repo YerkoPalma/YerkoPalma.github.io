@@ -34,7 +34,7 @@ import marked from 'marked'
 
 export default{
   methods: {
-    fadeIn: function(index) {
+    fadeIn: function (index) {
       let projectSelected = this.projects[index]
       projectSelected.show = true
       this.projects[index] = projectSelected
@@ -43,7 +43,7 @@ export default{
       body.style.overflow = 'hidden'
       
     },
-    fadeOut: function(index){
+    fadeOut: function (index){
       let projectSelected = this.projects[index]
       projectSelected.show = false
       this.projects[index] = projectSelected
@@ -52,18 +52,18 @@ export default{
       body.style.overflow = 'visible'
     }
   },
-  ready() {
+  ready () {
     //update the content of every project, loading the md content
     for (let project of this.projects){
       let client = new XMLHttpRequest()
       client.open('GET', project.content, false)
-      client.onreadystatechange = function() {
+      client.onreadystatechange = function () {
         project.content = client.responseText
       }
       client.send(null)
     }
   },
-  data() {
+  data () {
     return {
       projects: [
         {

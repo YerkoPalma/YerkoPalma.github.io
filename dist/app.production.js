@@ -33037,6 +33037,8 @@ var Skills = require('./components/skills.vue')
 var Projects = require('./components/projects.vue')
 var Experience = require('./components/experience.vue')
 var Contact = require('./components/contact.vue')
+var Social = require('./components/social.vue')
+var Rights = require('./components/rights.vue')
 
 Vue.config.debug = true
 
@@ -33051,12 +33053,14 @@ new Vue({
     projects: Projects,
     experience: Experience,
     contact: Contact,
-    navLink: NavLink
+    navLink: NavLink,
+    social: Social,
+    rights: Rights
   }
 })
 
-},{"./components/contact.vue":278,"./components/cover.vue":279,"./components/experience.vue":280,"./components/navigation.vue":281,"./components/navlink.vue":282,"./components/projects.vue":283,"./components/service.vue":284,"./components/services.vue":285,"./components/skills.vue":287,"vue":276}],278:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-12\">\n                  <h1>Contact Section</h1>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+},{"./components/contact.vue":278,"./components/cover.vue":279,"./components/experience.vue":280,"./components/navigation.vue":281,"./components/navlink.vue":282,"./components/projects.vue":283,"./components/rights.vue":284,"./components/service.vue":285,"./components/services.vue":286,"./components/skills.vue":288,"./components/social.vue":289,"vue":276}],278:[function(require,module,exports){
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n            <h1>Contacto</h1>\n              <div class=\"col-md-8 col-md-offset-2\">\n                <form class=\"contact-form\" action=\"https://formspree.io/yerko.palma@usach.cl\" method=\"POST\">\n                  <div class=\"row\">\n                    <div class=\"col-md-6\">\n                      <label>Name</label>\n                      <input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre\">\n                    </div>\n                    <div class=\"col-md-6\">\n                      <label>Email</label>\n                      <input type=\"email\" class=\"form-control\" name=\"_replyto\" placeholder=\"Mail\">\n                      <input type=\"text\" name=\"_gotcha\" style=\"display:none\">\n                    </div>\n                  </div>\n                  <label>Message</label>\n                  <textarea class=\"form-control\" rows=\"4\" placeholder=\"Cuentame que necesitas...\" name=\"mensaje\"></textarea>\n                  <div class=\"row\">\n                    <div class=\"col-md-4 col-md-offset-4\">\n                      <button type=\"submit\" class=\"btn btn-danger btn-block btn-lg btn-fill\">Enviar mensaje</button>\n                    </div>\n                  </div>\n                </form>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33365,6 +33369,33 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"babel-runtime/core-js/get-iterator":1,"marked":274,"vue":276,"vue-hot-reload-api":275}],284:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: {
+    align: {
+      type: String,
+      default: 'left'
+    }
+  }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/ubuntu/workspace/src/components/rights.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":276,"vue-hot-reload-api":275}],285:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33393,7 +33424,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":276,"vue-hot-reload-api":275}],285:[function(require,module,exports){
+},{"vue":276,"vue-hot-reload-api":275}],286:[function(require,module,exports){
 ;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"services\" class=\"services-section\">\n    <h1>¿Qué hago?</h1>\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-3\">\n                  <slot name=\"design\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"develop\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"mobile\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"tech\"></slot>\n              </div>\n          </div>\n      </div>\n  </section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
@@ -33406,7 +33437,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":276,"vue-hot-reload-api":275}],286:[function(require,module,exports){
+},{"vue":276,"vue-hot-reload-api":275}],287:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33497,7 +33528,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"vue":276,"vue-hot-reload-api":275}],287:[function(require,module,exports){
+},{"vue":276,"vue-hot-reload-api":275}],288:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33607,4 +33638,31 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, module.exports.template)
   }
 })()}
-},{"./skill.vue":286,"vue":276,"vue-hot-reload-api":275}]},{},[277]);
+},{"./skill.vue":287,"vue":276,"vue-hot-reload-api":275}],289:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: {
+    align: {
+      type: String,
+      default: 'left'
+    }
+  }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <i class=\"fa fa-facebook-square\"></i>\n  <i class=\"fa fa-linkedin-square\"></i>\n  <i class=\"fa fa-github\"></i>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/home/ubuntu/workspace/src/components/social.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, module.exports.template)
+  }
+})()}
+},{"vue":276,"vue-hot-reload-api":275}]},{},[277]);

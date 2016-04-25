@@ -40,8 +40,8 @@ import md5 from 'js-md5'
     },
     computed: {
       gravatar: function () {
-        var src = 'https://s.gravatar.com/avatar/' + md5(this.mail) + '?s=180'
-        return src;
+        let src = 'https://s.gravatar.com/avatar/' + md5(this.mail) + '?s=180'
+        return src
       }
     },
     props: {

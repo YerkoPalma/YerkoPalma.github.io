@@ -8,6 +8,8 @@ var Skills = require('./components/skills.vue')
 var Projects = require('./components/projects.vue')
 var Experience = require('./components/experience.vue')
 var Contact = require('./components/contact.vue')
+var Social = require('./components/social.vue')
+var Rights = require('./components/rights.vue')
 
 Vue.config.debug = true
 
@@ -22,6 +24,8 @@ new Vue({
     projects: Projects,
     experience: Experience,
     contact: Contact,
-    navLink: NavLink
+    navLink: NavLink,
+    social: Social,
+    rights: Rights
   }
 })

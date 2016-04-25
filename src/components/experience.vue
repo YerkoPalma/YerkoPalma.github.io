@@ -50,7 +50,7 @@ export default {
     let years = document.querySelectorAll('.node-year')
     
     if (nodes) {
-      for(let i = 0; i < nodes.length; i++) {
+      for (let i = 0; i < nodes.length; i++) {
         nodes[i].style.top = (eventHeight * i) + 'px'
         years[i].style.top = (eventHeight * i) + 'px'
       }
