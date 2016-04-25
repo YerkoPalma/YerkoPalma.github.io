@@ -33383,7 +33383,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div :class=\"{ 'pull-left': align === 'left', 'pull-right': align === 'right'}\"></div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33645,15 +33645,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
+  ready: function ready() {
+    $('#footer a').mouseenter(function () {
+      $(this).find('.uncolor').removeClass('uncolor');
+    }).mouseleave(function () {
+      $(this).find('.fa').addClass('uncolor');
+    });
+  },
+
   props: {
     align: {
       type: String,
       default: 'left'
+    },
+    facebook: {
+      type: String,
+      default: '#'
+    },
+    linkedin: {
+      type: String,
+      default: '#'
+    },
+    github: {
+      type: String,
+      default: '#'
     }
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <i class=\"fa fa-facebook-square\"></i>\n  <i class=\"fa fa-linkedin-square\"></i>\n  <i class=\"fa fa-github\"></i>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav id=\"footer\" :class=\"{ 'pull-left': align === 'left', 'pull-right': align === 'right'}\">\n    <ul>\n      <li>\n        <a :href=\"facebook\"><i class=\"fa fa-facebook-square uncolor\"></i></a>\n      </li>\n      <li>\n        <a :href=\"linkedin\"><i class=\"fa fa-linkedin-square uncolor\"></i></a>\n      </li>\n      <li>\n        <a :href=\"github\"><i class=\"fa fa-github uncolor\"></i></a>\n      </li>\n    </ul>\n  </nav>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
