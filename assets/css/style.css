@@ -5458,7 +5458,7 @@ header nav.navbar.navbar-default.navbar-fixed-top {
     padding: 2px;
   }
   header nav.navbar.navbar-default.navbar-fixed-top ul.nav.navbar-nav.pull-rigth li .active {
-    background-color: #f99d97;
+    background-color: #f77066;
     color: #212121;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -5502,6 +5502,10 @@ header #cover-wrapper #cover {
 }
 header #cover-wrapper #cover .lead {
   color: #777;
+}
+header #cover-wrapper #cover .self-description p {
+  color: #ccc;
+  font-size: 18px;
 }
 @media (min-width: 767px) {
   header .navbar {

@@ -21,7 +21,7 @@
       </div>
       <h1 class="display-3">{{title}}</h1>
       <p class="lead">{{subTitle}}</p>
-      <div class="self-description">
+      <div class="col-md-6 col-md-offset-3 self-description">
         <p>{{description}}</p>
       </div>
     </div>
@@ -35,11 +35,11 @@ import md5 from 'js-md5'
     data () {
       return{
         mail: 'yerko.palma@usach.cl',
-        description: ''
+        description: 'Desarrollador full stack, con preferencia por Javascript <3. También soy aficionado del diseño, con espiritu emprendedor. Actualmente trabajando como desarrollador .NET/Js, pero con ganas de ayudar en tu próximo proyecto. '
       }
     },
     computed: {
-      gravatar: function () {        
+      gravatar: function () {
         var src = 'https://s.gravatar.com/avatar/' + md5(this.mail) + '?s=180'
         return src;
       }
