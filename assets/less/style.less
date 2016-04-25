@@ -200,9 +200,82 @@ main{
     margin-bottom: 50px;
   }
 
+  .nav-tabs-navigation {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+
+    .nav-tabs-wrapper {
+      display: inline-block;
+      margin-bottom: -6px;
+      margin-left: 1.25%;
+      margin-right: 1.25%;
+      position: relative;
+      width: auto;
+
+      .nav-tabs {
+        border-bottom: 0 none;
+        font-size: 16px;
+        font-weight: 600;
+
+        > li {
+          
+          > a {
+            padding-bottom: 20px;
+            border: 0 none;
+            color: #A49E93;
+            
+            &:hover, &:focus {
+              color: #66615b;
+              background-color: transparent;
+              border-color: #eee #eee #ddd;
+            }
+          }
+            
+          &.active {
+            color: #66615b;
+            position: relative;
+            
+            > a, > a:hover, > a:focus {
+              background-color: transparent;
+              border: 0 none;
+              color: #555;
+            }
+            
+            &:before {
+              border-bottom: 11px solid #ddd;
+              border-left: 11px solid transparent;
+              border-right: 11px solid transparent;
+              content: "";
+              display: inline-block;
+              position: absolute;
+              right: 40%;
+              bottom: 1px;
+            }
+            &:after {
+              border-bottom: 11px solid #fff;
+              border-left: 11px solid transparent;
+              border-right: 11px solid transparent;
+              content: "";
+              display: inline-block;
+              position: absolute;
+              right: 40%;
+              bottom: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
   .tab-pane{
     .container{
       padding: 1em;
+      .progress {
+        background-color: #DDDDDD;
+        border-radius: 3px;
+        box-shadow: none;
+        height: 8px;
+      }
     }
     p{
       margin: 0;
@@ -214,7 +287,6 @@ main{
   }
   .jumbotron {
     padding: 0;
-    padding-top: 20px;
 
     h3 {
       margin: 0;

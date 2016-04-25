@@ -5560,8 +5560,74 @@ main section.contact-section {
   font-size: 4em;
   margin-bottom: 50px;
 }
+#skills .nav-tabs-navigation {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper {
+  display: inline-block;
+  margin-bottom: -6px;
+  margin-left: 1.25%;
+  margin-right: 1.25%;
+  position: relative;
+  width: auto;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs {
+  border-bottom: 0 none;
+  font-size: 16px;
+  font-weight: 600;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li > a {
+  padding-bottom: 20px;
+  border: 0 none;
+  color: #A49E93;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li > a:hover,
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li > a:focus {
+  color: #66615b;
+  background-color: transparent;
+  border-color: #eee #eee #ddd;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li.active {
+  color: #66615b;
+  position: relative;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li.active > a,
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li.active > a:hover,
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border: 0 none;
+  color: #555;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li.active:before {
+  border-bottom: 11px solid #ddd;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 40%;
+  bottom: 1px;
+}
+#skills .nav-tabs-navigation .nav-tabs-wrapper .nav-tabs > li.active:after {
+  border-bottom: 11px solid #fff;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 40%;
+  bottom: -1px;
+}
 #skills .tab-pane .container {
   padding: 1em;
+}
+#skills .tab-pane .container .progress {
+  background-color: #DDDDDD;
+  border-radius: 3px;
+  box-shadow: none;
+  height: 8px;
 }
 #skills .tab-pane p {
   margin: 0;
@@ -5572,7 +5638,6 @@ main section.contact-section {
 }
 #skills .jumbotron {
   padding: 0;
-  padding-top: 20px;
 }
 #skills .jumbotron h3 {
   margin: 0;

@@ -3,13 +3,16 @@
       <div class="container">
           <div class="row">
             <h1>¿Para qué soy bueno?</h1>
+              <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" v-for="tab in tabs" v-bind:class="{ 'active' : $index === 0 }">
+                      <a href="#{{tab.target}}" role="tab" aria-controls="{{tab.target}}" data-toggle="tab">{{tab.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <div class="col-lg-7">
-                <!-- Tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation" v-for="tab in tabs" v-bind:class="{ 'active' : $index === 0 }">
-                    <a href="#{{tab.target}}" role="tab" aria-controls="{{tab.target}}" data-toggle="tab">{{tab.name}}</a>
-                  </li>
-                </ul>
 
                 <!-- Tabs content -->
                 <div class="tab-content">
@@ -19,14 +22,10 @@
                     :level="area.level"
                     :skill-id="area.name">
                   </skill>
-
-                   <!-- /Front-end -->
-
                 </div>
               </div>
               <div class="col-md-5">
                 <div class="jumbotron">
-                  <h3>Detalles</h3>
                   <div id="canvas-container">
                     <canvas id="myChart" width="370" height="400"></canvas>
                   </div>
@@ -134,17 +133,32 @@ export default{
       let _data = {
         labels: data.map(obj => { return obj.name }),
         datasets: [{
-          label: '',
-          fillColor: 'rgba(220,220,220,0.2)',
-          strokeColor: 'rgba(220,220,220,1)',
-          pointColor: 'rgba(220,220,220,1)',
-          pointStrokeColor: '#fff',
-          pointHighlightFill: '#fff',
-          pointHighlightStroke: 'rgba(220,220,220,1)',
+          label: 'Nivel',
+          backgroundColor: "rgba(179,181,198,0.2)",
+          borderColor: "rgba(179,181,198,1)",
+          pointBackgroundColor: "rgba(179,181,198,1)",
+          pointBorderColor: "#fff",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(179,181,198,1)",
           data: data.map(obj => { return obj.level })
         }]
       }
-      let myRadarChart = new Chart(ctx).Radar(_data)
+      let myRadarChart = new Chart(ctx, {
+        type: 'radar',
+        data: _data,
+        options: {
+          default: {
+            global: {
+              title: {
+                display: false
+              },
+              legend: {
+                display: false
+              }
+            }
+          }
+        }
+      })
     }
   },
   components: {
