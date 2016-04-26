@@ -22,10 +22,8 @@ build:
       name: browserify
       code: |
         npm install -g browserify
-    - script:
-      name: libfontconfig
-      code: |
-        apt-get install libfontconfig
+    - install-packages:
+        packages: libfontconfig
     - script:
       name: karma and phantomjs
       code: |
