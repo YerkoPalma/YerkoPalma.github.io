@@ -9,7 +9,7 @@ module.exports = function (config) {
       'test/unit/**/*.js': ['browserify']
     },
     browserify: {
-      debug: true,
+      debug: true
       // needed to enable mocks
       // plugin: [require('proxyquireify').plugin]
     },
