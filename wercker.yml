@@ -3,6 +3,10 @@ box: nodesource/trusty
 build:
   # The steps that will be executed on build
   steps:
+    - script:
+      name: set to dev
+      code: |
+        export NODE_ENV=development
     # A step that executes `npm install` command
     - npm-install
     # install eslint globally
@@ -23,5 +27,4 @@ build:
       code: |
         npm install karma -g
         npm install -g phantomjs-prebuilt
-        export NODE_ENV=development
     - npm-test
