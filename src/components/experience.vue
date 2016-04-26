@@ -48,7 +48,7 @@ export default {
     let eventHeight = document.querySelector('.event-div').offsetHeight
     let nodes = document.querySelectorAll('.node')
     let years = document.querySelectorAll('.node-year')
-    
+
     if (nodes) {
       for (let i = 0; i < nodes.length; i++) {
         nodes[i].style.top = (eventHeight * i) + 'px'

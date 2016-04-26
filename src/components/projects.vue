@@ -39,22 +39,22 @@ export default{
       projectSelected.show = true
       this.projects[index] = projectSelected
       let body = document.getElementsByTagName('body')[0]
-      
+
       body.style.overflow = 'hidden'
-      
+
     },
-    fadeOut: function (index){
+    fadeOut: function (index) {
       let projectSelected = this.projects[index]
       projectSelected.show = false
       this.projects[index] = projectSelected
       let body = document.getElementsByTagName('body')[0]
-      
+
       body.style.overflow = 'visible'
     }
   },
   ready () {
-    //update the content of every project, loading the md content
-    for (let project of this.projects){
+    // update the content of every project, loading the md content
+    for (let project of this.projects) {
       let client = new XMLHttpRequest()
       client.open('GET', project.content, false)
       client.onreadystatechange = function () {

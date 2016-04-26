@@ -21,6 +21,7 @@
     "browserify-fs": "^1.0.0",
     "browserify-hmr": "^0.3.1",
     "eslint": "^2.8.0",
+    "eslint-plugin-html": "^1.4.0",
     "eslint-plugin-vue": "^0.1.1",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
@@ -32,28 +33,11 @@
     "stringify": "^3.2.0",
     "xo": "^0.14.0"
   },
-  "xo": {
-    "esnext": true,
-    "space": 2,
-    "semicolon": false,
-    "overrides": [
-      {
-        "files": "gulpfile.js",
-        "esnext": false
-      },
-      {
-        "files": "src/app.js",
-        "esnext": false
-      }
-    ],
-    "rules": {
-      "no-new": 0
-    }
-  },
   "scripts": {
     "build": "browserify -t vueify -e src/app.js -o dist/app.production.js",
     "compile": "browserify -t stringify -t vueify -e src/app.js -o dist/app.production.js",
-    "test": "xo --ignore=lib/*.js --plugin=vue"
+    "test": "npm run lint",
+    "lint": "eslint --ext .js,.vue src"
   },
   "repository": {
     "type": "git",

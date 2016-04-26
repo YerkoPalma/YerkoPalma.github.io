@@ -34,7 +34,7 @@ export default{
       required: true
     }
   },
-  data(){
+  data () {
     return {
       url: '#',
       name: ''

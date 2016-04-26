@@ -40,7 +40,7 @@
 import skill from './skill.vue'
 
 export default{
-  data(){
+  data () {
     return {
       tabs: [
         { target: 'frontend', name: 'Front-end'},
@@ -89,7 +89,7 @@ export default{
             {name: 'sqlite', level: 30, type: 'sql'},
             {name: 'mongodb', level: 90, type: 'nosql'},
             {name: 'dynamodb', level: 30, type: 'nosql'},
-            {name: 'redis', level: 0, type: 'nosql'},
+            {name: 'redis', level: 0, type: 'nosql'}
           ]
         },
         {
@@ -110,10 +110,10 @@ export default{
     }
   },
   events: {
-    'chartify' : function (data) {
+    'chartify': function (data) {
       // remove previous canvas
       let container = document.getElementById('canvas-container')
-      
+
       while (container.firstChild) {
         container.removeChild(container.firstChild)
       }
@@ -124,22 +124,22 @@ export default{
       canvas.width = 370
       canvas.height = 400
       canvas.style.zIndex = 8
-      
+
       container.appendChild(canvas)
-      
+
       let chartLayer = document.getElementById('chart')
       let ctx = chartLayer.getContext('2d')
-      
+
       let _data = {
         labels: data.map(obj => { return obj.name }),
         datasets: [{
           label: 'Nivel',
-          backgroundColor: "rgba(179,181,198,0.2)",
-          borderColor: "rgba(179,181,198,1)",
-          pointBackgroundColor: "rgba(179,181,198,1)",
-          pointBorderColor: "#fff",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(179,181,198,1)",
+          backgroundColor: 'rgba(179,181,198,0.2)',
+          borderColor: 'rgba(179,181,198,1)',
+          pointBackgroundColor: 'rgba(179,181,198,1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(179,181,198,1)',
           data: data.map(obj => { return obj.level })
         }]
       }

@@ -31,27 +31,27 @@
 <script>
 import md5 from 'js-md5'
 
-  export default{
-    data () {
-      return{
-        mail: 'yerko.palma@usach.cl',
-        description: 'Desarrollador full stack, con preferencia por Javascript <3. También soy aficionado del diseño, con espiritu emprendedor. Actualmente trabajando como desarrollador .NET/Js, pero con ganas de ayudar en tu próximo proyecto. '
-      }
+export default{
+  data () {
+    return {
+      mail: 'yerko.palma@usach.cl',
+      description: 'Desarrollador full stack, con preferencia por Javascript <3. También soy aficionado del diseño, con espiritu emprendedor. Actualmente trabajando como desarrollador .NET/Js, pero con ganas de ayudar en tu próximo proyecto. '
+    }
+  },
+  computed: {
+    gravatar: function () {
+      let src = 'https://s.gravatar.com/avatar/' + md5(this.mail) + '?s=180'
+      return src
+    }
+  },
+  props: {
+    title: {
+      type: String,
+      required: true
     },
-    computed: {
-      gravatar: function () {
-        let src = 'https://s.gravatar.com/avatar/' + md5(this.mail) + '?s=180'
-        return src
-      }
-    },
-    props: {
-      title: {
-        type: String,
-        required: true
-      },
-      subTitle: {
-        type: String,
-      }
+    subTitle: {
+      type: String
     }
   }
+}
 </script>

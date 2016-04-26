@@ -54,8 +54,8 @@ export default{
       let self = this
 
       let getIndex = (arr, obj) => {
-        for (let i = 0; i < arr.length; i++){
-          if (obj.type === arr[i].type){
+        for (let i = 0; i < arr.length; i++) {
+          if (obj.type === arr[i].type) {
             return i
           }
         }
@@ -63,17 +63,17 @@ export default{
       }
 
       let countPerType = type => {
-          let filtered = self.tools.filter((el, i) => {
-            return el.type === type
-          })
-          return filtered.length
+        let filtered = self.tools.filter((el, i) => {
+          return el.type === type
+        })
+        return filtered.length
       }
 
-      for (let i = 0; i < this.tools.length; i++){
+      for (let i = 0; i < this.tools.length; i++) {
         let actual = this.tools[i]
         let index = getIndex(_groups, actual)
         // if type found
-        if ( index >= 0 ) {
+        if (index >= 0) {
           // added to what is already on _groups
           let sum = _groups[index]
           sum.value = sum.value + actual.level
