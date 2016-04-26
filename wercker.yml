@@ -10,5 +10,7 @@ build:
       name: eslint
       code: |
         npm install -g eslint
+        npm install -g eslint-plugin-html
+        npm install -g eslint-plugin-vue
     # A step that executes `npm test` command
     - npm-test
