@@ -6,7 +6,9 @@ build:
     # A step that executes `npm install` command
     - npm-install
     # install eslint globally
-    - nahody/npm-install@1.1.1
-      options: -g eslint
+    - script:
+      name: eslint
+      code: |
+        npm install -g eslint
     # A step that executes `npm test` command
     - npm-test
