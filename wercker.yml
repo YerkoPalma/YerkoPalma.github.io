@@ -23,4 +23,5 @@ build:
       code: |
         npm install karma -g
         npm install -g phantomjs-prebuilt
+        export NODE_ENV=development
     - npm-test
