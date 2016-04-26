@@ -5,5 +5,7 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
+    # install eslint globally
+    - npm install -g eslint
     # A step that executes `npm test` command
     - npm-test
