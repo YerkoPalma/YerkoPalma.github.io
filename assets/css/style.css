@@ -5852,6 +5852,9 @@ footer nav > ul > li {
 footer nav > ul > li a {
   color: #555;
 }
+footer .copyright {
+  margin: 20px 0 10px;
+}
 /* ------------------ TRANSITION SECTION ------------------ */
 .bounce-transition {
   display: inline-block;

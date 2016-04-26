@@ -10,6 +10,9 @@
       <li>
         <a :href="github"><i class="fa fa-github uncolor"></i></a>
       </li>
+      <li>
+        <a :href="stackoverflow"><i class="fa fa-stack-overflow uncolor"></i></a>
+      </li>
     </ul>
   </nav>
 </template>
@@ -36,6 +39,10 @@ export default {
       default: '#'
     },
     github: {
+      type: String,
+      default: '#'
+    },
+    stackoverflow: {
       type: String,
       default: '#'
     }
