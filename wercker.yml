@@ -15,6 +15,10 @@ build:
         npm install -g babel-eslint
     # A step that executes `npm test` command
     - script:
+      name: browserify
+      code: |
+        npm install -g browserify
+    - script:
       name: karma and phantomjs
       code: |
         npm install -g karma
