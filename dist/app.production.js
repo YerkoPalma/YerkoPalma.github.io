@@ -33060,7 +33060,7 @@ new Vue({
 })
 
 },{"./components/contact.vue":278,"./components/cover.vue":279,"./components/experience.vue":280,"./components/navigation.vue":281,"./components/navlink.vue":282,"./components/projects.vue":283,"./components/rights.vue":284,"./components/service.vue":285,"./components/services.vue":286,"./components/skills.vue":288,"./components/social.vue":289,"vue":276}],278:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"contact\" class=\"contact-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n            <h1>Contacto</h1>\n              <div class=\"col-md-8 col-md-offset-2\">\n                <form class=\"contact-form\" action=\"https://formspree.io/yerko.palma@usach.cl\" method=\"POST\">\n                  <div class=\"row\">\n                    <div class=\"col-md-6\">\n                      <label>Name</label>\n                      <input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre\">\n                    </div>\n                    <div class=\"col-md-6\">\n                      <label>Email</label>\n                      <input type=\"email\" class=\"form-control\" name=\"_replyto\" placeholder=\"Mail\">\n                      <input type=\"text\" name=\"_gotcha\" style=\"display:none\">\n                    </div>\n                  </div>\n                  <label>Message</label>\n                  <textarea class=\"form-control\" rows=\"4\" placeholder=\"Cuentame que necesitas...\" name=\"mensaje\"></textarea>\n                  <div class=\"row\">\n                    <div class=\"col-md-4 col-md-offset-4\">\n                      <button type=\"submit\" class=\"btn btn-danger btn-block btn-lg btn-fill\">Enviar mensaje</button>\n                    </div>\n                  </div>\n                </form>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<section id=\"contact\" class=\"contact-section\">\n    <div class=\"container\">\n        <div class=\"row\">\n          <h1>Contacto</h1>\n            <div class=\"col-md-8 col-md-offset-2\">\n              <form class=\"contact-form\" action=\"https://formspree.io/yerko.palma@usach.cl\" method=\"POST\">\n                <div class=\"row\">\n                  <div class=\"col-md-6\">\n                    <label>Name</label>\n                    <input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre\">\n                  </div>\n                  <div class=\"col-md-6\">\n                    <label>Email</label>\n                    <input type=\"email\" class=\"form-control\" name=\"_replyto\" placeholder=\"Mail\">\n                    <input type=\"text\" name=\"_gotcha\" style=\"display:none\">\n                  </div>\n                </div>\n                <label>Message</label>\n                <textarea class=\"form-control\" rows=\"4\" placeholder=\"Cuentame que necesitas...\" name=\"mensaje\"></textarea>\n                <div class=\"row\">\n                  <div class=\"col-md-4 col-md-offset-4\">\n                    <button type=\"submit\" class=\"btn btn-danger btn-block btn-lg btn-fill\">Enviar mensaje</button>\n                  </div>\n                </div>\n              </form>\n            </div>\n        </div>\n    </div>\n</section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33069,7 +33069,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],279:[function(require,module,exports){
@@ -33110,7 +33110,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div class=\"container-fluid\" id=\"cover-wrapper\">\n    <div class=\"row text-center\" id=\"cover\">\n      <div class=\"flip-container\" ontouchstart=\"this.classList.toggle('hover');\">\n        <div class=\"flipper\">\n          <div class=\"front\">\n            <img :src=\"gravatar\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n          </div>\n          <div class=\"back\">\n            <!-- back content -->\n            <div class=\"card\">\n              <a class=\"publicity\" href=\"https://github.com/YerkoPalma\" target=\"_blank\">\n                <i class=\"fa fa-github uncolor\" aria-hidden=\"true\"></i>\n              </a>\n              <a class=\"publicity\" href=\"http://stackoverflow.com/users/3178237/yerko-palma\" target=\"_blank\">\n                <i class=\"fa fa-stack-overflow uncolor\" aria-hidden=\"true\"></i>\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      <h1 class=\"display-3\">{{title}}</h1>\n      <p class=\"lead\">{{subTitle}}</p>\n      <div class=\"col-md-6 col-md-offset-3 self-description\">\n        <p>{{description}}</p>\n      </div>\n    </div>\n  </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"container-fluid\" id=\"cover-wrapper\">\n  <div class=\"row text-center\" id=\"cover\">\n    <div class=\"flip-container\" ontouchstart=\"this.classList.toggle('hover');\">\n      <div class=\"flipper\">\n        <div class=\"front\">\n          <img :src=\"gravatar\" class=\"img-circle center-block\" style=\"display: block;\" alt=\"...\">\n        </div>\n        <div class=\"back\">\n          <!-- back content -->\n          <div class=\"card\">\n            <a class=\"publicity\" href=\"https://github.com/YerkoPalma\" target=\"_blank\">\n              <i class=\"fa fa-github uncolor\" aria-hidden=\"true\"></i>\n            </a>\n            <a class=\"publicity\" href=\"http://stackoverflow.com/users/3178237/yerko-palma\" target=\"_blank\">\n              <i class=\"fa fa-stack-overflow uncolor\" aria-hidden=\"true\"></i>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n    <h1 class=\"display-3\">{{title}}</h1>\n    <p class=\"lead\">{{subTitle}}</p>\n    <div class=\"col-md-6 col-md-offset-3 self-description\">\n      <p>{{description}}</p>\n    </div>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33119,7 +33119,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"js-md5":273,"vue":276,"vue-hot-reload-api":275}],280:[function(require,module,exports){
@@ -33159,7 +33159,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"experience\" class=\"experience-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n              <h1>Experiencia</h1>\n              <div class=\"timeline\">\n                <template v-for=\"event in experience\">\n                  <span class=\"node-year\">{{event.year}}</span>\n                  <div class=\"node\"></div>\n                </template>\n              </div>\n              <div v-for=\"event in experience\" class=\"row event-div\">\n                <div class=\"col-sm-5 col-md-5\" :class=\"{ 'col-md-offset-7': $index % 2 !== 0 }\"> \n                  <div class=\"thumbnail thumbnail-event\" :class=\"{ 'event-left': $index % 2 === 0, 'event-right': $index % 2 !== 0 }\"> \n                    <img data-src=\"holder.js/100%x200\" alt=\"100%x200\" :src=\"event.image\" data-holder-rendered=\"true\" style=\"height: 200px; width: 100%; display: block;\">\n                    <div class=\"caption\"> \n                      <h3>{{event.title}}</h3> \n                      <p>{{event.content}}</p> \n                    </div> \n                  </div> \n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<section id=\"experience\" class=\"experience-section\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <h1>Experiencia</h1>\n            <div class=\"timeline\">\n              <template v-for=\"event in experience\">\n                <span class=\"node-year\">{{event.year}}</span>\n                <div class=\"node\"></div>\n              </template>\n            </div>\n            <div v-for=\"event in experience\" class=\"row event-div\">\n              <div class=\"col-sm-5 col-md-5\" :class=\"{ 'col-md-offset-7': $index % 2 !== 0 }\"> \n                <div class=\"thumbnail thumbnail-event\" :class=\"{ 'event-left': $index % 2 === 0, 'event-right': $index % 2 !== 0 }\"> \n                  <img data-src=\"holder.js/100%x200\" alt=\"100%x200\" :src=\"event.image\" data-holder-rendered=\"true\" style=\"height: 200px; width: 100%; display: block;\">\n                  <div class=\"caption\"> \n                    <h3>{{event.title}}</h3> \n                    <p>{{event.content}}</p> \n                  </div> \n                </div> \n              </div>\n            </div>\n        </div>\n    </div>\n</section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33168,7 +33168,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],281:[function(require,module,exports){
@@ -33192,7 +33192,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n          <div class=\"navbar-header page-scroll\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                  <span class=\"sr-only\">Toggle navigation</span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n                  <span class=\"icon-bar\"></span>\n              </button>\n              <a class=\"navbar-brand page-scroll\" href=\"{{root.url}}\">{{root.name}}</a>\n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n              <ul class=\"nav navbar-nav pull-rigth\">\n                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->\n                  <li class=\"hidden\">\n                      <a class=\"page-scroll\" href=\"#cover-wrapper\"></a>\n                  </li>\n                  <slot></slot>\n              </ul>\n          </div>\n          <!-- /.navbar-collapse -->\n      </div>\n      <!-- /.container -->\n  </nav>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n    <div class=\"container\">\n        <div class=\"navbar-header page-scroll\">\n            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand page-scroll\" href=\"{{root.url}}\">{{root.name}}</a>\n        </div>\n\n        <!-- Collect the nav links, forms, and other content for toggling -->\n        <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n            <ul class=\"nav navbar-nav pull-rigth\">\n                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->\n                <li class=\"hidden\">\n                    <a class=\"page-scroll\" href=\"#cover-wrapper\"></a>\n                </li>\n                <slot></slot>\n            </ul>\n        </div>\n        <!-- /.navbar-collapse -->\n    </div>\n    <!-- /.container -->\n</nav>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33201,7 +33201,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],282:[function(require,module,exports){
@@ -33219,7 +33219,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <li>\n      <a class=\"page-scroll\" href=\"#{{link}}\"><slot></slot></a>\n  </li>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<li>\n    <a class=\"page-scroll\" href=\"#{{link}}\"><slot></slot></a>\n</li>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33228,7 +33228,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],283:[function(require,module,exports){
@@ -33268,7 +33268,7 @@ exports.default = {
     }
   },
   ready: function ready() {
-    //update the content of every project, loading the md content
+    // update the content of every project, loading the md content
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -33356,7 +33356,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"projects\" class=\"projects-section\">\n    <h1>¿Qué he hecho?</h1>\n      <div class=\"container-fluid\">\n        <div class=\"projects-wrapper\">\n          <template v-for=\"project in projects\">\n            <div class=\"project-thumbnail\" id=\"{{project.id}}\" :class=\"{ 'new-row': $index % 3 == 0 }\">\n              <div class=\"project-content\">\n                <div class=\"project-hover\" @click=\"fadeIn($index)\">\n                  <i class=\"fa fa-plus fa-5x\"></i>\n                </div>\n                <img class=\"img-responsive\" :src=\"project.thumbnail\">\n              </div>\n              <div class=\"project-caption\">\n                <h3>{{project.name}}</h3>\n                <span class=\"sub-title\">{{project.description}}</span>\n              </div>\n            </div>\n            <div class=\"project-panel\" id=\"{{project.id}}-modal\" v-show=\"project.show\" transition=\"bounce\">\n              <span @click=\"fadeOut($index)\" class=\"times\">×</span>\n              <div class=\"container\">\n                <div v-html=\"project.content | marked\"></div>\n              </div>\n            </div>\n          </template>\n\n        </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<section id=\"projects\" class=\"projects-section\">\n  <h1>¿Qué he hecho?</h1>\n    <div class=\"container-fluid\">\n      <div class=\"projects-wrapper\">\n        <template v-for=\"project in projects\">\n          <div class=\"project-thumbnail\" id=\"{{project.id}}\" :class=\"{ 'new-row': $index % 3 == 0 }\">\n            <div class=\"project-content\">\n              <div class=\"project-hover\" @click=\"fadeIn($index)\">\n                <i class=\"fa fa-plus fa-5x\"></i>\n              </div>\n              <img class=\"img-responsive\" :src=\"project.thumbnail\">\n            </div>\n            <div class=\"project-caption\">\n              <h3>{{project.name}}</h3>\n              <span class=\"sub-title\">{{project.description}}</span>\n            </div>\n          </div>\n          <div class=\"project-panel\" id=\"{{project.id}}-modal\" v-show=\"project.show\" transition=\"bounce\">\n            <span @click=\"fadeOut($index)\" class=\"times\">×</span>\n            <div class=\"container\">\n              <div v-html=\"project.content | marked\"></div>\n            </div>\n          </div>\n        </template>\n\n      </div>\n    </div>\n</section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33365,7 +33365,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"babel-runtime/core-js/get-iterator":1,"marked":274,"vue":276,"vue-hot-reload-api":275}],284:[function(require,module,exports){
@@ -33387,7 +33387,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div :class=\"{ 'pull-left': align === 'left', 'pull-right': align === 'right'}\">\n    <p class=\"copyright\">© {{ (new Date()).getFullYear() }} - {{author}}</p>\n  </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div :class=\"{ 'pull-left': align === 'left', 'pull-right': align === 'right'}\">\n  <p class=\"copyright\">© {{ (new Date()).getFullYear() }} - {{author}}</p>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33396,7 +33396,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],285:[function(require,module,exports){
@@ -33416,7 +33416,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <i class=\"{{i}}\"></i>\n  <p class=\"service-title\">{{title}}</p>\n  <p class=\"lead\"><slot></slot></p>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<i class=\"{{i}}\"></i>\n<p class=\"service-title\">{{title}}</p>\n<p class=\"lead\"><slot></slot></p>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33425,11 +33425,11 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],286:[function(require,module,exports){
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"services\" class=\"services-section\">\n    <h1>¿Qué hago?</h1>\n      <div class=\"container\">\n          <div class=\"row\">\n              <div class=\"col-lg-3\">\n                  <slot name=\"design\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"develop\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"mobile\"></slot>\n              </div>\n              <div class=\"col-lg-3\">\n                  <slot name=\"tech\"></slot>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<section id=\"services\" class=\"services-section\">\n  <h1>¿Qué hago?</h1>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-lg-3\">\n                <slot name=\"design\"></slot>\n            </div>\n            <div class=\"col-lg-3\">\n                <slot name=\"develop\"></slot>\n            </div>\n            <div class=\"col-lg-3\">\n                <slot name=\"mobile\"></slot>\n            </div>\n            <div class=\"col-lg-3\">\n                <slot name=\"tech\"></slot>\n            </div>\n        </div>\n    </div>\n</section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33438,7 +33438,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],287:[function(require,module,exports){
@@ -33520,7 +33520,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <div role=\"tabpanel\" class=\"tab-pane fade\" v-bind:class=\"{'in' : skillId === 'frontend', 'active' : skillId === 'frontend'}\" id=\"{{skillId}}\">\n    <div class=\"row\">\n      <div class=\"container\">\n        <div class=\"col-md-7\">\n\n          <template v-for=\"group in groups\">\n            <a href=\"#\" v-on:click=\"draw( group.type, $event )\" id=\"{{group.type}}\">\n              <p class=\"text-left\">{{group.type}}</p>\n              <div class=\"progress\">\n                <div class=\"progress-bar {{progressclass[$index]}}\" role=\"progressbar\" aria-valuenow=\"{{group.value}}\" aria-valuemin=\"0\" aria-valuemax=\"100\" v-bind:style=\"{width: group.value + '%'}\">\n                  <span class=\"sr-only\">{{group.value}}% Complete (success)</span>\n                </div>\n              </div>\n            </a>\n          </template>\n\n        </div>\n      </div>\n    </div>\n  </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div role=\"tabpanel\" class=\"tab-pane fade\" v-bind:class=\"{'in' : skillId === 'frontend', 'active' : skillId === 'frontend'}\" id=\"{{skillId}}\">\n  <div class=\"row\">\n    <div class=\"container\">\n      <div class=\"col-md-7\">\n\n        <template v-for=\"group in groups\">\n          <a href=\"#\" v-on:click=\"draw( group.type, $event )\" id=\"{{group.type}}\">\n            <p class=\"text-left\">{{group.type}}</p>\n            <div class=\"progress\">\n              <div class=\"progress-bar {{progressclass[$index]}}\" role=\"progressbar\" aria-valuenow=\"{{group.value}}\" aria-valuemin=\"0\" aria-valuemax=\"100\" v-bind:style=\"{width: group.value + '%'}\">\n                <span class=\"sr-only\">{{group.value}}% Complete (success)</span>\n              </div>\n            </div>\n          </a>\n        </template>\n\n      </div>\n    </div>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33529,7 +33529,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}],288:[function(require,module,exports){
@@ -33596,12 +33596,12 @@ exports.default = {
         }),
         datasets: [{
           label: 'Nivel',
-          backgroundColor: "rgba(179,181,198,0.2)",
-          borderColor: "rgba(179,181,198,1)",
-          pointBackgroundColor: "rgba(179,181,198,1)",
-          pointBorderColor: "#fff",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(179,181,198,1)",
+          backgroundColor: 'rgba(179,181,198,0.2)',
+          borderColor: 'rgba(179,181,198,1)',
+          pointBackgroundColor: 'rgba(179,181,198,1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(179,181,198,1)',
           data: data.map(function (obj) {
             return obj.level;
           })
@@ -33630,7 +33630,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <section id=\"skills\" class=\"skills-section\">\n      <div class=\"container\">\n          <div class=\"row\">\n            <h1>¿Para qué soy bueno?</h1>\n              <div class=\"nav-tabs-navigation\">\n                <div class=\"nav-tabs-wrapper\">\n                  <ul class=\"nav nav-tabs\" role=\"tablist\">\n                    <li role=\"presentation\" v-for=\"tab in tabs\" v-bind:class=\"{ 'active' : $index === 0 }\">\n                      <a href=\"#{{tab.target}}\" role=\"tab\" aria-controls=\"{{tab.target}}\" data-toggle=\"tab\">{{tab.name}}</a>\n                    </li>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"col-lg-7\">\n\n                <!-- Tabs content -->\n                <div class=\"tab-content\">\n                  <!-- Front-end -->\n                  <skill v-for=\"area in areas\" :tools=\"area.tools\" :level=\"area.level\" :skill-id=\"area.name\">\n                  </skill>\n                </div>\n              </div>\n              <div class=\"col-md-5\">\n                <div class=\"jumbotron\">\n                  <div id=\"canvas-container\">\n                    <canvas id=\"myChart\" width=\"370\" height=\"400\"></canvas>\n                  </div>\n                </div>\n              </div>\n          </div>\n      </div>\n  </section>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<section id=\"skills\" class=\"skills-section\">\n    <div class=\"container\">\n        <div class=\"row\">\n          <h1>¿Para qué soy bueno?</h1>\n            <div class=\"nav-tabs-navigation\">\n              <div class=\"nav-tabs-wrapper\">\n                <ul class=\"nav nav-tabs\" role=\"tablist\">\n                  <li role=\"presentation\" v-for=\"tab in tabs\" v-bind:class=\"{ 'active' : $index === 0 }\">\n                    <a href=\"#{{tab.target}}\" role=\"tab\" aria-controls=\"{{tab.target}}\" data-toggle=\"tab\">{{tab.name}}</a>\n                  </li>\n                </ul>\n              </div>\n            </div>\n            <div class=\"col-lg-7\">\n\n              <!-- Tabs content -->\n              <div class=\"tab-content\">\n                <!-- Front-end -->\n                <skill v-for=\"area in areas\" :tools=\"area.tools\" :level=\"area.level\" :skill-id=\"area.name\">\n                </skill>\n              </div>\n            </div>\n            <div class=\"col-md-5\">\n              <div class=\"jumbotron\">\n                <div id=\"canvas-container\">\n                  <canvas id=\"myChart\" width=\"370\" height=\"400\"></canvas>\n                </div>\n              </div>\n            </div>\n        </div>\n    </div>\n</section>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33639,7 +33639,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"./skill.vue":287,"vue":276,"vue-hot-reload-api":275}],289:[function(require,module,exports){
@@ -33681,7 +33681,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n  <nav id=\"footer\" :class=\"{ 'pull-left': align === 'left', 'pull-right': align === 'right'}\">\n    <ul>\n      <li>\n        <a :href=\"facebook\"><i class=\"fa fa-facebook-square uncolor\"></i></a>\n      </li>\n      <li>\n        <a :href=\"linkedin\"><i class=\"fa fa-linkedin-square uncolor\"></i></a>\n      </li>\n      <li>\n        <a :href=\"github\"><i class=\"fa fa-github uncolor\"></i></a>\n      </li>\n      <li>\n        <a :href=\"stackoverflow\"><i class=\"fa fa-stack-overflow uncolor\"></i></a>\n      </li>\n    </ul>\n  </nav>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<nav id=\"footer\" :class=\"{ 'pull-left': align === 'left', 'pull-right': align === 'right'}\">\n  <ul>\n    <li>\n      <a :href=\"facebook\"><i class=\"fa fa-facebook-square uncolor\"></i></a>\n    </li>\n    <li>\n      <a :href=\"linkedin\"><i class=\"fa fa-linkedin-square uncolor\"></i></a>\n    </li>\n    <li>\n      <a :href=\"github\"><i class=\"fa fa-github uncolor\"></i></a>\n    </li>\n    <li>\n      <a :href=\"stackoverflow\"><i class=\"fa fa-stack-overflow uncolor\"></i></a>\n    </li>\n  </ul>\n</nav>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -33690,7 +33690,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.update(id, module.exports, module.exports.template)
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":276,"vue-hot-reload-api":275}]},{},[277]);
