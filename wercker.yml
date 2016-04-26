@@ -22,5 +22,6 @@ build:
       name: karma and phantomjs
       code: |
         npm install karma-cli -g
+        npm install karma --save-dev
         npm install -g phantomjs-prebuilt
     - npm-test
