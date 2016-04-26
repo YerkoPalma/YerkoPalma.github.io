@@ -14,4 +14,9 @@ build:
         npm install -g eslint-plugin-vue
         npm install -g babel-eslint
     # A step that executes `npm test` command
+    - script:
+      name: karma and phantomjs
+      code: |
+        npm install -g karma
+        npm install -g phantomjs-prebuilt
     - npm-test

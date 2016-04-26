@@ -47,7 +47,7 @@
   "scripts": {
     "build": "browserify -t vueify -e src/app.js -o dist/app.production.js",
     "compile": "browserify -t stringify -t vueify -e src/app.js -o dist/app.production.js",
-    "test": "npm run lint",
+    "test": "npm run lint && karma start",
     "lint": "eslint --ext .js,.vue src test/unit/**.js"
   },
   "repository": {
