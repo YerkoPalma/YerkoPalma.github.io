@@ -1,16 +1,37 @@
-/* global describe, it, expect */
+/* global describe, it, expect, beforeAll, afterAll */
 
 var Vue = require('vue')
 var contact = require('../../src/components/contact.vue')
 
-describe('Hello.vue', function () {
-  it('should render correct contents', function () {
-    const vm = new Vue({
+describe('contact.vue', function () {
+  var vm = {}
+
+  beforeAll(function () {
+    vm = new Vue({
       template: '<div><contact></contact></div>',
       components: { contact: contact }
     }).$mount()
-    expect(vm.$el.querySelector('#contact h1').textContent).toBe('Contacto')
   })
+
+  afterAll(function () {
+    vm.$destroy(true)
+  })
+
+  it('should render correct contents', function () {
+    expect(vm.$el.querySelector('#contact h1').textContent).toBe('Contacto')
+    expect(vm.$el.querySelectorAll('form').length).toBe(1)
+    expect(vm.$el.querySelector('button[type="submit"]').textContent).toBe('Enviar mensaje')
+  })
+
+  it('should have all inputs with name', function () {
+    expect(vm.$el.querySelectorAll('input, textarea').length).toBe(4)
+    var inputs = vm.$el.querySelectorAll('input, textarea')
+    for (var i = 0; i < inputs.length; i++) {
+      expect(inputs[i].getAttribute('name')).toBeTruthy()
+    }
+  })
+
+  it('should make an ajax call when form submitted')
 })
 
 // also see example testing a component with mocks at
