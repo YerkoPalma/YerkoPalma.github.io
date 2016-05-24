@@ -14,6 +14,7 @@ export default {
   port: 3888,
   template: './src/template.hbs',
   eslint,
+  postcss: ['postcss-import'],
   webpack(config, options) {
     setAlias(config)
   }

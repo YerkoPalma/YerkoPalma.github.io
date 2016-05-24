@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/YerkoPalma/YerkoPalma.github.io#readme",
   "dependencies": {
+    "normalize.css": "^4.1.1",
     "vue-router": "^0.7.13"
   }
 }
