@@ -1,11 +1,12 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
 import app from './app'
+import routes from './routes'
 
-Vue.config.debug = true
+Vue.config.devtools = true
+Vue.use(VueRouter)
 
-new Vue({
-  el: 'body',
-  components: {
-    app
-  }
-})
+const router = new VueRouter()
+router.map(routes)
+
+router.start(app, 'app')
