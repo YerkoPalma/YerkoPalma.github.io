@@ -26,5 +26,10 @@
   "dependencies": {
     "normalize.css": "^4.1.1",
     "vue-router": "^0.7.13"
+  },
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3"
   }
 }

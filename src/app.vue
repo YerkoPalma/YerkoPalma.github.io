@@ -1,4 +1,4 @@
-<style src="./css/main"></style>
+<style lang="less" src="./style/main.less"></style>
 <template>
   <div id="app">
     <router-view></router-view>

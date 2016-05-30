@@ -1,0 +1,87 @@
+// Component footer
+
+// Used globally as fixed footer
+
+// usage
+// <footer>
+//   <div class="footer">
+//     <ul class="footer-social">
+//       <li class="footer-social-item">
+//         <i class="fa fa-github" aria-hidden="true"></i>
+//       </li>
+//       <li class="footer-social-item">
+//         <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+//       </li>
+//       <li class="footer-social-item">
+//         <i class="fa fa-codepen" aria-hidden="true"></i>
+//       </li>
+//     </ul>
+//     <div class="footer-rights">
+//       Developed By Me
+//     </div>
+//   </div>
+// </footer>
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: @secondary-text-color;
+}
+  .footer-social {
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    list-style: none;
+    flex-direction: row;
+  }
+    .footer-social-item {
+      flex-direction: row;
+      font-size: 24px;
+      padding: 0px 10px;
+      color: @primary-text-color;
+    }
+    .footer-social-item:hover {
+      color: @primary-color-light;
+      cursor: pointer;
+    }
+  .footer-rights {
+    align-self: center;
+    padding: 6px 18px;
+  }
+
+@media @small {
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .footer {
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: space-around;
+  }
+    .footer-social {
+      display: flex;
+      padding: 0;
+      align-self: center;
+      order: 1;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-rights {
+      display: flex;
+      align-self: center;
+      order: 2;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+}
