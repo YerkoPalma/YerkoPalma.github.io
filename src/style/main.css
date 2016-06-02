@@ -2,6 +2,16 @@
 
 @import "normalize.css";
 
+/* Variables */
+@import "variables/colors.css";
+@import "variables/media-queries.css";
+
+/* Utils */
+@import "utils/reset.css";
+
+/* Components */
+@import "components/footer.css";
+/*
 // Variables
 // @import "variables/media-queries.less"
 // @import "variables/colors.less"
@@ -17,9 +27,9 @@
 // Components
 
 // Board Components
-// @import "components/board/board-component-1.less"
 // @import "components/board/board-component-2.less"
 
 // Header Components
 // @import "components/header/header-component-1.less"
 // @import "components/header/header-component-2.less" // and so forth
+*/

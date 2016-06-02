@@ -1,5 +1,4 @@
 import path from 'path'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 const eslint = {
   globals: [
@@ -15,11 +14,8 @@ export default {
   port: 3888,
   template: './src/template.hbs',
   eslint,
-  postcss: ['postcss-import'],
+  postcss: [require('postcss-import'), require('postcss-simple-vars')],
   webpack(config, options) {
-    config.resolve.devtool = 'source-map'
-    addLess(config)
-    config.resolve.plugins = [ new ExtractTextPlugin('styles.css') ]
     setAlias(config)
   }
 }
@@ -33,20 +29,5 @@ function setAlias(config) {
     components: cwd('src/components'),
     utils: cwd('src/utils'),
     helpers: cwd('src/helpers')
-  }
-}
-
-function addLess(config) {
-  config.resolve.module = {
-    loaders: [
-      {
-        test: /\.less$/,
-        loader: ExtractTextPlugin.extract(
-          // activate source maps via loader query
-          'css?sourceMap!' +
-          'less?sourceMap'
-        )
-      }
-    ]
   }
 }

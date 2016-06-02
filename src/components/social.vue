@@ -19,11 +19,7 @@
 <script>
 export default {
   ready () {
-    $('#footer a').mouseenter(function () {
-      $(this).find('.uncolor').removeClass('uncolor')
-    }).mouseleave(function () {
-      $(this).find('.fa').addClass('uncolor')
-    })
+    
   },
   props: {
     align: {
